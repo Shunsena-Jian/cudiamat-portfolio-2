@@ -5,10 +5,10 @@ export default function Main() {
         <section className={'main-section container-fluid p-3'}>
             <div className={'row'}>
                 <div className={'col-12 col-sm-6 d-flex align-items-end'}>
-                    <p className={`${styles.tenPx}`}>Something</p>
+                    <p className={`${styles.tenPx} ${styles.animateFromLeft}`}>Something</p>
                 </div>
                 <div className={'col-12 col-sm-6 d-flex flex-column align-items-end justify-content-end'}>
-                    <div className={`${styles.tenPx} text-end`}>
+                    <div className={`${styles.tenPx} ${styles.animateFromRight} text-end`}>
                         <p>Based in the Philippines</p>
                         <p>I am a dedicated</p>
                         <p>Full Time Backend Developer</p>

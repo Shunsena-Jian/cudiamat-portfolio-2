@@ -1,3 +1,15 @@
 .tenPx {
     font-size: 15px;
 }
+
+.animateFromLeft {
+    animation-name: var(--animation-fade-in-from-left);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.animateFromRight {
+    animation-name: var(--animation-fade-in-from-right);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}

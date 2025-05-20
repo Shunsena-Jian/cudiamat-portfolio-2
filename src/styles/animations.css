@@ -1,6 +1,7 @@
 :root {
     --animation-fade-in-from-left: fadeInFromLeft;
     --animation-fade-in-from-bottom: fadeInFromBottom;
+    --animation-fade-in-from-right: fadeInFromRight;
 }
 
 @keyframes fadeInFromBottom {
@@ -18,6 +19,17 @@
     from {
         opacity: 0;
         transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
     }
     to {
         opacity: 1;
