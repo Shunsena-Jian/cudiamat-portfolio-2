@@ -1,6 +1,6 @@
 body {
   font-family: 'Chakra Petch', sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -17,6 +17,10 @@ body {
   /*overflow: hidden;*/
   display: flex;
   place-items: center;
+}
+
+#root {
+  width: 100%;
 }
 
 body::before {
