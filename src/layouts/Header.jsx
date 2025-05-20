@@ -8,17 +8,17 @@ export default function Header() {
         <section className={'main-section p-5 container-fluid between'}>
             <div className={'row mb-3'}>
                 <div className={`${styles.textContainer} col-12 col-md-6`}>
-                    <span className={`${styles.textItem} underline-grow mb-3`}>
+                    <div className={`d-inline-block ${styles.textItem} ${styles.underlineGrow} mb-3`}>
                         <h3 className={'m-0'}>Jian Raphael R. Cudiamat</h3>
-                    </span>
+                    </div>
                     <br/>
-                    <span className={`${styles.textItem} underline-grow mb-3`}>
+                    <div className={`d-inline-block ${styles.textItem} ${styles.underlineGrow} mb-3`}>
                         <p>Experience</p>
-                    </span>
+                    </div>
                     <br/>
-                    <span className={`${styles.textItem} underline-grow mb-3`}>
+                    <div className={`d-inline-block ${styles.textItem} ${styles.underlineGrow} mb-3`}>
                         <p>Projects</p>
-                    </span>
+                    </div>
                 </div>
             </div>
             <div className={'row'}>

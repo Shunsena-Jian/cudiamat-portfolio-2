@@ -2,7 +2,7 @@ import styles from '/src/styles/main.module.css';
 
 export default function Main() {
     return (
-        <section className={'main-section container-fluid p-5 min-vh-100 vw-100'}>
+        <section className={'main-section container-fluid'}>
             <div className={'row'}>
                 <div className={'col-12 col-sm-6 d-flex align-items-end'}>
                     <p className={`${styles.tenPx}`}>Something</p>
