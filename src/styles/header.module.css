@@ -1,10 +1,25 @@
 .textItem {
     opacity: 0;
     cursor: pointer;
+    /* Assuming default margin-bottom is applied by Bootstrap's mb-3 class initially */
+    /* We override this in the media query for smaller screens. */
+    transition: margin-bottom 0.3s ease-out;
 
     animation-name: var(--animation-fade-in-from-left);
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); /* easeOutCubic */
+}
+
+/* Base styles for h3 and p within textItem to apply transitions */
+.textItem > h3 {
+    /* Assuming initial font-size is browser default or from a global style */
+    transition: font-size 0.3s ease-out;
+}
+
+.textItem > p {
+    /* Assuming initial font-size is browser default or from a global style */
+    transition: font-size 0.3s ease-out;
 }
 
 .textContainer > .textItem:nth-child(3) {
@@ -16,10 +31,10 @@
 }
 
 .logo {
-    height: 35px;
+    height: 35px; /* Base height */
     display: block;
 
-    transition: transform 0.1s ease-out;
+    transition: height 0.3s ease-out, transform 0.25s ease-out; /* Added height transition */
 }
 
 .logo:hover {
@@ -33,6 +48,13 @@
     animation-name: var(--animation-fade-in-from-bottom);
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); /* easeOutCubic */
+}
+
+.logoContainer {
+    /* Base gap is applied by Bootstrap's gap-4 class initially */
+    /* We override this in the media query for smaller screens. */
+    transition: gap 0.3s ease-out;
 }
 
 .logoContainer > .logoItem:nth-child(2) {
@@ -43,7 +65,7 @@
 /*    animation-delay: 0.2s;*/
 /*}*/
 
-p {
+p { /* This is a general p tag style, ensure it's not conflicting or add specificity if needed */
     margin: 0;
 }
 
@@ -56,10 +78,74 @@ p {
     bottom: 0;
     left: 0;
     background-color: #ffffff;
-    transform-origin: center;
-    transition: transform 0.25s ease-out;
+    transform-origin: left; /* Changed from center to left */
+    transition: transform 0.3s ease-out; /* Adjusted duration */
 }
 
 .underlineGrow:hover::after {
     transform: scaleX(1);
 }
+
+.headerWrapper {
+    /* Base styles for headerWrapper if any, for now, it's mainly for targeting */
+    /* The p-5 class provides initial padding, which we will override in media queries */
+    /* Adding transition for padding. Note: Bootstrap p-5 might cause issues with this if not managed carefully. */
+    transition: padding 0.3s ease-out;
+}
+
+/* --- Responsive Design --- */
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .headerWrapper {
+        padding: 1.5rem !important; /* Override Bootstrap p-5 for smaller screens */
+    }
+
+    .textContainer {
+        text-align: center; /* Center align text for smaller screens */
+    }
+
+    .textItem {
+        margin-bottom: 0.75rem !important; /* Adjust default mb-3 for smaller screens */
+    }
+
+    .textItem > h3 {
+        font-size: 1.5rem; /* Adjust heading font size */
+    }
+
+    .textItem > p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .logo {
+        height: 30px; /* Slightly smaller logos */
+    }
+
+    .logoContainer {
+        justify-content: center; /* Center logos */
+        gap: 1.5rem; /* Adjust gap for smaller screens */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .headerWrapper {
+        padding: 2rem !important; /* Override Bootstrap p-5 for tablet screens */
+    }
+
+    .textItem > h3 {
+        font-size: 1.65rem; /* Slightly adjusted for tablets */
+    }
+
+    .textItem > p {
+        font-size: 1.1rem; /* Slightly adjusted for tablets */
+    }
+
+    .logo {
+        height: 33px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+/* Styles for large devices are mostly the default styles above */
+/* No specific overrides needed here unless defaults change */

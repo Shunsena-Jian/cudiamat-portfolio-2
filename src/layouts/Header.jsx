@@ -3,9 +3,11 @@ import linkedInLogo from '/src/assets/images/InBug-White.png';
 
 import styles from '/src/styles/header.module.css';
 
+import styles from '/src/styles/header.module.css'; // Ensure this is first if not already
+
 export default function Header() {
     return (
-        <section className={'main-section p-5 container-fluid between'}>
+        <section className={`${styles.headerWrapper} main-section p-5 container-fluid between`}>
             <div className={'row mb-3'}>
                 <div className={`${styles.textContainer} col-12 col-md-6`}>
                     <div className={`d-inline-block ${styles.textItem} ${styles.underlineGrow} mb-3`}>
