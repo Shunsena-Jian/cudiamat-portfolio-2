@@ -1,14 +1,13 @@
 import '/src/styles/animations.css';
 
-import Main from "./layouts/Main";
-import Header from "./layouts/Header";
+import Header from "./components/Header/Header";
 
 function App() {
     return (
         <>
-            <div className={'d-flex flex-column justify-content-between min-vh-100'}>
+            <div className={'d-flex flex-column min-vh-100'}>
                 <Header />
-                <Main />
+                {/*<Main />*/}
             </div>
         </>
     )

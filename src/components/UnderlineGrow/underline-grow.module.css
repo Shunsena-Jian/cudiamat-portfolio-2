@@ -1,0 +1,23 @@
+.underlineGrow {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.underlineGrow::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: left;
+    transition: transform 0.25s ease-out;
+}
+
+.underlineGrow:hover::after {
+    transform: scaleX(1);
+}

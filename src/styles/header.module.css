@@ -1,4 +1,6 @@
 .textItem {
+    display: inline-block;
+    margin-bottom: 3px;
     opacity: 0;
     cursor: pointer;
 
