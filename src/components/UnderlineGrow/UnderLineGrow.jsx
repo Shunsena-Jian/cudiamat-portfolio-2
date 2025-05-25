@@ -1,8 +1,8 @@
-import styles from '/src/components/UnderlineGrow/underline-grow.module.css';
+import underlineStyles from '/src/components/UnderlineGrow/underline-grow.module.css';
 
 const UnderLineGrow = ({ children }) => {
     return (
-        <div className={`${styles.underlineGrow}`}>
+        <div className={`${underlineStyles.underlineGrow}`}>
             { children }
         </div>
     )

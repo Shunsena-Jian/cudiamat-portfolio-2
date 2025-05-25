@@ -131,10 +131,10 @@ function Main() {
         <div className={`${styles.tenPx} ${styles.animateFromRight} text-end`}>
             {
                 paragraphs.map(item => {
-                    const {id, ElementType, content} = item;
+                    const {key, ElementType, content} = item;
 
                     return (
-                        <ElementType key={id}>{content}</ElementType>
+                        <ElementType key={key}>{content}</ElementType>
                     );
                 })
             }

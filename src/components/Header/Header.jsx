@@ -10,19 +10,19 @@ const navItems = [
         id: 'name',
         text: 'Jian Raphael R. Cudiamat',
         ElementType: 'h1',
-        className: 'm-0',
+        className: `m-0 ${styles.textItem}`,
     },
     {
         id: 'experience',
         text: 'Experience',
         ElementType: 'p',
-        className: 'm-0',
+        className: `m-0 ${styles.textItem}`,
     },
     {
         id: 'projects',
         text: 'Projects',
         ElementType: 'p',
-        className: 'm-0',
+        className: `m-0 ${styles.textItem}`,
     }
 ];
 
@@ -48,7 +48,7 @@ const logoItems = [
 ];
 
 const upperContent = (
-    <div className={'container-fluid d-flex flex-column align-items-start gap-3 m-0'}>
+    <div className={`container-fluid d-flex flex-column align-items-start gap-3 m-0 ${styles.textContainer}`}>
         {
             navItems.map(item => {
                 const {id, text, ElementType, className} = item;
