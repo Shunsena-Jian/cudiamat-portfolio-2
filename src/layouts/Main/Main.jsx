@@ -129,7 +129,7 @@ function Main() {
     );
 
     const rightContent = (
-        <div className={`${styles.tenPx} ${styles.animateFromRight} text-center text-sm-end`}>
+        <div className={`${styles.tenPx} ${styles.animateFromRight} text-center text-md-end`}>
             {
                 paragraphs.map(item => {
                     const {key, ElementType, content} = item;
