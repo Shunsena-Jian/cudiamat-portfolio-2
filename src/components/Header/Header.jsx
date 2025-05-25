@@ -1,5 +1,7 @@
 import HeaderLayout from "./HeaderLayout.jsx";
 import UnderLineGrow from "../UnderlineGrow/UnderLineGrow.jsx";
+import GithubLogo from '/src/assets/images/github-logo-white.png';
+import LinkedInLogo from '/src/assets/images/InBug-White.png';
 
 import styles from '/src/styles/header.module.css';
 
@@ -29,7 +31,7 @@ const logoItems = [
         id: 'github_logo',
         ElementType: 'a',
         SubElementType: 'img',
-        src: '/src/assets/images/github-logo-white.png',
+        src: GithubLogo,
         url: 'https://github.com/Shunsena-Jian',
         className: `m-0 ${styles.logoItem}`,
         target: '_blank',
@@ -38,7 +40,7 @@ const logoItems = [
         id: 'linkedIn_logo',
         ElementType: 'a',
         SubElementType: 'img',
-        src: '/src/assets/images/InBug-White.png',
+        src: LinkedInLogo,
         url: 'https://www.linkedin.com/in/jian-raphael-cudiamat-70b1a5269/',
         className: `m-0 ${styles.logoItem}`,
         target: '_blank',
