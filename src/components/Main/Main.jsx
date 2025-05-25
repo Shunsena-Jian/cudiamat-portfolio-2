@@ -8,9 +8,11 @@ import reactLogo from '/src/assets/images/react.png';
 
 import styles from '/src/styles/main.module.css';
 
+import MainLayout from './MainLayout.jsx';
+
 export default function Main() {
     return (
-        <section className={'main-section container-fluid p-3'}>
+        <MainLayout>
             <div className={'row'}>
                 <div className={'col-12 col-sm-6 d-flex align-items-end'}>
                     <div className={`col d-flex flex-wrap`}>
@@ -40,6 +42,6 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-        </section>
-)
+        </MainLayout>
+    );
 }
