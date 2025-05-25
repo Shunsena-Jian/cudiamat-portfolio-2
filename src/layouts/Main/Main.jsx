@@ -10,7 +10,8 @@ import styles from '/src/styles/main.module.css';
 
 import MainLayout from './MainLayout.jsx';
 
-const stylesLogo = `${styles.logo}`
+const stylesLogo = `${styles.logo}`;
+
 const imageElement = 'img';
 const pElement = 'p';
 
@@ -128,7 +129,7 @@ function Main() {
     );
 
     const rightContent = (
-        <div className={`${styles.tenPx} ${styles.animateFromRight} text-end`}>
+        <div className={`${styles.tenPx} ${styles.animateFromRight} text-center text-sm-end`}>
             {
                 paragraphs.map(item => {
                     const {key, ElementType, content} = item;

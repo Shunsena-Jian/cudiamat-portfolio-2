@@ -4,8 +4,8 @@ import '/src/styles/animations.css';
 import AppLayout from '/src/layouts/AppLayout.jsx'
 
 // Component Imports
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
+import Header from "./layouts/Header/Header";
+import Main from "./layouts/Main/Main";
 
 function App() {
     return (
