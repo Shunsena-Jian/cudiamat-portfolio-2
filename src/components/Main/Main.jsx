@@ -10,38 +10,40 @@ import styles from '/src/styles/main.module.css';
 
 import MainLayout from './MainLayout.jsx';
 
-export default function Main() {
+function Main() {
+    const leftContent = (
+        <div className={`${styles.logoContainer} d-flex flex-wrap`}>
+            <img src={laravelLogo} className={`${styles.logo}`}/>
+            <img src={bootstrapLogo} className={`${styles.logo}`}/>
+            <img src={javaLogo} className={`${styles.logo}`}/>
+            <img src={jQyeryLogo} className={`${styles.logo}`}/>
+            <img src={mySqlLogo} className={`${styles.logo}`}/>
+            <img src={nodeJSLogo} className={`${styles.logo}`}/>
+            <img src={reactLogo} className={`${styles.logo}`}/>
+        </div>
+    );
+
+    const rightContent = (
+        <div className={`${styles.tenPx} ${styles.animateFromRight} text-end`}>
+            <p>Based in the Philippines</p>
+            <p>I am a dedicated</p>
+            <p>Full Time Backend Developer</p>
+            <p>with expertise in the Laravel framework</p>
+            <p>passionate about building robust</p>
+            <p>and efficient server-side applications.</p>
+            <p>Driven by a desire to</p>
+            <p>broaden my technical horizons,</p>
+            <p>I am actively pursuing growth to evolve</p>
+            <p>into a versatile Full Stack Developer.</p>
+        </div>
+    );
+
     return (
-        <MainLayout>
-            <div className={'row'}>
-                <div className={'col-12 col-sm-6 d-flex align-items-end'}>
-                    <div className={`col d-flex flex-wrap`}>
-                        <div className={`${styles.logoContainer} d-flex flex-wrap`}>
-                            <img src={laravelLogo} className={`${styles.logo}`}/>
-                            <img src={bootstrapLogo} className={`${styles.logo}`}/>
-                            <img src={javaLogo} className={`${styles.logo}`}/>
-                            <img src={jQyeryLogo} className={`${styles.logo}`}/>
-                            <img src={mySqlLogo} className={`${styles.logo}`}/>
-                            <img src={nodeJSLogo} className={`${styles.logo}`}/>
-                            <img src={reactLogo} className={`${styles.logo}`}/>
-                        </div>
-                    </div>
-                </div>
-                <div className={'col-12 col-sm-6 d-flex flex-column align-items-end justify-content-end'}>
-                    <div className={`${styles.tenPx} ${styles.animateFromRight} text-end`}>
-                        <p>Based in the Philippines</p>
-                        <p>I am a dedicated</p>
-                        <p>Full Time Backend Developer</p>
-                        <p>with expertise in the Laravel framework</p>
-                        <p>passionate about building robust</p>
-                        <p>and efficient server-side applications.</p>
-                        <p>Driven by a desire to</p>
-                        <p>broaden my technical horizons,</p>
-                        <p>I am actively pursuing growth to evolve</p>
-                        <p>into a versatile Full Stack Developer.</p>
-                    </div>
-                </div>
-            </div>
-        </MainLayout>
+        <MainLayout
+            leftColumn={ leftContent }
+            rightColumn={ rightContent }
+        />
     );
 }
+
+export default Main;

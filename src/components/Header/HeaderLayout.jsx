@@ -1,10 +1,19 @@
-const HeaderLayout = ({ children }) => {
+const HeaderLayout = ({ upperContent, lowerContent }) => {
     return (
-        <nav className={'navbar navbar-expand-lg'}>
-            <div className={'container-fluid p-3'}>
-                { children }
+        <>
+            <div className={'header-section'}>
+                <div className={'row'}>
+                    <div className={'col container-fluid d-flex p-4'}>
+                        { upperContent }
+                    </div>
+                </div>
+                <div className={'row'}>
+                    <div className={'col container-fluid d-flex pt-0 p-4'}>
+                        { lowerContent }
+                    </div>
+                </div>
             </div>
-        </nav>
+        </>
     )
 }
 

@@ -45,38 +45,43 @@ const logoItems = [
     }
 ];
 
+const upperContent = (
+    <div className={'container-fluid d-flex flex-column align-items-start gap-3 m-0'}>
+        {
+            navItems.map(item => {
+                const {id, text, ElementType, className} = item;
+
+                return (
+                    <UnderLineGrow key={id}>
+                        <ElementType className={className}>{text}</ElementType>
+                    </UnderLineGrow>
+                );
+            })
+        }
+    </div>
+);
+
+const lowerContent = (
+    <div className={`container-fluid d-flex gap-3 ${styles.logoContainer}`}>
+        {
+            logoItems.map(item => {
+                const {id, ElementType, SubElementType, src, url, className, target} = item;
+
+                return (
+                    <ElementType key={id} href={url} target={target} className={className}>
+                        <SubElementType src={src} className={`${styles.logo}`}/>
+                    </ElementType>
+                );
+            })
+        }
+    </div>
+);
+
 export default function Header() {
     return (
-        <HeaderLayout>
-            <div className={'container-fluid d-flex flex-column'}>
-                <div className={'container-fluid d-flex flex-column align-items-start gap-3 m-0 mb-4'}>
-                    {
-                        navItems.map(item => {
-                            const {id, text, ElementType, className} = item;
-
-                            return (
-                                <UnderLineGrow key={id}>
-                                    <ElementType className={className}>{text}</ElementType>
-                                </UnderLineGrow>
-                            );
-                        })
-                    }
-                </div>
-                <div className={`container-fluid d-flex gap-3 ${styles.logoContainer}`}>
-                    {
-                        logoItems.map(item => {
-                            const {id, ElementType, SubElementType, src, url, className, target} = item;
-
-                            return (
-                                <ElementType key={id} href={url} target={target} className={className}>
-                                    <SubElementType src={src} className={`${styles.logo}`}/>
-                                </ElementType>
-                            );
-                        })
-                    }
-                </div>
-            </div>
-
-        </HeaderLayout>
+        <HeaderLayout
+            upperContent={ upperContent }
+            lowerContent={ lowerContent }
+        />
     )
 }
