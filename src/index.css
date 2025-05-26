@@ -14,8 +14,8 @@ body {
 
   margin: 0;
   position: relative;
-  overflow: hidden;
   display: flex;
+  overflow-x: hidden;
   place-items: center;
 }
 
