@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Chakra Petch', sans-serif;
   line-height: 1;
@@ -13,10 +17,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   margin: 0;
-  position: relative;
-  display: flex;
   overflow-x: hidden;
-  place-items: center;
+  min-height: 100%;
+  position: relative;
+}
+
+#root {
+  width: 100%;
 }
 
 #root {
@@ -25,7 +32,7 @@ body {
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

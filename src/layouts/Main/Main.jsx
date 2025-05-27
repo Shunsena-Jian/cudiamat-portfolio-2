@@ -144,6 +144,7 @@ function Main() {
 
     return (
         <MainLayout
+            upperContent={ 'Something' }
             leftColumn={ leftContent }
             rightColumn={ rightContent }
         />
