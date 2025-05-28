@@ -1,9 +1,11 @@
-import laravelLogo from '/src/assets/images/laravel-logo.png';
-import bootstrapLogo from '/src/assets/images/bootstrap.png';
 import javaLogo from '/src/assets/images/java.png';
-import jQueryLogo from '/src/assets/images/jQuery.png';
-import mySqlLogo from '/src/assets/images/mySQL.png';
+import pythonLogo from '/src/assets/images/python.png';
 import nodeJSLogo from '/src/assets/images/nodeJS.png';
+import laravelLogo from '/src/assets/images/laravel-logo.png';
+import mySqlLogo from '/src/assets/images/mySQL.png';
+import mongoDBLogo from '/src/assets/images/mongoDB.png';
+import bootstrapLogo from '/src/assets/images/bootstrap.png';
+import jQueryLogo from '/src/assets/images/jQuery.png';
 import reactLogo from '/src/assets/images/react.png';
 
 import styles from '/src/styles/main.module.css';
@@ -17,47 +19,81 @@ const pElement = 'p';
 
 const logoItems = [
     {
-        id: 'laravel_logo',
-        ElementType: imageElement,
-        src: laravelLogo,
-        className: stylesLogo
-    },
-    {
-        id: 'bootstrap_logo',
-        ElementType: imageElement,
-        src: bootstrapLogo,
-        className: stylesLogo
-    },
-    {
         id: 'java_logo',
         ElementType: imageElement,
         src: javaLogo,
-        className: stylesLogo
+        className: stylesLogo,
+        content: 'Java - My first programming language, which I learned during my college years. It laid the foundation for my programming journey and continues to influence my approach to software development.'
     },
     {
-        id: 'jQuery_logo',
+        id: 'python_logo',
         ElementType: imageElement,
-        src: jQueryLogo,
-        className: stylesLogo
-    },
-    {
-        id: 'mySQL_logo',
-        ElementType: imageElement,
-        src: mySqlLogo,
-        className: stylesLogo
+        src: pythonLogo,
+        className: stylesLogo,
+        content: 'Python - My second programming language, which I learned during my college years. We used this technology to use in our web scraping, data analysis, and machine learning tasks.'
     },
     {
         id: 'nodeJS_logo',
         ElementType: imageElement,
         src: nodeJSLogo,
-        className: stylesLogo
+        className: stylesLogo,
+        content: 'NodeJS w/ Express - My third programming language, which I learned during my college years as well to apply it in our thesis project, "Intellijent".',
+    },
+    {
+        id: 'laravel_logo',
+        ElementType: imageElement,
+        src: laravelLogo,
+        className: stylesLogo,
+        content: 'PHP Laravel - My current programming language, which I am actively using in my professional work as a Full Time Backend Developer. I have developed several projects using Laravel, including the Cadet Information System, where I utilized its powerful features to build robust and efficient server-side applications.'
+    },
+    {
+        id: 'mySQL_logo',
+        ElementType: imageElement,
+        src: mySqlLogo,
+        className: stylesLogo,
+        content: 'MySQL - I have been using this since my college years, where it served as my stepping stone in learning database management for the different tasks and projects I did.',
+    },
+    {
+        id: 'mongoDB_logo',
+        ElementType: imageElement,
+        src: mongoDBLogo,
+        className: stylesLogo,
+        content: 'MongoDB - I have used this in our thesis project and in my current role, which allowed me to work with NoSQL databases and understand their advantages in handling unstructured data.',
+    },
+    {
+        id: 'dynamoDB_logo',
+        ElementType: imageElement,
+        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Amazon_DynamoDB_logo.svg/1200px-Amazon_DynamoDB_logo.svg.png',
+        className: stylesLogo,
+        content: 'DynamoDB - I am currently using this in my current role, which has allowed me to work with a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.',
+    },
+    {
+        id: 'opensearch_logo',
+        ElementType: imageElement,
+        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/OpenSearch_logo.svg/1200px-OpenSearch_logo.svg.png',
+        className: stylesLogo,
+        content: 'OpenSearch - I am currently using this in my current role, which has allowed me to work with a open-source search and analytics suite derived from Elasticsearch.',
     },
     {
         id: 'react_logo',
         ElementType: imageElement,
         src: reactLogo,
         className: stylesLogo
-    }
+    },
+    {
+        id: 'bootstrap_logo',
+        ElementType: imageElement,
+        src: bootstrapLogo,
+        className: stylesLogo,
+        content: 'Bootstrap - This portfolio website was developed using Bootstrap, a framework I am actively leveraging to enhance my front-end skills in building responsive and visually appealing web applications.'
+    },
+    {
+        id: 'jQuery_logo',
+        ElementType: imageElement,
+        src: jQueryLogo,
+        className: stylesLogo,
+        content: 'JQuery - I have used this library in the Cadet Information System project, where I utilized it to enhance the user interface and improve the overall user experience.',
+    },
 ];
 
 const paragraphs = [
@@ -144,7 +180,7 @@ function Main() {
 
     return (
         <MainLayout
-            upperContent={ 'Something' }
+            upperContent={ null }
             leftColumn={ leftContent }
             rightColumn={ rightContent }
         />

@@ -7,14 +7,13 @@ export default function MainLayout ({ upperContent, leftColumn, rightColumn }) {
                 {/* Left Column */}
                 <div className={'col-12 col-md-6 d-flex align-items-end justify-content-center order-2 order-md-1'}>
                     <div className={'row flex-column'}>
-                        {
-                            upperContent && (
-                                <div className={'col d-flex justify-content-center order-2 order-md-1'}>
-                                    {upperContent}
-                                </div>
-
-                            )
-                        }
+                        <div className={'col d-flex justify-content-center order-2 order-md-1'}>
+                            {
+                                upperContent ? upperContent : (
+                                    <p className="text-center">Hover (for web) || Click (for mobile) a logo above to see details here.</p>
+                                )
+                            }
+                        </div>
                         <div className={'col order-1 order-md-2 pb-3 pt-md-3'}>
                             {leftColumn}
                         </div>
