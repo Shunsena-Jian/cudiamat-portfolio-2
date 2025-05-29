@@ -9,7 +9,8 @@ body {
 
   color-scheme: light dark;
   color: #ffffff;
-  background-color: #00112e;
+  background: #003b75;
+  background: linear-gradient(150deg,rgba(0, 59, 117, 1) 0%, rgba(0, 0, 0, 1) 30%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
