@@ -7,15 +7,15 @@ export default function MainLayout ({ upperContent, leftColumn, rightColumn }) {
                 {/* Left Column */}
                 <div className={'col-12 col-md-6 d-flex align-items-end justify-content-center order-2 order-md-1'}>
                     <div className={'row flex-column'}>
-                        <div className={'col d-flex justify-content-center order-2 order-md-1'}>
-                            {
-                                upperContent ? upperContent : (
-                                    <p className="text-center">Hover (for web) || Click (for mobile) a logo above to see details here.</p>
-                                )
-                            }
+
+                        {/* Content for the logo description */}
+                        <div className={'col d-flex justify-content-center text-center order-2 order-md-1'}>
+                            { upperContent }
                         </div>
+
+                        {/* Column for Logos */}
                         <div className={'col order-1 order-md-2 pb-3 pt-md-3'}>
-                            {leftColumn}
+                            { leftColumn }
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@ export default function MainLayout ({ upperContent, leftColumn, rightColumn }) {
                 {/* Right Column */}
                 <div
                     className={'col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-start justify-content-md-end order-1 order-md-2 pb-3 pb-md-0'}>
-                    {rightColumn}
+                    { rightColumn }
                 </div>
             </div>
         </main>

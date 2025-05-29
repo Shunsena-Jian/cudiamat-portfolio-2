@@ -1,4 +1,10 @@
+.logo .img {
+    width: 50%;
+    object-fit: contain;
+}
+
 .logo {
+    opacity: 0;
     height: 35px;
     width: 50px;
     display: block;
@@ -8,6 +14,10 @@
     background-color: #ffffff;
 
     transition: transform 0.1s ease-out;
+
+    animation-name: var(--animation-fade-in-from-bottom);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .logo:hover {
@@ -19,18 +29,62 @@
     gap: 10px;
 }
 
-.tenPx {
-    font-size: 15px;
+.logoContainer > div:nth-child(2) img {
+    animation-delay: 0.1s;
 }
 
-.animateFromLeft {
-    animation-name: var(--animation-fade-in-from-left);
+.logoContainer > div:nth-child(3) img {
+    animation-delay: 0.2s;
+}
+
+.logoContainer > div:nth-child(4) img {
+    animation-delay: 0.3s;
+}
+
+.logoContainer > div:nth-child(5) img {
+    animation-delay: 0.4s;
+}
+
+.logoContainer > div:nth-child(6) img {
+    animation-delay: 0.5s;
+}
+
+.logoContainer > div:nth-child(7) img {
+    animation-delay: 0.6s;
+}
+
+.logoContainer > div:nth-child(8) img {
+    animation-delay: 0.7s;
+}
+
+.logoContainer > div:nth-child(9) img {
+    animation-delay: 0.8s;
+}
+
+.logoContainer > div:nth-child(10) img {
+    animation-delay: 0.9s;
+}
+
+.logoContainer > div:nth-child(11) img {
+    animation-delay: 1s;
+}
+
+.paragraph {
+    font-size: 15px;
+
+    animation-name: var(--animation-fade-in-from-right);
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
-.animateFromRight {
-    animation-name: var(--animation-fade-in-from-right);
+.showDynamicContent {
+    animation-name: var(--animation-fade-in-from-top);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.hideDynamicContent {
+    animation-name: var(--animation-exit-fade-to-bottom);
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }

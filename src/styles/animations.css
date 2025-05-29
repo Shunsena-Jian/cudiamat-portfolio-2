@@ -1,10 +1,24 @@
 :root {
-    --animation-fade-in-from-left: fadeInFromLeft;
-    --animation-fade-in-from-bottom: fadeInFromBottom;
-    --animation-fade-in-from-right: fadeInFromRight;
+    --animation-fade-in-from-top: enterFadeFromTop;
+    --animation-fade-in-from-bottom: enterFadeFromBottom;
+    --animation-fade-in-from-left: enterFadeFromLeft;
+    --animation-fade-in-from-right: enterFadeFromRight;
+    --animation-exit-fade-to-bottom: exitFadeToBottom;
+    --animation-exit-fade-to-top: exitFadeToTop;
 }
 
-@keyframes fadeInFromBottom {
+@keyframes enterFadeFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes enterFadeFromBottom {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -15,7 +29,7 @@
     }
 }
 
-@keyframes fadeInFromLeft{
+@keyframes enterFadeFromLeft{
     from {
         opacity: 0;
         transform: translateX(-20px);
@@ -26,7 +40,7 @@
     }
 }
 
-@keyframes fadeInFromRight {
+@keyframes enterFadeFromRight {
     from {
         opacity: 0;
         transform: translateX(20px);
@@ -34,5 +48,27 @@
     to {
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+@keyframes exitFadeToBottom {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes exitFadeToTop {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 }
