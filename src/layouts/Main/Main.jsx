@@ -39,7 +39,7 @@ function Main() {
     };
 
     const leftContent = (
-        <div className={`${styles.logoContainer} d-flex flex-wrap`}>
+        <div className={`${styles.logoContainer} d-flex flex-wrap gap-3`}>
             {
                 logoItems.map(item => {
                     const {id, ElementType, src, className} = item;

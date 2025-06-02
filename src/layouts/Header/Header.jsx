@@ -15,13 +15,13 @@ const navItems = [
     {
         id: 'experience',
         text: 'Experience',
-        ElementType: 'p',
+        ElementType: 'h5',
         className: `m-0 ${styles.textItem}`,
     },
     {
         id: 'projects',
         text: 'Projects',
-        ElementType: 'p',
+        ElementType: 'h5',
         className: `m-0 ${styles.textItem}`,
     }
 ];
@@ -64,7 +64,7 @@ const upperContent = (
 );
 
 const lowerContent = (
-    <div className={`container-fluid d-flex gap-3 ${styles.logoContainer}`}>
+    <div className={`container-fluid d-flex gap-4 ${styles.logoContainer}`}>
         {
             logoItems.map(item => {
                 const {id, ElementType, SubElementType, src, url, className, target} = item;

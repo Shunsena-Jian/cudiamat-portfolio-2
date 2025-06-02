@@ -14,7 +14,7 @@ export default function MainLayout ({ upperContent, leftColumn, rightColumn }) {
                         </div>
 
                         {/* Column for Logos */}
-                        <div className={'col order-1 order-md-2 pb-3 pt-md-3'}>
+                        <div className={'col d-flex order-1 order-md-2 pb-3 pt-md-3'}>
                             { leftColumn }
                         </div>
                     </div>
