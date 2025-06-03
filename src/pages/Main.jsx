@@ -13,7 +13,7 @@ function Main() {
     const hoverTimeOut = useRef(null);
     const leaveTimeOut = useRef(null);
 
-    const handMouseHover = (item) => {
+    const handleMouseHover = (item) => {
         if (hoverTimeOut.current) {
             clearTimeout(hoverTimeOut.current);
         }
@@ -48,10 +48,10 @@ function Main() {
                         <div
                             key={id}
                             className={'d-flex flex-wrap'}
-                            onMouseEnter={() => handMouseHover(item)}
+                            onMouseEnter={() => handleMouseHover(item)}
                             onMouseLeave={handleMouseLeave}
                         >
-                            <ElementType key={id} src={src} className={className}/>
+                            <ElementType src={src} className={className}/>
                         </div>
                     );
                 })
