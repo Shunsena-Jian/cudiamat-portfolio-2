@@ -1,11 +1,11 @@
-import '/src/styles/animations.css';
+import '/src/animations.css';
 
 // Layout Imports
 import AppLayout from '/src/layouts/AppLayout.jsx'
 
 // Component Imports
-import Header from "./layouts/Header/Header";
-import Main from "./layouts/Main/Main";
+import Header from "./pages/Header.jsx";
+import Main from "./pages/Main.jsx";
 
 function App() {
     return (

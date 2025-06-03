@@ -1,5 +1,5 @@
-import HeaderLayout from "./HeaderLayout.jsx";
-import UnderLineGrow from "../../components/UnderlineGrow/UnderLineGrow.jsx";
+import HeaderLayout from "../layouts/HeaderLayout.jsx";
+import UnderLineGrow from "../components/UnderlineGrow/UnderLineGrow.jsx";
 import GithubLogo from '/src/assets/images/github-logo-white.png';
 import LinkedInLogo from '/src/assets/images/InBug-White.png';
 

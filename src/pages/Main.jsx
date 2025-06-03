@@ -1,9 +1,9 @@
-import { paragraphs } from '/src/constants/main/rightMainContent.js';
-import { logoItems } from '/src/constants/main/leftMainContent.js';
+import { paragraphs } from '/src/constants/MainContent/rightMainContent.js';
+import { logoItems } from '/src/constants/MainContent/leftMainContent.js';
 
 import styles from '/src/styles/main.module.css';
 
-import MainLayout from './MainLayout.jsx';
+import MainLayout from '../layouts/MainLayout.jsx';
 import {useRef, useState} from "react";
 
 function Main() {

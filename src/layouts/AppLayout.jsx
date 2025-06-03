@@ -1,4 +1,4 @@
-import Header from '/src/layouts/Header/Header.jsx';
+import Header from '/src/pages/Header.jsx';
 
 function AppLayout({ header, content }) {
     return (
