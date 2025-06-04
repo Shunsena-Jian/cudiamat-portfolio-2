@@ -1,4 +1,4 @@
-import underlineStyles from 'underline-grow.module.css';
+import underlineStyles from './underline-grow.module.css';
 
 const UnderLineGrow = ({ children }) => {
     return (

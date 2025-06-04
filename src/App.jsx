@@ -1,7 +1,7 @@
-import '/animations.css';
+import './animations.css';
 
 // Layout Imports
-import AppLayout from '/layouts/AppLayout.jsx'
+import AppLayout from './layouts/AppLayout.jsx'
 
 // Component Imports
 import Header from "./pages/Header.jsx";
