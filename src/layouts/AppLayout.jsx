@@ -1,5 +1,3 @@
-import Header from '/src/pages/Header.jsx';
-
 function AppLayout({ header, content }) {
     return (
         <div className={'container-fluid d-flex flex-column vh-100 p-0'}>

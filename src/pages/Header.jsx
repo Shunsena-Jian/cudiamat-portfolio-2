@@ -1,9 +1,9 @@
 import HeaderLayout from "../layouts/HeaderLayout.jsx";
 import UnderLineGrow from "../components/UnderlineGrow/UnderLineGrow.jsx";
-import GithubLogo from '/src/assets/images/github-logo-white.png';
-import LinkedInLogo from '/src/assets/images/InBug-White.png';
+import GithubLogo from '../assets/images/github-logo-white.png';
+import LinkedInLogo from '../assets/images/InBug-White.png';
 
-import styles from '/src/styles/header.module.css';
+import styles from '../styles/header.module.css';
 
 const navItems = [
     {

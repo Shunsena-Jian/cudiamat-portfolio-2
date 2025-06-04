@@ -1,7 +1,7 @@
-import { paragraphs } from '/src/constants/MainContent/rightMainContent.js';
-import { logoItems } from '/src/constants/MainContent/leftMainContent.js';
+import { paragraphs } from '../constants/MainContent/rightMainContent.js';
+import { logoItems } from '../constants/MainContent/leftMainContent.js';
 
-import styles from '/src/styles/main.module.css';
+import styles from '../styles/main.module.css';
 
 import MainLayout from '../layouts/MainLayout.jsx';
 import {useRef, useState} from 'react';
@@ -38,7 +38,7 @@ function Main() {
         }, 500);
     };
 
-    const dynamicContent = ({ activeContent, isVisible,  }) => {
+    const dynamicContent = ({ activeContent, isVisible }) => {
         if (activeContent) {
             return (
                 <div className={`${isVisible ? styles.showDynamicContent : styles.hideDynamicContent}`}>

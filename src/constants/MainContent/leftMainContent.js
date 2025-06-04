@@ -10,7 +10,7 @@ import reactLogo from "../../assets/images/react.png";
 import bootstrapLogo from "../../assets/images/bootstrap.png";
 import jQueryLogo from "../../assets/images/jQuery.png";
 
-import styles from '/src/styles/main.module.css';
+import styles from '../../styles/main.module.css';
 const stylesLogo = `${styles.logo}`;
 
 const imageElement = 'img';
