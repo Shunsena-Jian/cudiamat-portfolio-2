@@ -38,6 +38,22 @@ function Main() {
         }, 500);
     };
 
+    const dynamicContent = ({ activeContent, isVisible,  }) => {
+        if (activeContent) {
+            return (
+                <div className={`${isVisible ? styles.showDynamicContent : styles.hideDynamicContent}`}>
+                    {activeContent}
+                </div>
+            );
+        }
+
+        return (
+            <p className={`${styles.showDynamicContent}`}>
+                Hover or Click a logo to see the details.
+            </p>
+        );
+    }
+
     const leftContent = (
         <div className={`${styles.logoContainer} d-flex flex-wrap gap-3`}>
             {
@@ -75,15 +91,7 @@ function Main() {
 
     return (
         <MainLayout
-            upperContent={
-            activeContent
-                ? (
-                    <div className={`${isVisible ? styles.showDynamicContent : styles.hideDynamicContent}`}>
-                        { activeContent }
-                    </div>
-                )
-                : (<p className={`${styles.showDynamicContent}`}>Hover or Click a logo to see the details.</p>)
-            }
+            upperContent={dynamicContent({ activeContent, isVisible })}
             leftColumn={leftContent}
             rightColumn={rightContent}
         />
