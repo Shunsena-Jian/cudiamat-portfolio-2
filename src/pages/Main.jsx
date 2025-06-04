@@ -4,7 +4,7 @@ import { logoItems } from '/src/constants/MainContent/leftMainContent.js';
 import styles from '/src/styles/main.module.css';
 
 import MainLayout from '../layouts/MainLayout.jsx';
-import {useRef, useState} from "react";
+import {useRef, useState} from 'react';
 
 function Main() {
     const [activeContent, setActiveContent] = useState('');
