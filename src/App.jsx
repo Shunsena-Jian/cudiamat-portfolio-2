@@ -1,19 +1,31 @@
 import './animations.css';
+import { Routes, Route, Outlet } from 'react-router-dom';
 
-// Layout Imports
-import AppLayout from './layouts/AppLayout.jsx'
+import AppLayout from './layouts/AppLayout.jsx';
 
-// Component Imports
 import Header from "./pages/Header.jsx";
 import Main from "./pages/Main.jsx";
+import Experience from "./pages/Experience.jsx";
+import Projects from "./pages/Projects.jsx";
 
 function App() {
     return (
-        <AppLayout
-            header={ <Header /> }
-            content={ <Main />}
-        />
-    )
+        <Routes>
+            <Route
+                path="/"
+                element={
+                    <AppLayout
+                        header={<Header />}
+                        content={<Outlet />}
+                    />
+                }
+            >
+                <Route index element={<Main />} />
+                <Route path="projects" element={<Projects />} />
+                <Route path="experiences" element={<Experience />} />
+            </Route>
+        </Routes>
+    );
 }
 
-export default App
+export default App;

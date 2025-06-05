@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import HeaderLayout from "../layouts/HeaderLayout.jsx";
 import UnderLineGrow from "../components/UnderlineGrow/UnderLineGrow.jsx";
 import GithubLogo from '../assets/images/github-logo-white.png';
@@ -11,18 +13,21 @@ const navItems = [
         text: 'Jian Raphael R. Cudiamat',
         ElementType: 'h1',
         className: `m-0 ${styles.textItem}`,
+        to: '/',
     },
     {
         id: 'experience',
         text: 'Experience',
         ElementType: 'h5',
         className: `m-0 ${styles.textItem}`,
+        to: '/experiences',
     },
     {
         id: 'projects',
         text: 'Projects',
         ElementType: 'h5',
         className: `m-0 ${styles.textItem}`,
+        to: '/projects',
     }
 ];
 
@@ -51,13 +56,21 @@ const upperContent = (
     <div className={`container-fluid d-flex flex-column align-items-start gap-3 m-0 ${styles.textContainer}`}>
         {
             navItems.map(item => {
-                const {id, text, ElementType, className} = item;
+                const {id, text, ElementType, className, to} = item;
 
-                return (
+                const content =  (
                     <UnderLineGrow key={id}>
                         <ElementType className={className}>{text}</ElementType>
                     </UnderLineGrow>
                 );
+
+                if (to) {
+                    return (
+                        <Link key={id} to={to} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            {content}
+                        </Link>
+                    );
+                }
             })
         }
     </div>
