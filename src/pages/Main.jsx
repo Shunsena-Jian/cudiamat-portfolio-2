@@ -54,6 +54,12 @@ function Main() {
         );
     }
 
+    const handleAnimationEnd = (event) => {
+        if (event.animationName && event.animationName.includes('enterFadeFromBottom')) {
+            event.target.style.opacity = 1;
+        }
+    }
+
     const leftContent = (
         <div className={`${styles.logoContainer} d-flex flex-wrap gap-3`}>
             {
@@ -61,14 +67,14 @@ function Main() {
                     const {id, ElementType, src, className} = item;
 
                     return (
-                        <div
+                        <ElementType
                             key={id}
-                            className={'d-flex flex-wrap'}
+                            src={src}
                             onMouseEnter={() => handleMouseHover(item)}
                             onMouseLeave={handleMouseLeave}
-                        >
-                            <ElementType src={src} className={className}/>
-                        </div>
+                            className={className}
+                            onAnimationEnd={handleAnimationEnd}
+                        />
                     );
                 })
             }

@@ -2,7 +2,7 @@
     opacity: 0;
     height: 35px;
     width: 50px;
-    display: block;
+    display: inline-block;
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
@@ -12,7 +12,6 @@
 
     animation-name: var(--animation-fade-in-from-bottom);
     animation-duration: 0.5s;
-    animation-fill-mode: forwards;
 }
 
 .logo:hover {
@@ -25,43 +24,43 @@
     gap: 10px;
 }
 
-.logoContainer > div:nth-child(2) img {
+.logoContainer > img:nth-child(2) {
     animation-delay: 0.1s;
 }
 
-.logoContainer > div:nth-child(3) img {
+.logoContainer > img:nth-child(3) {
     animation-delay: 0.2s;
 }
 
-.logoContainer > div:nth-child(4) img {
+.logoContainer > img:nth-child(4) {
     animation-delay: 0.3s;
 }
 
-.logoContainer > div:nth-child(5) img {
+.logoContainer > img:nth-child(5) {
     animation-delay: 0.4s;
 }
 
-.logoContainer > div:nth-child(6) img {
+.logoContainer > img:nth-child(6) {
     animation-delay: 0.5s;
 }
 
-.logoContainer > div:nth-child(7) img {
+.logoContainer > img:nth-child(7) {
     animation-delay: 0.6s;
 }
 
-.logoContainer > div:nth-child(8) img {
+.logoContainer > img:nth-child(8) {
     animation-delay: 0.7s;
 }
 
-.logoContainer > div:nth-child(9) img {
+.logoContainer > img:nth-child(9) {
     animation-delay: 0.8s;
 }
 
-.logoContainer > div:nth-child(10) img {
+.logoContainer > img:nth-child(10) {
     animation-delay: 0.9s;
 }
 
-.logoContainer > div:nth-child(11) img {
+.logoContainer > img:nth-child(11) {
     animation-delay: 1s;
 }
 
