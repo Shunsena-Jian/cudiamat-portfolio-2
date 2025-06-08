@@ -2,55 +2,11 @@ import { Link } from "react-router-dom";
 
 import HeaderLayout from "../layouts/HeaderLayout.jsx";
 import UnderLineGrow from "../components/UnderlineGrow/UnderLineGrow.jsx";
-import GithubLogo from '../assets/images/github-logo-white.png';
-import LinkedInLogo from '../assets/images/InBug-White.png';
+
+import { navItems } from '../constants/Header/Navigation.js';
+import { logoItems } from '../constants/Header/Logos.js';
 
 import styles from '../styles/header.module.css';
-
-const navItems = [
-    {
-        id: 'name',
-        text: 'Jian Raphael R. Cudiamat',
-        ElementType: 'h1',
-        className: `m-0 ${styles.textItem}`,
-        to: '/',
-    },
-    {
-        id: 'experience',
-        text: 'Experience',
-        ElementType: 'h5',
-        className: `m-0 ${styles.textItem}`,
-        to: '/experiences',
-    },
-    {
-        id: 'projects',
-        text: 'Projects',
-        ElementType: 'h5',
-        className: `m-0 ${styles.textItem}`,
-        to: '/projects',
-    }
-];
-
-const logoItems = [
-    {
-        id: 'github_logo',
-        ElementType: 'a',
-        SubElementType: 'img',
-        src: GithubLogo,
-        url: 'https://github.com/Shunsena-Jian',
-        className: `m-0 ${styles.logoItem}`,
-        target: '_blank',
-    },
-    {
-        id: 'linkedIn_logo',
-        ElementType: 'a',
-        SubElementType: 'img',
-        src: LinkedInLogo,
-        url: 'https://www.linkedin.com/in/jian-raphael-cudiamat-70b1a5269/',
-        className: `m-0 ${styles.logoItem}`,
-        target: '_blank',
-    }
-];
 
 const upperContent = (
     <div className={`container-fluid d-flex flex-column align-items-start gap-3 m-0 ${styles.textContainer}`}>
