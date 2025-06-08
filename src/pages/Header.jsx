@@ -55,12 +55,12 @@ const logoItems = [
 const upperContent = (
     <div className={`container-fluid d-flex flex-column align-items-start gap-3 m-0 ${styles.textContainer}`}>
         {
-            navItems.map(item => {
+            navItems.map((item, index) => {
                 const {id, text, ElementType, className, to} = item;
 
                 const content =  (
                     <UnderLineGrow key={id}>
-                        <ElementType className={className}>{text}</ElementType>
+                        <ElementType className={className} style={{ '--item': index }}>{text}</ElementType>
                     </UnderLineGrow>
                 );
 
