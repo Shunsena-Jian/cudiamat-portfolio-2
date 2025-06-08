@@ -14,7 +14,7 @@ import styles from '../../styles/main.module.css';
 
 const defaultLogoProps = {
     ElementType: 'img',
-    className: `logo ${styles.logo}`,
+    className: `${styles.logo}`,
 };
 
 export const logoItems = [

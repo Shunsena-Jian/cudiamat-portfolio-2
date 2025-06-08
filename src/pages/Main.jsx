@@ -63,7 +63,7 @@ function Main() {
     const leftContent = (
         <div className={`${styles.logoContainer} d-flex flex-wrap gap-3`}>
             {
-                logoItems.map(item => {
+                logoItems.map((item, index) => {
                     const {id, ElementType, src, className} = item;
 
                     return (
@@ -74,6 +74,7 @@ function Main() {
                             onMouseLeave={handleMouseLeave}
                             className={className}
                             onAnimationEnd={handleAnimationEnd}
+                            style={{ '--n': index + 1 }}
                         />
                     );
                 })
