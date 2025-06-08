@@ -9,7 +9,7 @@ import { logoItems } from '../constants/Header/Logos.js';
 import styles from '../styles/header.module.css';
 
 const upperContent = (
-    <div className={`container-fluid d-flex flex-column align-items-start gap-3 m-0 ${styles.textContainer}`}>
+    <div className={`container-fluid d-flex flex-column align-items-start gap-3 m-0`}>
         {
             navItems.map((item, index) => {
                 const {id, text, ElementType, className, to} = item;
@@ -33,13 +33,13 @@ const upperContent = (
 );
 
 const lowerContent = (
-    <div className={`container-fluid d-flex gap-4 ${styles.logoContainer}`}>
+    <div className={`container-fluid d-flex gap-4`}>
         {
-            logoItems.map(item => {
+            logoItems.map((item, index) => {
                 const {id, ElementType, SubElementType, src, url, className, target} = item;
 
                 return (
-                    <ElementType key={id} href={url} target={target} className={className}>
+                    <ElementType key={id} href={url} target={target} className={className} style={{ '--logo': index }}>
                         <SubElementType src={src} className={`${styles.logo}`}/>
                     </ElementType>
                 );
