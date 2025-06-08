@@ -1,4 +1,10 @@
+import {useEffect} from "react";
+
 export default function Experience() {
+    useEffect(() => {
+        document.title = 'Cudiamat Portfolio - Experiences';
+    }, []);
+
     return (
         <>
             <main className={'experience-section container-fluid p-3'}>

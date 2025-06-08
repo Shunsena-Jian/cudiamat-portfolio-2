@@ -4,9 +4,13 @@ import { logoItems } from '../constants/MainContent/leftMainContent.js';
 import styles from '../styles/main.module.css';
 
 import MainLayout from '../layouts/MainLayout.jsx';
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 function Main() {
+    useEffect(() => {
+        document.title = 'Cudiamat Portfolio';
+    }, []);
+
     const [activeContent, setActiveContent] = useState('');
     const [isVisible, setIsVisible] = useState(false);
 
