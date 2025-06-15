@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  background: #000000;
 }
 
 body {
@@ -9,8 +10,9 @@ body {
 
   color-scheme: light dark;
   color: #ffffff;
-  background: #003b75;
+  background: #000000;
   background: linear-gradient(150deg,rgba(0, 59, 117, 1) 0%, rgba(0, 0, 0, 1) 30%);
+  background-repeat: no-repeat;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,37 +27,4 @@ body {
 
 #root {
   width: 100%;
-}
-
-#root {
-  width: 100%;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('data:image/svg+xml,\
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">\
-      <filter id="noiseFilter">\
-        <feTurbulence \
-          type="fractalNoise" \
-          baseFrequency="0.85" \
-          numOctaves="3" \
-          stitchTiles="stitch"/>\
-      </filter>\
-      <rect width="100%" height="100%" filter="url(%23noiseFilter)"/>\
-    </svg>');
-  opacity: 0.10; /* Adjust for desired grain intensity (0.05 to 0.15 is usually good) */
-  pointer-events: none; /* Makes the overlay non-interactive */
-  z-index: -1; /* Puts the grain behind the body's content */
-}
-
-.underline-grow {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
 }
