@@ -21,67 +21,67 @@ export const logoItems = [
     {
         id: 'java_logo',
         src: javaLogo,
-        content: 'Java - My first programming language, which I learned during my college years. It laid the foundation for my programming journey and continues to influence my approach to software development.',
+        content: 'Java wasn\'t just my first programming language; it was the bedrock of my entire coding journey, igniting my passion for software development during my college years.',
         ...defaultLogoProps
     },
     {
         id: 'python_logo',
         src: pythonLogo,
-        content: 'Python - My second programming language, which I learned during my college years. We used this technology to use in our web scraping, data analysis, and machine learning tasks.',
+        content: 'After laying my foundation with Java, Python became my next major focus in college. This incredibly versatile language quickly became my go-to for everything from web scraping and data analysis to diving into the world of machine learning.',
         ...defaultLogoProps
     },
     {
         id: 'nodeJS_logo',
         src: nodeJSLogo,
-        content: 'NodeJS w/ Express - My third programming language, which I learned during my college years as well to apply it in our thesis project, "Intellijent".',
+        content: 'For my college thesis, \'Intellijent,\' I delved into Node.js with Express. This powerful combination became the backbone of our project, allowing me to build robust applications and bring our vision to life. Which also gave me my passion for web development.',
         ...defaultLogoProps
     },
     {
         id: 'laravel_logo',
         src: laravelLogo,
-        content: 'PHP Laravel - My current programming language, which I am actively using in my professional work as a Full Time Backend Developer. I have developed several projects using Laravel, including the Cadet Information System, where I utilized its powerful features to build robust and efficient server-side applications.',
+        content: 'As a professional Backend Developer, PHP with Laravel is my go-to. I\'m actively using its powerful features to build robust and efficient server-side applications, including impactful projects like the Cadet Information System.',
         ...defaultLogoProps
     },
     {
         id: 'mySQL_logo',
         src: mySqlLogo,
-        content: 'MySQL - I have been using this since my college years, where it served as my stepping stone in learning database management for the different tasks and projects I did.',
+        content: 'MySQL was my introduction to the world of database management. From my college years onward, it\'s been the essential stepping stone, solidifying my understanding of how to efficiently organize and manage data for countless projects.',
         ...defaultLogoProps
     },
     {
         id: 'mongoDB_logo',
         src: mongoDBLogo,
-        content: 'MongoDB - I have used this in our thesis project and in my current role, which allowed me to work with NoSQL databases and understand their advantages in handling unstructured data.',
+        content: 'MongoDB was crucial for my college thesis, \'Intellijent,\' and continues to be a key tool in my current role. It\'s where I truly grasped the power of NoSQL databases and their advantages in handling diverse, unstructured data.',
         ...defaultLogoProps
     },
     {
         id: 'dynamoDB_logo',
         src: dynamoDB,
-        content: 'DynamoDB - I currently use this in my current role. My experience with DynamoDB allowed me to proficiently retrieve, add, modify, and delete data, thereby managing critical information within projects. I also gained practical experience utilizing NoSQL Workbenches for efficient data manipulation and exploration.',
+        content: 'In my current role, DynamoDB is a critical part of my toolkit. I proficiently manage vital project information—from cache to TTLs—confidently handling data retrieval, additions, modifications, and deletions to ensure seamless operations.',
         ...defaultLogoProps
     },
     {
         id: 'opensearch_logo',
         src: opensearch,
-        content: 'OpenSearch - I am currently using this in my current role, which allowed me to monitor our projects and enabled me to search large amounts of data in our organization.',
+        content: 'In my current role, OpenSearch is a vital tool for monitoring our projects and efficiently sifting through vast amounts of organizational data. It\'s taught me how to effectively log events and pinpoint exception errors across both testing and live environments, making the retrieval of data for pagination incredibly seamless.',
         ...defaultLogoProps
     },
     {
         id: 'react_logo',
         src: reactLogo,
-        content: 'React - This website was developed using React, a library I am actively using for my personal projects to enhance my front-end skills in building dynamic and interactive user interfaces.',
+        content: 'This very website showcases my work with React, a library I actively use in my personal projects. It\'s my go-to for honing my front-end skills, allowing me to craft dynamic and highly interactive user interfaces.',
         ...defaultLogoProps
     },
     {
         id: 'bootstrap_logo',
         src: bootstrapLogo,
-        content: 'Bootstrap - This portfolio website was developed using Bootstrap, a framework I am actively using for my personal projects to enhance my front-end skills in building responsive and visually appealing web applications.',
+        content: 'This very portfolio was built with Bootstrap, a framework I frequently use in my personal projects. It\'s instrumental in enhancing my front-end skills, allowing me to quickly create responsive and visually appealing web applications.',
         ...defaultLogoProps
     },
     {
         id: 'jQuery_logo',
         src: jQueryLogo,
-        content: 'JQuery - I have used this library in the Cadet Information System project, where I utilized it to enhance the user interface and improve the overall user experience.',
+        content: 'During my internship, I leveraged jQuery for the Cadet Information System project. It was instrumental in enhancing the user interface and significantly improving the overall user experience.',
         ...defaultLogoProps
     },
 ];
