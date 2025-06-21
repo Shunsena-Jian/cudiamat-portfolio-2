@@ -27,9 +27,9 @@ const RightColumnContent = ({rightColumn}) => {
 
 export default function MainLayout({mainContent, upperContent, leftColumn, rightColumn}) {
     return (
-        <main className="main-section container-fluid p-3">
+        <main className="main-section container-fluid d-flex align-items-center align-items-md-end justify-content-center p-3">
             {/* Main Row */}
-            <div className={'row'}>
+            <div className={'row container-fluid p-0'}>
                 {
                     mainContent
                         ? mainContent

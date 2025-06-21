@@ -6,7 +6,7 @@ function AppLayout({ header, content }) {
             </div>
 
             {/* Main Content Row */}
-            <div className={'row g-0 flex-grow-1 align-items-start align-items-md-end'}>
+            <div className={'row g-0 flex-grow-1'}>
                 { content }
             </div>
         </div>
