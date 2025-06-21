@@ -4,7 +4,7 @@ const paragraphProps = {
 
 const paragraphContents = [
     'Based in the Philippines',
-    'I am dedicated Full Time',
+    'I am a dedicated Full Time',
     'Backend Developer with',
     'expertise in the Laravel',
     'framework passionate about',

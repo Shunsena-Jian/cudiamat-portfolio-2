@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ExperienceLayout({ content }) {
     return (
-        <main className={'experience-section container-fluid p-3'}>
+        <main className={'experience-section container-fluid d-flex align-items-center justify-content-center p-3'}>
             <div className={'row'}>
                 <div className={'col'}>
                     {
