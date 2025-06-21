@@ -4,7 +4,7 @@ import ExperienceLayout from '../layouts/ExperienceLayout.jsx';
 
 export default function Experience() {
     useEffect(() => {
-        document.title = 'Cudiamat Portfolio - Experiences';
+        document.title = 'Experiences - Cudiamat';
     }, []);
 
     // TODO: Create content, current planning and designing phase

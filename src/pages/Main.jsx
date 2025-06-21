@@ -8,7 +8,7 @@ import {useEffect, useRef, useState} from 'react';
 
 function Main() {
     useEffect(() => {
-        document.title = 'Cudiamat Portfolio';
+        document.title = 'Portfolio - Cudiamat';
     }, []);
 
     const [activeContent, setActiveContent] = useState('');
