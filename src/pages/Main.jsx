@@ -45,9 +45,10 @@ function Main() {
     const dynamicContent = ({ activeContent, isVisible }) => {
         if (activeContent) {
             return (
-                <div className={`${isVisible ? styles.showDynamicContent : styles.hideDynamicContent}`}>
-                    {activeContent}
-                </div>
+                <div
+                    className={`${isVisible ? styles.showDynamicContent : styles.hideDynamicContent}`}
+                    dangerouslySetInnerHTML={{ __html: activeContent }}
+                />
             );
         }
 
