@@ -26,7 +26,7 @@ function Main() {
         }
 
         setIsVisible(true);
-        setActiveContent(item.content);
+        setActiveContent(`<strong>${item.boldedWord}</strong> ${item.description}`);
     };
 
     const handleMouseLeave = () => {
