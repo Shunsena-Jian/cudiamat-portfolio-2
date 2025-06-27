@@ -1,10 +1,8 @@
-import { paragraphs } from '../constants/MainContent/rightMainContent.js';
-import { logoItems } from '../constants/MainContent/leftMainContent.js';
-
-import styles from '../styles/main.module.css';
-
 import MainLayout from '../layouts/MainLayout.jsx';
 import {useEffect, useRef, useState} from 'react';
+import DynamicContent from "../components/MainPage/DynamicContent.jsx";
+import LeftContent from "../components/MainPage/LeftContent.jsx";
+import RightContent from "../components/MainPage/RightContent.jsx";
 
 function Main() {
     useEffect(() => {
@@ -42,70 +40,17 @@ function Main() {
         }, 500);
     };
 
-    const dynamicContent = ({ activeContent, isVisible }) => {
-        if (activeContent) {
-            return (
-                <div
-                    className={`${isVisible ? styles.showDynamicContent : styles.hideDynamicContent}`}
-                    dangerouslySetInnerHTML={{ __html: activeContent }}
-                />
-            );
-        }
-
-        return (
-            <p className={`${styles.showDynamicContent}`}>
-                Hover or Click a logo to see the details.
-            </p>
-        );
-    }
-
     const handleAnimationEnd = (event) => {
         if (event.animationName && event.animationName.includes('enterFadeFromBottom')) {
             event.target.style.opacity = 1;
         }
     }
 
-    const leftContent = (
-        <div className={`${styles.logoContainer} d-flex flex-wrap gap-3`}>
-            {
-                logoItems.map((item, index) => {
-                    const {id, ElementType, src, className} = item;
-
-                    return (
-                        <ElementType
-                            key={id}
-                            src={src}
-                            onMouseEnter={() => handleMouseHover(item)}
-                            onMouseLeave={handleMouseLeave}
-                            className={className}
-                            onAnimationEnd={handleAnimationEnd}
-                            style={{ '--n': index + 1 }}
-                        />
-                    );
-                })
-            }
-        </div>
-    );
-
-    const rightContent = (
-        <div className={`${styles.paragraph} text-center text-md-end`}>
-            {
-                paragraphs.map(item => {
-                    const {key, ElementType, content} = item;
-
-                    return (
-                        <ElementType key={key}>{content}</ElementType>
-                    );
-                })
-            }
-        </div>
-    );
-
     return (
         <MainLayout
-            upperContent={dynamicContent({ activeContent, isVisible })}
-            leftColumn={leftContent}
-            rightColumn={rightContent}
+            upperContent={<DynamicContent activeContent={activeContent} isVisible={isVisible} />}
+            leftColumn={<LeftContent handleMouseHover={handleMouseHover} handleMouseLeave={handleMouseLeave} handleAnimationEnd={handleAnimationEnd} />}
+            rightColumn={<RightContent />}
         />
     );
 }
