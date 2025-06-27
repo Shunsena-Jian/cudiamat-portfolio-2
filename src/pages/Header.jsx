@@ -8,8 +8,8 @@ import { logoItems } from '../constants/Header/Logos.js';
 
 import styles from '../styles/header.module.css';
 
-const upperContent = (
-    <div className={`container-fluid d-flex flex-column align-items-start gap-3 m-0`}>
+const NavigationLinks = () => (
+    <>
         {
             navItems.map((item, index) => {
                 const {id, text, ElementType, className, to} = item;
@@ -22,18 +22,24 @@ const upperContent = (
 
                 if (to) {
                     return (
-                        <Link key={id} to={to} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <Link key={id} to={to} className={styles.linkReset}>
                             {content}
                         </Link>
                     );
                 }
             })
         }
-    </div>
+    </>
 );
 
-const lowerContent = (
-    <div className={`container-fluid d-flex gap-4`}>
+const upperContent = (
+    <nav className={`container-fluid d-flex flex-column align-items-start gap-3 m-0`}>
+        <NavigationLinks />
+    </nav>
+);
+
+const SocialLogos = () => (
+    <>
         {
             logoItems.map((item, index) => {
                 const {id, ElementType, SubElementType, src, url, className, target} = item;
@@ -45,6 +51,12 @@ const lowerContent = (
                 );
             })
         }
+    </>
+);
+
+const lowerContent = (
+    <div className={`container-fluid d-flex gap-4`}>
+        <SocialLogos />
     </div>
 );
 

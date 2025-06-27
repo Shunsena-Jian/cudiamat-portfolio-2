@@ -31,6 +31,8 @@
     animation-delay: calc((var(--logo) - 1) * 0.1s);
 }
 
-p {
-    margin: 0;
+.linkReset {
+    text-decoration: none;
+    color: inherit;
 }
+

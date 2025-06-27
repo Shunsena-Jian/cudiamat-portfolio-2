@@ -12,7 +12,7 @@ export default function Projects() {
         return(
             <ul>
                 {
-                    list.map((project, index) => {
+                    list.map((project) => {
                         const {key, content, ElementType} = project;
 
                         return (
