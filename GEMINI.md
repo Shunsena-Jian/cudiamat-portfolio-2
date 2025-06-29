@@ -20,12 +20,12 @@ The main page has a cool interactive section where you can hover over different 
 I organized the codebase into these main folders:
 
 - `src/`
-    - `assets/`: For all my static assets like images and logos.
-    - `components/`: Reusable React components that I use across different pages.
-    - `constants/`: Where I keep static data, like navigation links and content for various sections.
-    - `layouts/`: Defines the overall structure for different parts of the app (like `AppLayout`, `HeaderLayout`).
-    - `pages/`: The top-level components for each page (like `Main`, `Projects`).
-    - `styles/`: For my global and modular CSS stylesheets.
+  - `assets/`: For all my static assets like images and logos.
+  - `components/`: Reusable React components that I use across different pages.
+  - `constants/`: Where I keep static data, like navigation links and content for various sections.
+  - `layouts/`: Defines the overall structure for different parts of the app (like `AppLayout`, `HeaderLayout`).
+  - `pages/`: The top-level components for each page (like `Main`, `Projects`).
+  - `styles/`: For my global and modular CSS stylesheets.
 
 ## Available Scripts
 

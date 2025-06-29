@@ -1,6 +1,10 @@
+import { useContext } from 'react';
+import { MainContext } from '../../context/MainContext.jsx';
 import styles from '../../styles/main.module.css';
 
-const DynamicContent = ({ activeContent, isVisible }) => {
+const DynamicContent = () => {
+    const { activeContent, isVisible } = useContext(MainContext);
+
     if (activeContent) {
         return (
             <div
@@ -16,6 +20,5 @@ const DynamicContent = ({ activeContent, isVisible }) => {
         </p>
     );
 };
-
 export default DynamicContent;
 

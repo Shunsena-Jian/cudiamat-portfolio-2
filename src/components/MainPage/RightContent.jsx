@@ -1,15 +1,22 @@
-import { paragraphs } from '../../constants/MainContent/rightMainContent.js';
+import {useEffect, useState} from "react";
 import styles from '../../styles/main.module.css';
 
 const RightContent = () => {
+    const [paragraphs, setParagraphs] = useState([]);
+
+    useEffect(() => {
+        fetch('/src/data/rightMainContent.json')
+            .then(response => response.json())
+            .then(data => setParagraphs(data))
+            .catch(error => console.error('Error fetching paragraphs:', error));
+    }, []);
+
     return (
         <div className={`${styles.paragraph} text-center text-md-end`}>
             {
-                paragraphs.map(item => {
-                    const {key, ElementType, content} = item;
-
+                paragraphs.map((paragraph, index) => {
                     return (
-                        <ElementType key={key}>{content}</ElementType>
+                        <p key={index}>{paragraph}</p>
                     );
                 })
             }

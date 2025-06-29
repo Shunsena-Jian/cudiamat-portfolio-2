@@ -1,7 +1,7 @@
 const HeaderLayout = ({ upperContent, lowerContent }) => {
     return (
         <>
-            <div className={'header-section'}>
+            <header className={'header-section'}>
                 <div className={'row'}>
                     <div className={'col container-fluid d-flex p-4'}>
                         { upperContent }
@@ -12,7 +12,7 @@ const HeaderLayout = ({ upperContent, lowerContent }) => {
                         { lowerContent }
                     </div>
                 </div>
-            </div>
+            </header>
         </>
     )
 }

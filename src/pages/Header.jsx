@@ -3,8 +3,52 @@ import { Link } from "react-router-dom";
 import HeaderLayout from "../layouts/HeaderLayout.jsx";
 import UnderLineGrow from "../components/UnderlineGrow/UnderLineGrow.jsx";
 
-import { navItems } from '../constants/Header/Navigation.js';
-import { logoItems } from '../constants/Header/Logos.js';
+const navItems = [
+    {
+        id: 'name',
+        text: 'Jian Raphael R. Cudiamat',
+        ElementType: 'h1',
+        className: `m-0 ${styles.textItem}`,
+        to: '/',
+    },
+    {
+        id: 'experience',
+        text: 'Experience',
+        ElementType: 'h5',
+        className: `m-0 ${styles.textItem}`,
+        to: '/experiences',
+    },
+    {
+        id: 'projects',
+        text: 'Projects',
+        ElementType: 'h5',
+        className: `m-0 ${styles.textItem}`,
+        to: '/projects',
+    }
+];
+import GithubLogo from "../assets/images/github-logo-white.png";
+import LinkedInLogo from "../assets/images/InBug-White.png";
+
+const logoItems = [
+    {
+        id: 'github_logo',
+        ElementType: 'a',
+        SubElementType: 'img',
+        src: GithubLogo,
+        url: 'https://github.com/Shunsena-Jian',
+        className: `m-0 ${styles.logoItem}`,
+        target: '_blank',
+    },
+    {
+        id: 'linkedIn_logo',
+        ElementType: 'a',
+        SubElementType: 'img',
+        src: LinkedInLogo,
+        url: 'https://www.linkedin.com/in/jian-raphael-cudiamat-70b1a5269/',
+        className: `m-0 ${styles.logoItem}`,
+        target: '_blank',
+    }
+];
 
 import styles from '../styles/header.module.css';
 
@@ -46,7 +90,7 @@ const SocialLogos = () => (
 
                 return (
                     <ElementType key={id} href={url} target={target} className={className} style={{ '--logo': index }}>
-                        <SubElementType src={src} className={`${styles.logo}`}/>
+                        <SubElementType src={src} className={`${styles.logo}`} alt={id.replace('_', ' ')}/>
                     </ElementType>
                 );
             })

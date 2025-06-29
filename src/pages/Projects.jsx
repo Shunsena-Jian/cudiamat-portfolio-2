@@ -1,24 +1,27 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 import ProjectLayout from "../layouts/ProjectLayout.jsx";
-import { list } from "../constants/Projects/list.js"
 
 export default function Projects() {
+    const [projects, setProjects] = useState([]);
+
     useEffect(() => {
         document.title = 'Projects - Cudiamat';
+        fetch('/src/data/projects.json')
+            .then(response => response.json())
+            .then(data => setProjects(data))
+            .catch(error => console.error('Error fetching projects:', error));
     }, []);
 
     const listProjects = () => {
         return(
             <ul>
                 {
-                    list.map((project) => {
-                        const {key, content, ElementType} = project;
-
+                    projects.map((project, index) => {
                         return (
-                            <ElementType key={key}>
-                                {content}
-                            </ElementType>
+                            <li key={index}>
+                                {project}
+                            </li>
                         );
                     })
                 }
