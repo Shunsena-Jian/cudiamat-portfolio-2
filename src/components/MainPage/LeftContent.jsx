@@ -20,77 +20,77 @@ const logoItems = [
         id: 'java_logo',
         src: javaLogo,
         boldedWord: 'Java',
-        description: 'wasn\'t just my first programming language; it was the bedrock of my entire coding journey, igniting my passion for software development during my college years.',
+        description: 'was more than my first programming language; it was the bedrock of my coding journey, sparking a passion for software development that began in college.',
         ...defaultLogoProps
     },
     {
         id: 'python_logo',
         src: pythonLogo,
         boldedWord: 'Python',
-        description: 'became my next major focus in college. This incredibly versatile language quickly became my go-to for everything from web scraping and data analysis to diving into the world of machine learning.',
+        description: 'became my next major focus in college. This versatile language quickly became my go-to for everything from web scraping and data analysis to exploring machine learning.',
         ...defaultLogoProps
     },
     {
         id: 'nodeJS_logo',
         src: nodeJSLogo,
         boldedWord: 'Node.js with Express',
-        description: 'This powerful combination became the backbone of our project, allowing me to build robust applications and bring our vision to life. Which also gave me my passion for web development.',
+        description: 'became the backbone of our project, "Intellijent", allowing me to build robust applications and bring our vision to life, igniting my passion for web development.',
         ...defaultLogoProps
     },
     {
         id: 'laravel_logo',
         src: laravelLogo,
         boldedWord: 'PHP with Laravel',
-        description: 'is my go-to. I\'m actively using its powerful features to build robust and efficient server-side applications, including impactful projects like the Cadet Information System.',
+        description: 'is my primary tool for building robust and efficient server-side applications. I leverage its powerful features for impactful projects, such as the Cadet Information System.',
         ...defaultLogoProps
     },
     {
         id: 'mySQL_logo',
         src: mySqlLogo,
         boldedWord: 'MySQL',
-        description: 'was my introduction to the world of database management. From my college years onward, it\'s been the essential stepping stone, solidifying my understanding of how to efficiently organize and manage data for countless projects.',
+        description: 'was my introduction to database management. Since college, it has been an essential stepping stone in solidifying my understanding of how to efficiently organize and manage data.',
         ...defaultLogoProps
     },
     {
         id: 'mongoDB_logo',
         src: mongoDBLogo,
         boldedWord: 'MongoDB',
-        description: 'was crucial for my college thesis, \'Intellijent,\' and continues to be a key tool in my current role. It\'s where I truly grasped the power of NoSQL databases and their advantages in handling diverse, unstructured data.',
+        description: 'was crucial for my college thesis, \'Intellijent,\' and remains a key tool in my current role. It was here I truly grasped the power of NoSQL for handling diverse, unstructured data.',
         ...defaultLogoProps
     },
     {
         id: 'dynamoDB_logo',
         src: dynamoDB,
         boldedWord: 'DynamoDB',
-        description: 'is a critical part of my toolkit. I proficiently manage vital project information—from cache to TTLs—confidently handling data retrieval, additions, modifications, and deletions to ensure seamless operations.',
+        description: 'is a critical part of my toolkit. I proficiently manage vital project information—from cache to TTLs—and confidently handle data retrieval, additions, and modifications to ensure seamless operations.',
         ...defaultLogoProps
     },
     {
         id: 'opensearch_logo',
         src: opensearch,
         boldedWord: 'OpenSearch',
-        description: 'is a vital tool for monitoring our projects and efficiently sifting through vast amounts of organizational data. It\'s taught me how to effectively log events and pinpoint exception errors across both testing and live environments, making the retrieval of data for pagination incredibly seamless.',
+        description: 'is a vital tool for monitoring projects and sifting through vast amounts of data. It has taught me to effectively log events and pinpoint errors in testing and live environments, making data retrieval for pagination seamless.',
         ...defaultLogoProps
     },
     {
         id: 'react_logo',
         src: reactLogo,
         boldedWord: 'React',
-        description: 'a library I actively use in my personal projects. It\'s my go-to for honing my front-end skills, allowing me to craft dynamic and highly interactive user interfaces.',
+        description: 'is the library I use in my personal projects to hone my front-end skills, allowing me to craft dynamic and interactive user interfaces.',
         ...defaultLogoProps
     },
     {
         id: 'bootstrap_logo',
         src: bootstrapLogo,
         boldedWord: 'Bootstrap',
-        description: 'a framework I frequently use in my personal projects. It\'s instrumental in enhancing my front-end skills, allowing me to quickly create responsive and visually appealing web applications.',
+        description: 'is a framework I use in my personal projects to enhance my front-end skills, allowing me to quickly create responsive and visually appealing web applications.',
         ...defaultLogoProps
     },
     {
         id: 'jQuery_logo',
         src: jQueryLogo,
         boldedWord: 'jQuery',
-        description: 'for the Cadet Information System project. It was instrumental in enhancing the user interface and significantly improving the overall user experience.',
+        description: 'was instrumental in the Cadet Information System project, where I used it to enhance the user interface and significantly improve the overall user experience.',
         ...defaultLogoProps
     },
 ];
@@ -126,4 +126,3 @@ const LeftContent = () => {
 };
 
 export default LeftContent;
-
