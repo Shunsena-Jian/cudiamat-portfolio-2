@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 import HeaderLayout from "../layouts/HeaderLayout.jsx";
 import UnderLineGrow from "../components/UnderlineGrow/UnderLineGrow.jsx";
@@ -52,29 +52,34 @@ const logoItems = [
 
 import styles from '../styles/header.module.css';
 
-const NavigationLinks = () => (
-    <>
-        {
-            navItems.map((item, index) => {
-                const {id, text, ElementType, className, to} = item;
+const NavigationLinks = () => {
+    const location = useLocation();
 
-                const content =  (
-                    <UnderLineGrow key={id}>
-                        <ElementType className={className} style={{ '--item': index }}>{text}</ElementType>
-                    </UnderLineGrow>
-                );
+    return (
+        <>
+            {
+                navItems.map((item, index) => {
+                    const {id, text, ElementType, className, to} = item;
+                    const isActive = location.pathname === to;
 
-                if (to) {
-                    return (
-                        <Link key={id} to={to} className={styles.linkReset}>
-                            {content}
-                        </Link>
+                    const content =  (
+                        <UnderLineGrow key={id} isActive={isActive} >
+                            <ElementType className={className} style={{ '--item': index }}>{text}</ElementType>
+                        </UnderLineGrow>
                     );
-                }
-            })
-        }
-    </>
-);
+
+                    if (to) {
+                        return (
+                            <Link key={id} to={to} className={styles.linkReset}>
+                                {content}
+                            </Link>
+                        );
+                    }
+                })
+            }
+        </>
+    );
+};
 
 const upperContent = (
     <nav className={`container-fluid d-flex flex-column align-items-start gap-3 m-0`}>

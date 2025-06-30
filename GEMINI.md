@@ -35,3 +35,6 @@ I've set up the following scripts in `package.json` that can be run with `npm ru
 - **`build`**: Bundles the app for production.
 - **`lint`**: Lints the project to check for any code quality issues.
 - **`preview`**: Lets me preview the production build locally before deploying.
+
+## Instructions
+- Do not change anything. Just tell me and show what needs to be changed based on my request.

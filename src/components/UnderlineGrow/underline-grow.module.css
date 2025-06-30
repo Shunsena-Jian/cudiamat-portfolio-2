@@ -18,6 +18,7 @@
     transition: transform 0.25s ease-out;
 }
 
-.underlineGrow:hover::after {
+.underlineGrow:hover::after,
+.underlineGrow.active::after {
     transform: scaleX(1);
 }
