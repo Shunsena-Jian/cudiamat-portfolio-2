@@ -5,7 +5,7 @@ const RightContent = () => {
     const [paragraphs, setParagraphs] = useState([]);
 
     useEffect(() => {
-        fetch('/src/data/rightMainContent.json')
+        fetch('/data/rightMainContent.json')
             .then(response => response.json())
             .then(data => setParagraphs(data))
             .catch(error => console.error('Error fetching paragraphs:', error));
