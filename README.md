@@ -19,6 +19,9 @@ The main page has a cool interactive section where you can hover over different 
 
 I organized the codebase into these main folders:
 
+- `public/`
+    - `data/`: Holds JSON files that dynamically populate content.
+
 - `src/`
     - `assets/`: For all my static assets like images and logos.
     - `components/`: Reusable React components that I use across different pages.

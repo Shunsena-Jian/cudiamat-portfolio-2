@@ -19,6 +19,9 @@ The main page has a cool interactive section where you can hover over different 
 
 I organized the codebase into these main folders:
 
+- `public/`
+  - `data/`: Holds JSON files that dynamically populate content.
+
 - `src/`
   - `assets/`: For all my static assets like images and logos.
   - `components/`: Reusable React components that I use across different pages.
@@ -37,4 +40,4 @@ I've set up the following scripts in `package.json` that can be run with `npm ru
 - **`preview`**: Lets me preview the production build locally before deploying.
 
 ## Instructions
-- Do not change anything. Just tell me and show what needs to be changed based on my request.
+- Do not change anything immediately. Just tell me and show what needs to be changed based on the user's request.
