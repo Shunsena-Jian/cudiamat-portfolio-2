@@ -3,66 +3,66 @@
         "id": "java_logo",
         "src": "java.png",
         "boldedWord": "Java",
-        "description": "was more than my first programming language; it was the bedrock of my coding journey, sparking a passion for software development that began in college."
+        "description": "As my first programming language, it became the bedrock of my coding journey and sparked a lifelong passion for software development that started in college."
     },
     {
         "id": "python_logo",
         "src": "python.png",
         "boldedWord": "Python",
-        "description": "became my next major focus in college. This versatile language quickly became my go-to for everything from web scraping and data analysis to exploring machine learning."
+        "description": "In college, I dove deep into this versatile language, using it for everything from web scraping and data analysis to exploring machine learning."
     },
     {
         "id": "nodeJS_logo",
         "src": "nodeJS.png",
         "boldedWord": "Node.js with Express",
-        "description": "became the backbone of our project, \"Intellijent\", allowing me to build robust applications and bring our vision to life, igniting my passion for web development."
+        "description": "This powerful duo was the backbone of my college thesis, \"Intellijent,\" allowing me to build robust applications and igniting my passion for web development."
     },
     {
         "id": "laravel_logo",
         "src": "laravel-logo.png",
         "boldedWord": "PHP with Laravel",
-        "description": "is my primary tool for building robust and efficient server-side applications. I leverage its powerful features for impactful projects, such as the Cadet Information System."
+        "description": "As my primary tool for server-side development, I use its powerful features to build robust applications like the Cadet Information System, which marked the beginning of my web development journey during my internship."
     },
     {
         "id": "mySQL_logo",
         "src": "mySQL.png",
         "boldedWord": "MySQL",
-        "description": "was my introduction to database management. Since college, it has been an essential stepping stone in solidifying my understanding of how to efficiently organize and manage data."
+        "description": "As my introduction to database management in college, it was an essential stepping stone that solidified my understanding of efficient data organization and management."
     },
     {
         "id": "mongoDB_logo",
         "src": "mongoDB.png",
         "boldedWord": "MongoDB",
-        "description": "was crucial for my college thesis, 'Intellijent,' and remains a key tool in my current role. It was here I truly grasped the power of NoSQL for handling diverse, unstructured data."
+        "description": "Crucial for my college thesis, 'Intellijent,' and still a key tool in my current role, it was with this database that I truly grasped the power of NoSQL for handling diverse, unstructured data."
     },
     {
         "id": "dynamoDB_logo",
         "src": "dynamoDB.svg",
         "boldedWord": "DynamoDB",
-        "description": "is a critical part of my toolkit. I proficiently manage vital project information—from cache to TTLs—and confidently handle data retrieval, additions, and modifications to ensure seamless operations."
+        "description": "As a core part of my toolkit, I use it to manage vital project information—from cache to TTLs—and confidently handle data retrieval, additions, and modifications to ensure seamless operations."
     },
     {
         "id": "opensearch_logo",
         "src": "opensearch.svg",
         "boldedWord": "OpenSearch",
-        "description": "is a vital tool for monitoring projects and sifting through vast amounts of data. It has taught me to effectively log events and pinpoint errors in testing and live environments, making data retrieval for pagination seamless."
+        "description": "A vital tool in my workflow, I use it to monitor projects by sifting through vast amounts of data, effectively logging events, and pinpointing errors to ensure seamless data retrieval for features like pagination."
     },
     {
         "id": "react_logo",
         "src": "react.png",
         "boldedWord": "React",
-        "description": "is the library I use in my personal projects to hone my front-end skills, allowing me to craft dynamic and interactive user interfaces."
+        "description": "I use this library in my personal projects to hone my front-end skills, allowing me to craft dynamic and interactive user interfaces that bring my ideas to life."
     },
     {
         "id": "bootstrap_logo",
         "src": "bootstrap.png",
         "boldedWord": "Bootstrap",
-        "description": "is a framework I use in my personal projects to enhance my front-end skills, allowing me to quickly create responsive and visually appealing web applications."
+        "description": "In this portfolio, I use this framework to enhance my front-end skills by rapidly creating responsive and visually appealing web applications."
     },
     {
         "id": "jQuery_logo",
         "src": "jQuery.png",
         "boldedWord": "jQuery",
-        "description": "was instrumental in the Cadet Information System project, where I used it to enhance the user interface and significantly improve the overall user experience."
+        "description": "This was instrumental in the Cadet Information System project, where I used it to enhance the user interface and significantly improve the overall user experience."
     }
 ]
