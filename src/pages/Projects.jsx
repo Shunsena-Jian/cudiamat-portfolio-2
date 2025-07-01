@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 
 import UnderLineGrow from "../components/UnderlineGrow/UnderLineGrow.jsx";
+import styles from "../styles/projects.module.css"
 
 import ProjectLayout from "../layouts/ProjectLayout.jsx";
 
@@ -23,7 +24,7 @@ export default function Projects() {
                         return (
                             <li key={index} className={'mb-2'}>
                                 <UnderLineGrow>
-                                    <h5 className={'m-0'}>
+                                    <h5 className={`m-0 ${styles.projectTitle}`}>
                                         {project}
                                     </h5>
                                 </UnderLineGrow>

@@ -1,0 +1,3 @@
+.projectTitle {
+    font-size: clamp(1rem, 1vw, 1.50rem);
+}
