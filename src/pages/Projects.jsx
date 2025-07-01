@@ -38,7 +38,9 @@ export default function Projects() {
 
     return (
         <ProjectLayout
-            content={ listProjects() }
+            left={ listProjects() }
+            middle={ null }
+            right={ null }
         />
     );
 }

@@ -1,16 +1,27 @@
-export default function ProjectLayout({content}) {
+export default function ProjectLayout({left, middle, right}) {
     return (
-        <main className={'project-section container-fluid p-3 d-flex justify-content-center'}>
+        <main className={'project-section container-fluid p-3 d-flex justify-content-start'}>
             <section className={'row container-fluid p-0'}>
-                <div className={'col-6 d-flex align-items-center'}>
+                <div className={'col-4 d-flex align-items-center'}>
                     {
-                        content
-                            ? content
-                            : <p>No projects for now</p>
+                        left
+                            ? left
+                            : <p>No projects</p>
                     }
                 </div>
-                <div className={'col-6 d-flex align-items-center justify-content-center'}>
-
+                <div className={'col-4 d-flex align-items-center justify-content-center'}>
+                    {
+                        middle
+                            ? middle
+                            : <p>No details or confidential</p>
+                    }
+                </div>
+                <div className={'col-4 d-flex align-items-center justify-content-center'}>
+                    {
+                        right
+                            ? right
+                            : <p>No details or confidential</p>
+                    }
                 </div>
             </section>
         </main>
