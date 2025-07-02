@@ -1,5 +1,11 @@
 [
-    "IAFCertSearch",
-    "Cadet Information System",
-    "Intellijent"
+  {
+    "title": "IAFCertSearch"
+  },
+  {
+    "title": "Cadet Information System"
+  },
+  {
+    "title": "Intellijent"
+  }
 ]

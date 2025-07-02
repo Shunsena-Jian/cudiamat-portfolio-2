@@ -31,15 +31,17 @@ const LeftContent = () => {
         <ul className={'m-0 ps-0 list-unstyled'}>
             {
                 projects.map((project, index) => {
+                    const { title } = project;
+
                     return (
                         <li key={index} className={'mb-2'}>
-                            <UnderLineGrow isActive={activeContent === project}>
+                            <UnderLineGrow isActive={activeContent === title}>
                                 <h5
                                     className={`m-0 ${styles.projectTitle}`}
                                     onClick={() => handleMouseOnClick(project)}
                                     style={{ '--project': index }}
                                 >
-                                    {project}
+                                    {title}
                                 </h5>
                             </UnderLineGrow>
                         </li>
