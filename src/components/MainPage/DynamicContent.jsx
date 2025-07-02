@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { MainContext } from '../../context/MainContext.jsx';
+import { MainContext } from '../../context/MainContextProvider.jsx';
 import styles from '../../styles/main.module.css';
 
 const DynamicContent = () => {

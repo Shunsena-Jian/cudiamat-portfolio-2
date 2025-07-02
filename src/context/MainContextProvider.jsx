@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
-import { MainContext } from './MainContext';
+import React, {createContext, useState, useRef} from 'react';
 
+export const MainContext = createContext();
 export const MainProvider = ({ children }) => {
     const [activeContent, setActiveContent] = useState('');
     const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +17,7 @@ export const MainProvider = ({ children }) => {
         }
 
         setIsVisible(true);
-        setActiveContent(`<strong>${item.boldedWord}</strong> ${item.description}`);
+        setActiveContent(`<strong>${item.boldedWord}</strong> - ${item.description}`);
     };
 
     const handleMouseLeave = () => {
