@@ -31,6 +31,7 @@ const logoImages = {
 const LeftContent = () => {
     const { handleMouseHover, handleMouseLeave, handleAnimationEnd } = useContext(MainContext);
     const [logoItems, setLogoItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         fetch('/data/leftMainContent.json')
@@ -43,9 +44,17 @@ const LeftContent = () => {
                     className: styles.logo,
                 }));
                 setLogoItems(items);
+                setIsLoading(false);
             })
-            .catch(error => console.error('Error fetching left content:', error));
+            .catch(error => {
+                console.error('Error fetching left content:', error)
+                setIsLoading(false);
+            });
     }, []);
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <div className={`${styles.logoContainer} d-flex flex-wrap gap-3`}>

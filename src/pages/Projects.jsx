@@ -7,14 +7,25 @@ import ProjectLayout from "../layouts/ProjectLayout.jsx";
 
 export default function Projects() {
     const [projects, setProjects] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         document.title = 'Projects - Cudiamat';
         fetch('/data/projects.json')
             .then(response => response.json())
-            .then(data => setProjects(data))
-            .catch(error => console.error('Error fetching projects:', error));
+            .then(data => {
+                setProjects(data);
+                setIsLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching projects:', error);
+                setIsLoading(false);
+            });
     }, []);
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     const listProjects = () => {
         return(
