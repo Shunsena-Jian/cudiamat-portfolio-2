@@ -1,3 +1,11 @@
 .projectTitle {
     font-size: clamp(1rem, 1vw, 1.50rem);
+
+    opacity: 0;
+    display: inline-block;
+
+    animation-name: var(--animation-fade-in-from-left);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: calc((var(--project) - 1) * 0.1s);
 }

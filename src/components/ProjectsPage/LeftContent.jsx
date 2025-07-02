@@ -37,6 +37,7 @@ const LeftContent = () => {
                                 <h5
                                     className={`m-0 ${styles.projectTitle}`}
                                     onClick={() => handleMouseOnClick(project)}
+                                    style={{ '--project': index }}
                                 >
                                     {project}
                                 </h5>
