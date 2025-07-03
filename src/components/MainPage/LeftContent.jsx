@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { MainContext } from '../../context/MainContextProvider.jsx';
+import { MainContext } from '../../pages/Main/MainContextProvider.jsx';
 import styles from '../../styles/main.module.css';
 
 import javaLogo from "../../assets/images/java.png";

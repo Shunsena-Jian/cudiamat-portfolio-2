@@ -4,9 +4,9 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout.jsx';
 
 import Header from "./pages/Header.jsx";
-import Main from "./pages/Main.jsx";
+import Main from "./pages/Main/Main.jsx";
 import Experience from "./pages/Experience.jsx";
-import Projects from "./pages/Projects.jsx";
+import Projects from "./pages/Projects/Projects.jsx";
 
 function App() {
     return (

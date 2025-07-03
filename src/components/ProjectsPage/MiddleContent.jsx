@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {ProjectsContext} from "../../context/ProjectsContextProvider.jsx";
+import {ProjectsContext} from "../../pages/Projects/ProjectsContextProvider.jsx";
 import styles from "../../styles/projects.module.css"
 
 const MiddleContent = () => {
