@@ -30,7 +30,7 @@
       "Tailwind"
     ],
     "position": "Computer Programmer (Apprentice)",
-    "description": "The Cadet Information System project is a centralized platyform where historical and current cadet data are digitized. This system empowers academy staff to efficiently create, retrieve, update, and archive cadet information.",
+    "description": "The Cadet Information System project is a centralized platform where historical and current cadet data are digitized. This system empowers academy staff to efficiently create, retrieve, update, and archive cadet information.",
     "link": null,
     "github_link": null,
     "src": null
@@ -47,7 +47,7 @@
       "JavaScript"
     ],
     "position": "Full Stack Developer",
-    "description": "This project centralized and digitized all university documents. This system enabled teachers and staff to efficiently create, retrieve, update, and delete documents.",
+    "description": "IntelliDocs is a project where all university documents are centralized and digitized. The system enabled teachers and staff to efficiently create, retrieve, update, and delete documents.",
     "link": null,
     "github_link": "https://github.com/Shunsena-Jian/Intellidocs",
     "src": null
