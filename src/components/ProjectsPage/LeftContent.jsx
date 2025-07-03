@@ -4,7 +4,7 @@ import styles from "../../styles/projects.module.css";
 import { ProjectsContext } from "../../context/ProjectsContextProvider.jsx";
 
 const LeftContent = () => {
-    const { activeContent, handleMouseOnClick } = useContext(ProjectsContext);
+    const { middleContent, handleMouseOnClick } = useContext(ProjectsContext);
 
     const [projects, setProjects] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +35,7 @@ const LeftContent = () => {
 
                     return (
                         <li key={index} className={'mb-2'}>
-                            <UnderLineGrow isActive={activeContent === title}>
+                            <UnderLineGrow isActive={middleContent.title === title}>
                                 <h5
                                     className={`m-0 ${styles.projectTitle}`}
                                     onClick={() => handleMouseOnClick(project)}

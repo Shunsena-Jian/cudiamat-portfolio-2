@@ -1,11 +1,55 @@
 [
   {
-    "title": "IAFCertSearch"
+    "title": "IAFCertSearch",
+    "company": "IThinkWeb Corporation",
+    "technology": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "MongoDB",
+      "DynamoDB",
+      "OpenSearch"
+    ],
+    "position": "Junior Backend Developer",
+    "description": "IAFCertSearch is a global database used to validate and verify the status of accredited certifications issued by certification bodies worldwide. It helps businesses, governments, and consumers confirm the legitimacy of management system certifications, ensuring transparency and trust in global supply chains.",
+    "link": "https://iafcertsearch.org/",
+    "github_link": null,
+    "src": null
   },
   {
-    "title": "Cadet Information System"
+    "title": "Cadet Information System",
+    "company": "Philippine Military Academy",
+    "technology": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Javascript",
+      "HTML",
+      "Blade",
+      "AJAX",
+      "Tailwind"
+    ],
+    "position": "Computer Programmer (Apprentice)",
+    "description": "The Cadet Information System project is a centralized platyform where historical and current cadet data are digitized. This system empowers academy staff to efficiently create, retrieve, update, and archive cadet information.",
+    "link": null,
+    "github_link": null,
+    "src": null
   },
   {
-    "title": "Intellijent"
+    "title": "IntelliDocs",
+    "company":  "Saint Louis University (Baguio City)",
+    "technology": [
+      "Node.JS",
+      "Express",
+      "MongoDB",
+      "Pug",
+      "CSS",
+      "JavaScript"
+    ],
+    "position": "Full Stack Developer",
+    "description": "This project centralized and digitized all university documents. This system enabled teachers and staff to efficiently create, retrieve, update, and delete documents.",
+    "link": null,
+    "github_link": "https://github.com/Shunsena-Jian/Intellidocs",
+    "src": null
   }
 ]
