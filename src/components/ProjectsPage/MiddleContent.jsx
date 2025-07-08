@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import {ProjectsContext} from "../../pages/Projects/ProjectsContextProvider.jsx";
 import styles from "../../styles/projects.module.css"
+import GithubLogo from "../../assets/images/github-logo-white.png";
 
 const MiddleContent = () => {
     const { isActive, middleContent } = useContext(ProjectsContext);
@@ -18,8 +19,12 @@ const MiddleContent = () => {
                         <h6>{middleContent.position}</h6>
                         <p>{middleContent.description}</p>
                         {middleContent.github_link &&
-                            <a className={'mt-2'} href={middleContent.github_link} target={"_blank"} rel={"noopener noreferrer"}>
-                                Github Link
+                            <a className={'mt-3'} href={middleContent.github_link} target={"_blank"} rel={"noopener noreferrer"}>
+                                <img
+                                    src={GithubLogo}
+                                    className={styles.logo}
+                                    alt={'Github Logo'}
+                                />
                             </a>
                         }
                     </>

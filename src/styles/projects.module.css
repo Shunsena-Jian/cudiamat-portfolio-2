@@ -25,3 +25,19 @@
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
+
+.links {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.logo {
+    height: 40px;
+    display: block;
+
+    transition: transform 0.1s ease-out;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
