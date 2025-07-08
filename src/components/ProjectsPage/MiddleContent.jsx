@@ -15,8 +15,8 @@ const MiddleContent = () => {
                         <a href={middleContent.link} target={'_blank'} rel={'noopener noreferrer'}>
                             <h4>{middleContent.title}</h4>
                         </a>
-                        <h6>{middleContent.company}</h6>
-                        <h6>{middleContent.position}</h6>
+                        <h6 className={styles.h6}>{middleContent.company}</h6>
+                        <h6 className={styles.h6}>{middleContent.position}</h6>
                         <p>{middleContent.description}</p>
                         {middleContent.github_link &&
                             <a className={'mt-3'} href={middleContent.github_link} target={"_blank"} rel={"noopener noreferrer"}>
