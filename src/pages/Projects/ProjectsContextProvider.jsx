@@ -8,12 +8,20 @@ export const ProjectsProvider = ({ children }) => {
 
     const handleMouseOnClick = (item) => {
         const isSameItem = middleContent === item;
-        if (isSameItem) {
+
+        if (middleContent) {
             setIsActive(false);
-            setMiddleContent('');
+            setTimeout(() => {
+                if (isSameItem) {
+                    setMiddleContent('');
+                } else {
+                    setMiddleContent(item);
+                    setIsActive(true);
+                }
+            }, 500);
         } else {
-            setIsActive(true);
             setMiddleContent(item);
+            setIsActive(true);
         }
     }
 

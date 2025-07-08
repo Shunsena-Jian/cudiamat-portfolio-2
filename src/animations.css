@@ -5,6 +5,8 @@
     --animation-fade-in-from-right: enterFadeFromRight;
     --animation-exit-fade-to-bottom: exitFadeToBottom;
     --animation-exit-fade-to-top: exitFadeToTop;
+    --animation-exit-fade-to-left: exitFadeToLeft;
+    --animation-exit-fade-to-right: exitFadeToRight;
 }
 
 @keyframes enterFadeFromTop {
@@ -70,5 +72,27 @@
     to {
         opacity: 0;
         transform: translateY(-20px);
+    }
+}
+
+@keyframes exitFadeToLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes exitFadeToRight {
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px);
     }
 }

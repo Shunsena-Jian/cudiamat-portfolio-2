@@ -13,3 +13,15 @@
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin: 0;
 }
+
+.middleContentActive {
+    animation-name: var(--animation-fade-in-from-left);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.middleContentHide {
+    animation-name: var(--animation-exit-fade-to-left);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
