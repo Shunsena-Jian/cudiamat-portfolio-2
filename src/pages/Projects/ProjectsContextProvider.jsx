@@ -18,20 +18,18 @@ export const ProjectsProvider = ({ children }) => {
                     setMiddleContent('');
                     setRightContent('');
                 } else {
-                    setMiddleContent(item.middleContent);
-                    setRightContent(item.rightContent);
+                    setMiddleContent(item);
                     setIsActive(true);
                 }
             }, 500);
         } else {
-            setMiddleContent(item.middleContent);
-            setRightContent(item.rightContent);
+            setMiddleContent(item);
             setIsActive(true);
         }
     }
 
-    const handleHoverItem = () => {
-        setHandleHoveredItem(true);
+    const handleHoverItem = (content) => {
+        console.log(content);
     }
 
     return (
