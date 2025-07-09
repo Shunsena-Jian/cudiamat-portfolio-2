@@ -7,6 +7,7 @@ import RightContent from "../../components/ProjectsPage/RightContent.jsx";
 export default function Projects() {
     return (
         <ProjectsProvider>
+            <title>My Projects</title>
             <ProjectLayout
                 left={ <LeftContent /> }
                 middle={ <MiddleContent /> }
