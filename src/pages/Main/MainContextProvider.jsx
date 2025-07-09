@@ -1,7 +1,8 @@
 import React, {createContext, useState, useRef} from 'react';
 
 export const MainContext = createContext();
-export const MainProvider = ({ children }) => {
+
+export const MainContextProvider = ({ children }) => {
     const [activeContent, setActiveContent] = useState('');
     const [isVisible, setIsVisible] = useState(false);
 
@@ -37,7 +38,7 @@ export const MainProvider = ({ children }) => {
         if (event.animationName && event.animationName.includes('enterFadeFromBottom')) {
             event.target.style.opacity = 1;
         }
-    }
+    };
 
     return (
         <MainContext.Provider value={{
