@@ -16,7 +16,7 @@ const navItems = [
         text: 'Experience',
         ElementType: 'h5',
         className: `m-0 ${styles.textItem}`,
-        to: '/experiences',
+        to: '/experience',
     },
     {
         id: 'projects',
