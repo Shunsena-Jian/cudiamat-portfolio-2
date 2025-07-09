@@ -7,7 +7,7 @@ import DynamicBackground from "./components/DynamicBackground/DynamicBackground.
 
 const Main = lazy(() => import("./pages/Main/Main.jsx"));
 const Projects = lazy(() => import("./pages/Projects/Projects.jsx"));
-const Experience = lazy(() => import("./pages/Experience.jsx"));
+const Experience = lazy(() => import("./pages/Experience/Experience.jsx"));
 
 function App() {
     return (
