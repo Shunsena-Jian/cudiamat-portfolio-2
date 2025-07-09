@@ -5,7 +5,7 @@ export const ProjectsContext = createContext();
 export const ProjectsProvider = ({ children }) => {
     const [rightContent, setRightContent] = useState ('');
     const [activeContent, setActiveContent] = useState('');
-    const [isActive, setIsActive] = useState(false);
+    const [isActiveMiddle, setIsActiveMiddle] = useState(false);
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
@@ -23,31 +23,30 @@ export const ProjectsProvider = ({ children }) => {
     const handleMouseOnClick = (item) => {
         const isSameItem = activeContent && activeContent.title === item.title;
 
-        if (isActive) {
-            setIsActive(false);
+        if (isActiveMiddle) {
+            setIsActiveMiddle(false);
             setTimeout(() => {
                 if (isSameItem) {
                     setActiveContent('');
                 } else {
                     setActiveContent(item);
-                    setIsActive(true);
+                    setIsActiveMiddle(true);
                 }
             }, 500);
         } else {
             setActiveContent(item);
-            setIsActive(true);
+            setIsActiveMiddle(true);
         }
     }
 
     const handleHoverItem = (content) => {
-        console.log(content);
         setRightContent(content);
     }
 
     return (
         <ProjectsContext.Provider value={{
             projects,
-            isActive,
+            isActiveMiddle,
             activeContent,
             rightContent,
             handleMouseOnClick,

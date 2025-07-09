@@ -4,12 +4,12 @@ import styles from "../../styles/projects.module.css"
 import GithubLogo from "../../assets/images/github-logo-white.png";
 
 const MiddleContent = () => {
-    const { isActive, activeContent, handleHoverItem } = useContext(ProjectsContext);
+    const { isActiveMiddle, activeContent, handleHoverItem } = useContext(ProjectsContext);
 
     return (
         <>
             <h6 style={{ visibility: activeContent ? 'hidden' : 'visible' }}>Select a project.</h6>
-            <div className={`d-flex flex-column gap-1 ${isActive ? styles.middleContentActive : styles.middleContentHide}`}>
+            <div className={`d-flex flex-column gap-1 ${isActiveMiddle ? styles.middleContentActive : styles.middleContentHide}`}>
                 {activeContent && (
                     <>
                         <a href={activeContent.link} target={'_blank'} rel={'noopener noreferrer'}>
