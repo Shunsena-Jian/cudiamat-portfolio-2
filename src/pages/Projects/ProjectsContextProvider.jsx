@@ -1,43 +1,55 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 
 export const ProjectsContext = createContext();
 
 export const ProjectsProvider = ({ children }) => {
     const [rightContent, setRightContent] = useState ('');
-    const [middleContent, setMiddleContent] = useState('');
+    const [activeContent, setActiveContent] = useState('');
     const [isActive, setIsActive] = useState(false);
-    const [hoveredItem, setHandleHoveredItem] = useState('');
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        document.title = 'Projects - Cudiamat';
+        fetch('/data/projects.json')
+            .then(response => response.json())
+            .then(data => {
+                setProjects(data);
+            })
+            .catch(error => {
+                console.error('Error fetching projects:', error);
+            });
+    }, []);
 
     const handleMouseOnClick = (item) => {
-        const isSameItem = middleContent === item;
+        const isSameItem = activeContent && activeContent.title === item.title;
 
         if (isActive) {
             setIsActive(false);
             setTimeout(() => {
                 if (isSameItem) {
-                    setMiddleContent('');
-                    setRightContent('');
+                    setActiveContent('');
                 } else {
-                    setMiddleContent(item);
+                    setActiveContent(item);
                     setIsActive(true);
                 }
             }, 500);
         } else {
-            setMiddleContent(item);
+            setActiveContent(item);
             setIsActive(true);
         }
     }
 
     const handleHoverItem = (content) => {
         console.log(content);
+        setRightContent(content);
     }
 
     return (
         <ProjectsContext.Provider value={{
+            projects,
             isActive,
-            middleContent,
+            activeContent,
             rightContent,
-            hoveredItem,
             handleMouseOnClick,
             handleHoverItem
         }}>

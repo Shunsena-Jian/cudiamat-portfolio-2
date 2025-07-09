@@ -4,32 +4,32 @@ import styles from "../../styles/projects.module.css"
 import GithubLogo from "../../assets/images/github-logo-white.png";
 
 const MiddleContent = () => {
-    const { isActive, middleContent, rightContent, handleHoverItem } = useContext(ProjectsContext);
+    const { isActive, activeContent, handleHoverItem } = useContext(ProjectsContext);
 
     return (
         <>
-            <h6 style={{ visibility: middleContent ? 'hidden' : 'visible' }}>Select a project.</h6>
+            <h6 style={{ visibility: activeContent ? 'hidden' : 'visible' }}>Select a project.</h6>
             <div className={`d-flex flex-column gap-1 ${isActive ? styles.middleContentActive : styles.middleContentHide}`}>
-                {middleContent && (
+                {activeContent && (
                     <>
-                        <a href={middleContent.link} target={'_blank'} rel={'noopener noreferrer'}>
-                            <h4>{middleContent.title}</h4>
+                        <a href={activeContent.link} target={'_blank'} rel={'noopener noreferrer'}>
+                            <h4>{activeContent.title}</h4>
                         </a>
                         <h6
                             className={styles.h6}
-                            onMouseEnter={() => handleHoverItem(rightContent)}
+                            onMouseEnter={() => handleHoverItem(activeContent.src)}
                         >
-                            {middleContent.company}
+                            {activeContent.company}
                         </h6>
                         <h6
                             className={styles.h6}
-                            onMouseEnter={() => handleHoverItem(rightContent)}
+                            onMouseEnter={() => handleHoverItem(activeContent.roleDescription)}
                         >
-                            {middleContent.position}
+                            {activeContent.position}
                         </h6>
-                        <p>{middleContent.description}</p>
-                        {middleContent.github_link &&
-                            <a className={'mt-3'} href={middleContent.github_link} target={"_blank"} rel={"noopener noreferrer"}>
+                        <p>{activeContent.description}</p>
+                        {activeContent.github_link &&
+                            <a className={'mt-3'} href={activeContent.github_link} target={"_blank"} rel={"noopener noreferrer"}>
                                 <img
                                     src={GithubLogo}
                                     className={styles.logo}
