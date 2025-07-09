@@ -4,7 +4,7 @@ import styles from "../../styles/projects.module.css"
 import GithubLogo from "../../assets/images/github-logo-white.png";
 
 const MiddleContent = () => {
-    const { isActiveMiddle, activeContent, handleHoverItem } = useContext(ProjectsContext);
+    const { isActiveMiddle, activeContent } = useContext(ProjectsContext);
 
     return (
         <>
@@ -17,13 +17,11 @@ const MiddleContent = () => {
                         </a>
                         <h6
                             className={styles.h6}
-                            onMouseEnter={() => handleHoverItem(activeContent.src)}
                         >
                             {activeContent.company}
                         </h6>
                         <h6
                             className={styles.h6}
-                            onMouseEnter={() => handleHoverItem(activeContent.roleDescription)}
                         >
                             {activeContent.position}
                         </h6>

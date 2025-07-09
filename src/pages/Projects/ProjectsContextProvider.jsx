@@ -1,4 +1,5 @@
 import React, {createContext, useEffect, useState} from 'react';
+import useDocumentTitle from '../../hooks/useDocumentTitle.js';
 
 export const ProjectsContext = createContext();
 
@@ -8,8 +9,9 @@ export const ProjectsProvider = ({ children }) => {
     const [isActiveMiddle, setIsActiveMiddle] = useState(false);
     const [projects, setProjects] = useState([]);
 
+    useDocumentTitle('Projects - Cudiamat');
+
     useEffect(() => {
-        document.title = 'Projects - Cudiamat';
         fetch('/data/projects.json')
             .then(response => response.json())
             .then(data => {
