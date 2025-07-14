@@ -26,8 +26,8 @@ const navItems = [
         to: '/projects',
     }
 ];
-import GithubLogo from "../assets/images/github-logo-white.png";
-import LinkedInLogo from "../assets/images/InBug-White.png";
+import GithubLogo from "../assets/images/technologies/github-logo-white.png";
+import LinkedInLogo from "../assets/images/technologies/InBug-White.png";
 
 const logoItems = [
     {

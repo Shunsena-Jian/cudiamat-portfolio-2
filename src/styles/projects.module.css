@@ -55,13 +55,15 @@
 }
 
 .companyLogo {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+    width: 150px; /* Set explicit width to match height for a perfect circle */
+    height: 150px; /* Set explicit height for a perfect circle */
+    object-fit: contain; /* Keep object-fit for the image inside */
 
-    background-color: white;
-    border: 1px solid white;
+    background: radial-gradient(circle, white, black);
     border-radius: 100%;
+
+    /* Ensure the image inside is centered and fits */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

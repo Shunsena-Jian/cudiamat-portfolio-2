@@ -1,11 +1,14 @@
 import React, {useContext} from "react";
 import {ProjectsContext} from "../../pages/Projects/ProjectsContextProvider.jsx";
 import styles from "../../styles/projects.module.css";
-
-import pmaLogo from "/public/images/pma_logo.png";
+import pmaLogo from "/src/assets/images/companies/pma_logo.png";
+import iThinkWebLogo from "/src/assets/images/companies/ithinkweb_corporation_logo.png";
+import sluLogo from "/src/assets/images/companies/slu_logo.png";
 
 const companyLogos = {
-    'pma_logo.png': pmaLogo
+    'slu_logo.png': sluLogo,
+    'pma_logo.png': pmaLogo,
+    'ithinkweb_logo.png': iThinkWebLogo
 };
 
 const RightContent = () => {

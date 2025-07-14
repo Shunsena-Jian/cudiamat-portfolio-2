@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {ProjectsContext} from "../../pages/Projects/ProjectsContextProvider.jsx";
 import styles from "../../styles/projects.module.css"
-import GithubLogo from "../../assets/images/github-logo-white.png";
+import GithubLogo from "../../assets/images/technologies/github-logo-white.png";
 
 const MiddleContent = () => {
     const { isActiveMiddle, activeContent, handleMouseOnClickRight } = useContext(ProjectsContext);

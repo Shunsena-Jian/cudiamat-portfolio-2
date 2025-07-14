@@ -2,17 +2,17 @@ import { useContext, useEffect, useState } from 'react';
 import { MainContext } from '../../pages/Main/MainContextProvider.jsx';
 import styles from '../../styles/main.module.css';
 
-import javaLogo from "../../assets/images/java.png";
-import pythonLogo from "../../assets/images/python.png";
-import nodeJSLogo from "../../assets/images/nodeJS.png";
-import laravelLogo from "../../assets/images/laravel-logo.png";
-import mySqlLogo from "../../assets/images/mySQL.png";
-import mongoDBLogo from "../../assets/images/mongoDB.png";
-import dynamoDB from "../../assets/images/dynamoDB.svg";
-import opensearch from "../../assets/images/opensearch.svg";
-import reactLogo from "../../assets/images/react.png";
-import bootstrapLogo from "../../assets/images/bootstrap.png";
-import jQueryLogo from "../../assets/images/jQuery.png";
+import javaLogo from "../../assets/images/technologies/java.png";
+import pythonLogo from "../../assets/images/technologies/python.png";
+import nodeJSLogo from "../../assets/images/technologies/nodeJS.png";
+import laravelLogo from "../../assets/images/technologies/laravel-logo.png";
+import mySqlLogo from "../../assets/images/technologies/mySQL.png";
+import mongoDBLogo from "../../assets/images/technologies/mongoDB.png";
+import dynamoDB from "../../assets/images/technologies/dynamoDB.svg";
+import opensearch from "../../assets/images/technologies/opensearch.svg";
+import reactLogo from "../../assets/images/technologies/react.png";
+import bootstrapLogo from "../../assets/images/technologies/bootstrap.png";
+import jQueryLogo from "../../assets/images/technologies/jQuery.png";
 
 const logoImages = {
     'java.png': javaLogo,

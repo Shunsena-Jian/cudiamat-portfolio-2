@@ -15,7 +15,7 @@
         "description": "IAFCertSearch is a global database used to validate and verify the status of accredited certifications issued by certification bodies worldwide. It helps businesses, governments, and consumers confirm the legitimacy of management system certifications, ensuring transparency and trust in global supply chains.",
         "link": "https://iafcertsearch.org/",
         "github_link": null,
-        "src": "",
+        "src": "ithinkweb_logo.png",
         "alt":  "IThinkWeb Logo",
         "roleDescription": "I am one of the junior backend developers in this company and collaborated with the different teams in the company. I am tasked to apply new features and bug fixes for every release."
     },
@@ -57,7 +57,7 @@
         "description": "IntelliDocs is a project where all university documents are centralized and digitized. The system enabled teachers and staff to efficiently create, retrieve, update, and delete documents. The system allows users with access to: create a template, request for approval, approve, print documents, and many more.",
         "link": null,
         "github_link": "https://github.com/Shunsena-Jian/Intellidocs",
-        "src": "",
+        "src": "slu_logo.png",
         "alt": "Saint Louis University Logo",
         "roleDescription": "I am one of the key developers in this project that developed both the backend and frontend of the project. We developed this project in an Agile type of SDLC where we constantly get feedbacks from our Thesis Advisor every week."
     }
