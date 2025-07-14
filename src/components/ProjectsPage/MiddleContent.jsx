@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {ProjectsContext} from "../../pages/Projects/ProjectsContextProvider.jsx";
+import {ProjectsContext} from "../../pages/Projects/ProjectsContext.jsx";
 import styles from "../../styles/projects.module.css"
 import GithubLogo from "../../assets/images/technologies/github-logo-white.png";
 

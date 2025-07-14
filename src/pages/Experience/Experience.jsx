@@ -1,14 +1,14 @@
 import ExperienceLayout from '../../layouts/ExperienceLayout.jsx';
-import {ExperienceContextProvider} from "./ExperienceContextProvider.jsx";
+import {ExperienceProvider} from "./ExperienceProvider.jsx";
 
 export default function Experience() {
 
     return (
-        <ExperienceContextProvider>
+        <ExperienceProvider>
             <title>My Experience</title>
             <ExperienceLayout
                 content={ null }
             />
-        </ExperienceContextProvider>
+        </ExperienceProvider>
     );
 }

@@ -1,8 +1,7 @@
-import React, {createContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {ProjectsContext} from "./ProjectsContext.jsx";
 
-export const ProjectsContext = createContext();
-
-export const ProjectsContextProvider = ({ children }) => {
+export const ProjectsProvider = ({ children }) => {
     const [rightContent, setRightContent] = useState ('');
     const [activeContent, setActiveContent] = useState('');
     const [isActiveMiddle, setIsActiveMiddle] = useState(false);

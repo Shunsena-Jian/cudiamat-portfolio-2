@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {ProjectsContext} from "../../pages/Projects/ProjectsContextProvider.jsx";
+import {ProjectsContext} from "../../pages/Projects/ProjectsContext.jsx";
 import styles from "../../styles/projects.module.css";
 import pmaLogo from "/src/assets/images/companies/pma_logo.png";
 import iThinkWebLogo from "/src/assets/images/companies/ithinkweb_corporation_logo.png";

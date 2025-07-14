@@ -1,8 +1,7 @@
-import React, {createContext, useState, useRef} from 'react';
+import React, {useState, useRef} from 'react';
+import {MainContext} from "./MainContext.jsx";
 
-export const MainContext = createContext();
-
-export const MainContextProvider = ({ children }) => {
+export const MainProvider = ({ children }) => {
     const [activeContent, setActiveContent] = useState('');
     const [isVisible, setIsVisible] = useState(false);
 

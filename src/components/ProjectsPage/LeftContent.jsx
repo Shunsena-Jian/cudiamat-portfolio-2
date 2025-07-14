@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import UnderLineGrow from "../UnderlineGrow/UnderLineGrow.jsx";
 import styles from "../../styles/projects.module.css";
-import { ProjectsContext } from "../../pages/Projects/ProjectsContextProvider.jsx";
+import { ProjectsContext } from "../../pages/Projects/ProjectsContext.jsx";
 
 const LeftContent = () => {
     const { projects, activeContent, handleMouseOnClickMiddle } = useContext(ProjectsContext);
