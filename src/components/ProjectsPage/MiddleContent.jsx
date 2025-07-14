@@ -9,7 +9,7 @@ const MiddleContent = () => {
     return (
         <>
             <h6 style={{ display: activeContent ? 'none' : 'block' }}>Select a project.</h6>
-            <div className={`d-flex flex-column gap-3 ${isActiveMiddle ? styles.middleContentActive : styles.middleContentHide}`}>
+            <div className={`d-flex flex-column gap-2 ${isActiveMiddle ? styles.middleContentActive : styles.middleContentHide}`}>
                 {activeContent && (
                     <>
                         <a href={activeContent.link} target={'_blank'} rel={'noopener noreferrer'}>

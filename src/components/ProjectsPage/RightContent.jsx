@@ -15,7 +15,9 @@ const RightContent = () => {
 
     return(
         <div className={`d-flex flex-column gap-2 ${isActiveRight ? styles.middleContentActive : styles.middleContentHide}`}>
-            <img className={styles.companyLogo} src={company} alt={rightContent.alt}/>
+            <div className={styles.companyLogoContainer}>
+                <img className={styles.companyLogo} src={company} alt={rightContent.alt}/>
+            </div>
             <p>{rightContent.role}</p>
             {
                 rightContent.technology ? (

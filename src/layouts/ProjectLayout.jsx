@@ -9,14 +9,14 @@ export default function ProjectLayout({left, middle, right}) {
                             : <p>No projects</p>
                     }
                 </div>
-                <div className={'col-5 d-flex align-items-center'}>
+                <div className={'col-4 d-flex align-items-center'}>
                     {
                         middle
                             ? middle
                             : <p>No details or confidential</p>
                     }
                 </div>
-                <div className={'col-4 d-flex align-items-center'}>
+                <div className={'col-5 d-flex align-items-center'}>
                     {
                         right
                             ? right

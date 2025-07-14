@@ -47,10 +47,17 @@
     transform: scale(1.2);
 }
 
-.companyLogo {
-    height: 100px;
-    width: 100px;
+.companyLogoContainer {
     display: flex;
-
     justify-content: center;
+    height: 150px;
+    width: 100%;
+}
+
+.companyLogo {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
