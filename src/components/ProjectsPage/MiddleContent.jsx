@@ -8,28 +8,21 @@ const MiddleContent = () => {
 
     return (
         <>
-            <h6 style={{ visibility: activeContent ? 'hidden' : 'visible' }}>Select a project.</h6>
-            <div className={`d-flex flex-column gap-1 ${isActiveMiddle ? styles.middleContentActive : styles.middleContentHide}`}>
+            <h6 style={{ display: activeContent ? 'none' : 'block' }}>Select a project.</h6>
+            <div className={`d-flex flex-column gap-3 ${isActiveMiddle ? styles.middleContentActive : styles.middleContentHide}`}>
                 {activeContent && (
                     <>
                         <a href={activeContent.link} target={'_blank'} rel={'noopener noreferrer'}>
-                            <h4>{activeContent.title}</h4>
+                            <h4 className={'m-0'}>{activeContent.title}</h4>
                         </a>
-                        <h6
-                            className={styles.h6}
-                            onClick={() => handleMouseOnClickRight(activeContent.src)}
-                        >
-                            {activeContent.company}
-                        </h6>
-                        <h6
-                            className={styles.h6}
-                            onClick={() => handleMouseOnClickRight(activeContent.roleDescription)}
-                        >
-                            {activeContent.position}
-                        </h6>
+                        <h6 className={'m-0'}>{activeContent.company}</h6>
+                        <h6 className={'m-0'}>{activeContent.position}</h6>
                         <p>{activeContent.description}</p>
+                        <p className={styles.showMore} onClick={() => handleMouseOnClickRight(activeContent)}>
+                            Show More Details
+                        </p>
                         {activeContent.github_link &&
-                            <a className={'mt-3'} href={activeContent.github_link} target={"_blank"} rel={"noopener noreferrer"}>
+                            <a href={activeContent.github_link} target={"_blank"} rel={"noopener noreferrer"}>
                                 <img
                                     src={GithubLogo}
                                     className={styles.logo}

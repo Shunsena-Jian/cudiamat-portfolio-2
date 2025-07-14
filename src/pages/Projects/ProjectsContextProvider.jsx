@@ -44,7 +44,14 @@ export const ProjectsContextProvider = ({ children }) => {
     }
 
     const handleMouseOnClickRight = (content) => {
-        const isSameContent = rightContent === content;
+        const rightContentDetails = {
+            role: content.roleDescription,
+            technology: content.technology,
+            src: content.src,
+            alt: content.alt
+        };
+
+        const isSameContent = rightContent.alt === rightContentDetails.alt;
 
         if (isActiveRight) {
             setIsActiveRight(false);
@@ -52,12 +59,12 @@ export const ProjectsContextProvider = ({ children }) => {
                 if (isSameContent) {
                     setRightContent('');
                 } else {
-                    setRightContent(content);
+                    setRightContent(rightContentDetails);
                     setIsActiveRight(true);
                 }
             }, 500);
         } else {
-            setRightContent(content);
+            setRightContent(rightContentDetails);
             setIsActiveRight(true);
         }
     }

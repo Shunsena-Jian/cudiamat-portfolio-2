@@ -10,12 +10,11 @@
     animation-delay: calc((var(--project) - 1) * 0.1s);
 }
 
-.h6 {
-    margin: 0;
+.showMore {
     transition: transform 0.1s ease-out;
 }
 
-.h6:hover {
+.showMore:hover {
     cursor: pointer;
     transform: scale(1.03);
 }
@@ -46,4 +45,12 @@
 
 .logo:hover {
     transform: scale(1.2);
+}
+
+.companyLogo {
+    height: 100px;
+    width: 100px;
+    display: flex;
+
+    justify-content: center;
 }
