@@ -1,0 +1,23 @@
+[
+    {
+        "id": "name",
+        "text": "Jian Raphael R. Cudiamat",
+        "ElementType": "h1",
+        "className": "m-0",
+        "to": "/"
+    },
+    {
+        "id": "experience",
+        "text": "Experience",
+        "ElementType": "h5",
+        "className": "m-0",
+        "to": "/experience"
+    },
+    {
+        "id": "projects",
+        "text": "Projects",
+        "ElementType": "h5",
+        "className": "m-0",
+        "to": "/projects"
+    }
+]

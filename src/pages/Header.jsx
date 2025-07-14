@@ -1,59 +1,27 @@
 import {Link, useLocation} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 import HeaderLayout from "../layouts/HeaderLayout.jsx";
 import UnderLineGrow from "../components/UnderlineGrow/UnderLineGrow.jsx";
-
-const navItems = [
-    {
-        id: 'name',
-        text: 'Jian Raphael R. Cudiamat',
-        ElementType: 'h1',
-        className: `m-0 ${styles.textItem}`,
-        to: '/',
-    },
-    {
-        id: 'experience',
-        text: 'Experience',
-        ElementType: 'h5',
-        className: `m-0 ${styles.textItem}`,
-        to: '/experience',
-    },
-    {
-        id: 'projects',
-        text: 'Projects',
-        ElementType: 'h5',
-        className: `m-0 ${styles.textItem}`,
-        to: '/projects',
-    }
-];
 import GithubLogo from "../assets/images/technologies/github-logo-white.png";
 import LinkedInLogo from "../assets/images/technologies/InBug-White.png";
-
-const logoItems = [
-    {
-        id: 'github_logo',
-        ElementType: 'a',
-        SubElementType: 'img',
-        src: GithubLogo,
-        url: 'https://github.com/Shunsena-Jian',
-        className: `m-0 ${styles.logoItem}`,
-        target: '_blank',
-    },
-    {
-        id: 'linkedIn_logo',
-        ElementType: 'a',
-        SubElementType: 'img',
-        src: LinkedInLogo,
-        url: 'https://www.linkedin.com/in/jian-raphael-cudiamat-70b1a5269/',
-        className: `m-0 ${styles.logoItem}`,
-        target: '_blank',
-    }
-];
-
 import styles from '../styles/header.module.css';
+
+const logoImages = {
+    'github-logo-white.png': GithubLogo,
+    'InBug-White.png': LinkedInLogo,
+};
 
 const NavigationLinks = () => {
     const location = useLocation();
+    const [navItems, setNavItems] = useState([]);
+
+    useEffect(() => {
+        fetch('/data/headerNavItems.json')
+            .then(response => response.json())
+            .then(data => setNavItems(data))
+            .catch(error => console.error('Error fetching nav items:', error));
+    }, []);
 
     return (
         <>
@@ -64,7 +32,7 @@ const NavigationLinks = () => {
 
                     const content =  (
                         <UnderLineGrow key={id} isActive={isActive} >
-                            <ElementType className={className} style={{ '--item': index }}>{text}</ElementType>
+                            <ElementType className={`${className} ${styles.textItem}`} style={{ '--item': index }}>{text}</ElementType>
                         </UnderLineGrow>
                     );
 
@@ -87,21 +55,38 @@ const upperContent = (
     </nav>
 );
 
-const SocialLogos = () => (
-    <>
-        {
-            logoItems.map((item, index) => {
-                const {id, ElementType, SubElementType, src, url, className, target} = item;
+const SocialLogos = () => {
+    const [logoItems, setLogoItems] = useState([]);
 
-                return (
-                    <ElementType key={id} href={url} target={target} className={className} style={{ '--logo': index }}>
-                        <SubElementType src={src} className={`${styles.logo}`} alt={id.replace('_', ' ')}/>
-                    </ElementType>
-                );
+    useEffect(() => {
+        fetch('/data/headerLogoItems.json')
+            .then(response => response.json())
+            .then(data => {
+                const items = data.map(item => ({
+                    ...item,
+                    src: logoImages[item.src],
+                }));
+                setLogoItems(items);
             })
-        }
-    </>
-);
+            .catch(error => console.error('Error fetching logo items:', error));
+    }, []);
+
+    return (
+        <>
+            {
+                logoItems.map((item, index) => {
+                    const {id, ElementType, SubElementType, src, url, className, target} = item;
+
+                    return (
+                        <ElementType key={id} href={url} target={target} className={`${className} ${styles.logoItem}`} style={{ '--logo': index }}>
+                            <SubElementType src={src} className={`${styles.logo}`} alt={id.replace('_', ' ')}/>
+                        </ElementType>
+                    );
+                })
+            }
+        </>
+    )
+};
 
 const lowerContent = (
     <div className={`container-fluid d-flex gap-4`}>
