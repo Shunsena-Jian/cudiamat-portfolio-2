@@ -1,5 +1,7 @@
 import ExperienceLayout from '../../layouts/ExperienceLayout.jsx';
 import {ExperienceProvider} from "./ExperienceProvider.jsx";
+import LeftContent from "../../components/ExperiencesPage/LeftContent.jsx";
+import RightContent from "../../components/ExperiencesPage/RightContent.jsx";
 
 export default function Experience() {
 
@@ -7,7 +9,8 @@ export default function Experience() {
         <ExperienceProvider>
             <title>My Experience</title>
             <ExperienceLayout
-                content={ null }
+                content={ LeftContent }
+                details={ RightContent }
             />
         </ExperienceProvider>
     );
