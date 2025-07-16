@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {ProjectsContext} from "./ProjectsContext.jsx";
 
 export const ProjectsProvider = ({ children }) => {
-    const [rightContent, setRightContent] = useState ('');
-    const [activeContent, setActiveContent] = useState('');
+    const [rightContent, setRightContent] = useState ({});
+    const [middleContent, setMiddleContent] = useState({});
     const [isActiveMiddle, setIsActiveMiddle] = useState(false);
     const [isActiveRight, setIsActiveRight] = useState(false);
     const [projects, setProjects] = useState([]);
@@ -20,50 +20,44 @@ export const ProjectsProvider = ({ children }) => {
     }, []);
 
     const handleMouseOnClickMiddle = (item) => {
-        const isSameItem = activeContent && activeContent.title === item.title;
+        const middle = {
+            id: item.id,
+            title: item.title,
+            company: item.company,
+            description: item.description,
+            link: item.link,
+            github_link: item.github_link,
+        };
+
+        const right = {
+            id: item.id,
+            technology: item.technology,
+            src: item.src,
+            alt: item.alt,
+            contributions: item.contributions
+        };
+
+        const isSameItem = middleContent && middleContent.title === item.title;
+        console.log(isSameItem);
 
         if (isActiveMiddle) {
             setIsActiveRight(false);
             setIsActiveMiddle(false);
             setTimeout(() => {
                 if (isSameItem) {
-                    setActiveContent('');
+                    setMiddleContent('');
                     setRightContent('');
                 } else {
-                    setActiveContent(item);
-                    setRightContent('');
+                    setMiddleContent(middle);
+                    setRightContent(right);
                     setIsActiveMiddle(true);
-                }
-            }, 500);
-        } else {
-            setActiveContent(item);
-            setRightContent('');
-            setIsActiveMiddle(true);
-        }
-    }
-
-    const handleMouseOnClickRight = (content) => {
-        const rightContentDetails = {
-            role: content.roleDescription,
-            technology: content.technology,
-            src: content.src,
-            alt: content.alt
-        };
-
-        const isSameContent = rightContent.alt === rightContentDetails.alt;
-
-        if (isActiveRight) {
-            setIsActiveRight(false);
-            setTimeout(() => {
-                if (isSameContent) {
-                    setRightContent('');
-                } else {
-                    setRightContent(rightContentDetails);
                     setIsActiveRight(true);
                 }
             }, 500);
         } else {
-            setRightContent(rightContentDetails);
+            setMiddleContent(middle);
+            setRightContent(right);
+            setIsActiveMiddle(true);
             setIsActiveRight(true);
         }
     }
@@ -72,11 +66,10 @@ export const ProjectsProvider = ({ children }) => {
         <ProjectsContext.Provider value={{
             projects,
             isActiveMiddle,
-            activeContent,
+            middleContent,
             rightContent,
             isActiveRight,
-            handleMouseOnClickMiddle,
-            handleMouseOnClickRight
+            handleMouseOnClickMiddle
         }}>
             {children}
         </ProjectsContext.Provider>
