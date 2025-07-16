@@ -55,17 +55,22 @@
 }
 
 .companyLogo {
-    width: 150px; /* Set explicit width to match height for a perfect circle */
-    height: 150px; /* Set explicit height for a perfect circle */
-    object-fit: contain; /* Keep object-fit for the image inside */
-
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
     background: radial-gradient(circle, white, black);
-    border-radius: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(100%);
+}
 
-    /* Ensure the image inside is centered and fits */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.companyLogoContainer:hover .companyLogo {
+    filter: grayscale(0%);
+    transform: scale(1.25);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .techLogo {

@@ -15,7 +15,7 @@ const { projects, middleContent, handleMouseOnClickMiddle } = useContext(Project
 
                     return (
                         <li key={index} className={'mb-2'}>
-                            <UnderLineGrow isActive={middleContent &&middleContent.title === title}>
+                            <UnderLineGrow isActive={middleContent && middleContent.title === title}>
                                 <h5
                                     className={`m-0 ${styles.projectTitle}`}
                                     onClick={() => handleMouseOnClickMiddle(project)}
