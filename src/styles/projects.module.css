@@ -10,15 +10,6 @@
     animation-delay: calc((var(--project) - 1) * 0.1s);
 }
 
-.showMore {
-    transition: transform 0.1s ease-out;
-}
-
-.showMore:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-}
-
 .middleContentActive {
     animation-name: var(--animation-fade-in-from-left);
     animation-duration: 0.5s;

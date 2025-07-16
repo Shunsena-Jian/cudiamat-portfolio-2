@@ -10,19 +10,18 @@ const { projects, middleContent, handleMouseOnClickMiddle } = useContext(Project
         <ul className={'m-0 ps-0 list-unstyled'}>
             {
                 projects.map((project, index) => {
-
                     const { title } = project;
 
                     return (
                         <li key={index} className={'mb-2'}>
                             <UnderLineGrow isActive={middleContent && middleContent.title === title}>
-                                <h5
+                                <h4
                                     className={`m-0 ${styles.projectTitle}`}
                                     onClick={() => handleMouseOnClickMiddle(project)}
                                     style={{ '--project': index }}
                                 >
                                     {title}
-                                </h5>
+                                </h4>
                             </UnderLineGrow>
                         </li>
                     );

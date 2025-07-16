@@ -9,8 +9,8 @@ export default function Experience() {
         <ExperienceProvider>
             <title>My Experience</title>
             <ExperienceLayout
-                content={ LeftContent }
-                details={ RightContent }
+                content={ <LeftContent/> }
+                details={ <RightContent/> }
             />
         </ExperienceProvider>
     );
