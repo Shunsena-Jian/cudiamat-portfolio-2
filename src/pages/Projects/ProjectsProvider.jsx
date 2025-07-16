@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {ProjectsContext} from "./ProjectsContext.jsx";
 
 export const ProjectsProvider = ({ children }) => {
-    const [rightContent, setRightContent] = useState ({});
-    const [middleContent, setMiddleContent] = useState({});
+    const [rightContent, setRightContent] = useState (null);
+    const [middleContent, setMiddleContent] = useState(null);
     const [isActiveMiddle, setIsActiveMiddle] = useState(false);
     const [isActiveRight, setIsActiveRight] = useState(false);
     const [projects, setProjects] = useState([]);
