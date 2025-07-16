@@ -15,7 +15,9 @@
         "github_link": null,
         "src": "ithinkweb_logo.png",
         "alt":  "IThinkWeb Logo",
-        "contributions": ""
+        "contributions": [
+
+        ]
     },
     {
         "id": 2,
@@ -33,7 +35,9 @@
         "github_link": null,
         "src": "pma_logo.png",
         "alt": "Philippine Military Academy Logo",
-        "contributions": ""
+        "contributions": [
+
+        ]
     },
     {
         "id": 3,
@@ -52,6 +56,8 @@
         "github_link": "https://github.com/Shunsena-Jian/Intellidocs",
         "src": "slu_logo.png",
         "alt": "Saint Louis University Logo",
-        "contributions": ""
+        "contributions": [
+
+        ]
     }
 ]

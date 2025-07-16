@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "company": "IThinkWeb Corporation",
+        "position": "Junior Backend Developer",
+        "duration": "July 2024 - Present",
+        "responsibilities": [
+            "Directly report to the squad/team leader for updates and progress.",
+            "Designed and developed new APIs to be integrated with the frontend.",
+            "Applied bug fixes reported by the quality assurance team.",
+            "Reviewed pull requests by other developers from the backend team.",
+            "Developed and implemented new features and RESTFul APIs in an agile environment."
+        ],
+        "company_logo": "ithinkweb_logo.png"
+    },
+    {
+        "id": 2,
+        "company": "Philippine Military Academy",
+        "position": "Computer Programmer (Apprentice)",
+        "duration": "January 2024 - February 2024",
+        "responsibilities": [
+            "Receive and apply feedbacks from our direct supervisor.",
+            "Spearheaded the development of the backend side of the Cadet Information System project.",
+            "Developed the basic CRUD functionalities of the backend using PHP and Laravel.",
+            "Implemented the frontend using HTML, CSS, and JavaScript."
+        ],
+        "company_logo": "pma_logo.png"
+    }
+]
