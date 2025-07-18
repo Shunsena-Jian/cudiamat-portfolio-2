@@ -9,3 +9,41 @@
     animation-fill-mode: forwards;
     animation-delay: calc((var(--experience) - 1) * 0.1s);
 }
+
+.showContent {
+    animation-name: var(--animation-fade-in-from-left);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.hideContent {
+    animation-name: var(--animation-exit-fade-to-left);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.companyLogoContainer {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+}
+
+.companyLogo {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: radial-gradient(circle, white, black);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.companyLogo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.10);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

@@ -32,13 +32,11 @@ export const ProjectsProvider = ({ children }) => {
         const right = {
             id: item.id,
             technology: item.technology,
-            src: item.src,
             alt: item.alt,
             contributions: item.contributions
         };
 
         const isSameItem = middleContent && middleContent.title === item.title;
-        console.log(isSameItem);
 
         if (isActiveMiddle) {
             setIsActiveRight(false);

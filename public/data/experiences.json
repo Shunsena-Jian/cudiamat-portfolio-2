@@ -11,7 +11,8 @@
             "Reviewed pull requests by other developers from the backend team.",
             "Developed and implemented new features and RESTFul APIs in an agile environment."
         ],
-        "company_logo": "ithinkweb_logo.png"
+        "company_logo": "ithinkweb_logo.png",
+        "alt": "IThinkWeb Logo"
     },
     {
         "id": 2,
@@ -24,6 +25,7 @@
             "Developed the basic CRUD functionalities of the backend using PHP and Laravel.",
             "Implemented the frontend using HTML, CSS, and JavaScript."
         ],
-        "company_logo": "pma_logo.png"
+        "company_logo": "pma_logo.png",
+        "alt": "Philippine Military Academy Logo"
     }
 ]

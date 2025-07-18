@@ -18,7 +18,31 @@ export const ExperienceProvider = ({ children }) => {
     }, []);
 
     const handleOnClickExperience = (experience) => {
-        console.log(experience);
+        const processedExperience = {
+            id: experience.id,
+            position: experience.position,
+            duration: experience.duration,
+            responsibilities: experience.responsibilities,
+            company_logo: experience.company_logo,
+            alt: experience.alt
+        };
+
+        const isSameItem = activeExperience && activeExperience.id === experience.id;
+
+        if (isActive) {
+            setIsActive(false);
+            setTimeout(() => {
+                if (isSameItem) {
+                    setActiveExperience('');
+                } else {
+                    setIsActive(true);
+                    setActiveExperience(processedExperience);
+                }
+            }, 500)
+        } else {
+            setIsActive(true);
+            setActiveExperience(processedExperience);
+        }
     }
 
     return (

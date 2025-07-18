@@ -38,32 +38,6 @@
     transform: scale(1.2);
 }
 
-.companyLogoContainer {
-    display: flex;
-    justify-content: center;
-    height: 150px;
-    width: 100%;
-}
-
-.companyLogo {
-    display: block;
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    border-radius: 50%;
-    background: radial-gradient(circle, white, black);
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    filter: grayscale(100%);
-}
-
-.companyLogoContainer:hover .companyLogo {
-    filter: grayscale(0%);
-    transform: scale(1.25);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
 .techLogo {
     height: 35px;
     width: 50px;

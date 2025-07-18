@@ -4,7 +4,7 @@ import styles from "../../styles/experiences.module.css";
 import {ExperienceContext} from "../../pages/Experience/ExperienceContext.jsx";
 
 const LeftContent = () => {
-    const { experiences, handleOnClickExperience } = useContext(ExperienceContext);
+    const { experiences, activeExperience, handleOnClickExperience } = useContext(ExperienceContext);
 
     return (
         <ul className={'m-0 ps-0 list-unstyled'}>
@@ -14,7 +14,7 @@ const LeftContent = () => {
 
                     return (
                         <li key={id} className={'mb-2'}>
-                            <UnderLineGrow>
+                            <UnderLineGrow isActive={activeExperience && activeExperience.id === id}>
                                 <h4
                                     className={`m-0 ${styles.experienceTitle}`}
                                     onClick={() => handleOnClickExperience(experience)}

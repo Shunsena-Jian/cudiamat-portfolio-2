@@ -16,12 +16,6 @@ import pugLogo from "/src/assets/images/technologies/pug_logo.png";
 import cssLogo from "/src/assets/images/technologies/css_logo.png";
 import tailWindLogo from "/src/assets/images/technologies/tailwind_logo.png";
 
-const companyLogos = {
-    'slu_logo.png': sluLogo,
-    'pma_logo.png': pmaLogo,
-    'ithinkweb_logo.png': iThinkWebLogo
-};
-
 const techStackLogos = {
     'laravel-logo.png': laravelLogo,
     'mySQL.png': mySqlLogo,
@@ -43,13 +37,8 @@ const RightContent = () => {
         return null;
     }
 
-    const company = rightContent.src ? companyLogos[rightContent.src] : null;
-
     return(
         <div className={`d-flex flex-column gap-2 ${isActiveRight ? styles.middleContentActive : styles.middleContentHide}`}>
-            <div className={styles.companyLogoContainer}>
-                <img className={styles.companyLogo} src={company} alt={rightContent.alt}/>
-            </div>
             <p>{rightContent.role}</p>
             {
                 rightContent.technology ? (
