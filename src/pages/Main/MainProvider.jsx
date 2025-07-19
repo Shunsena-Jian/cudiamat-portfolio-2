@@ -1,37 +1,38 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {MainContext} from "./MainContext.jsx";
+import styles from "../../styles/main.module.css";
 
 export const MainProvider = ({ children }) => {
-    const [activeContent, setActiveContent] = useState('');
-    const [isVisible, setIsVisible] = useState(false);
+    const [beTech, setBETech] = useState([]);
+    const [feTech, setFETech] = useState([]);
+    const [dbTech, setDBTech] = useState([]);
 
-    const hoverTimeOut = useRef(null);
-    const leaveTimeOut = useRef(null);
+    useEffect(() => {
+        fetch('/data/leftMainContent.json')
+            .then(response => response.json())
+            .then(data => {
+                const backendTechs = [];
+                const frontendTechs = [];
+                const databaseTechs = [];
 
-    const handleMouseHover = (item) => {
-        if (hoverTimeOut.current) {
-            clearTimeout(hoverTimeOut.current);
-        }
-        if (leaveTimeOut.current) {
-            clearTimeout(leaveTimeOut.current);
-        }
+                data.forEach(item => {
+                    if (item.backend) {
+                        backendTechs.push(...item.backend);
+                    }
+                    if (item.frontend) {
+                        frontendTechs.push(...item.frontend);
+                    }
+                    if (item.database) {
+                        databaseTechs.push(...item.database);
+                    }
+                });
 
-        setIsVisible(true);
-        setActiveContent(`<strong>${item.boldedWord}</strong> - ${item.description}`);
-    };
-
-    const handleMouseLeave = () => {
-        if (hoverTimeOut.current) {
-            clearTimeout(hoverTimeOut.current);
-            hoverTimeOut.current = null;
-        }
-
-        setIsVisible(false);
-
-        leaveTimeOut.current = setTimeout(() => {
-            setActiveContent('');
-        }, 500);
-    };
+                setBETech(backendTechs);
+                setFETech(frontendTechs);
+                setDBTech(databaseTechs);
+            })
+            .catch(error => console.error('Error fetching left content:', error));
+    }, []);
 
     const handleAnimationEnd = (event) => {
         if (event.animationName && event.animationName.includes('enterFadeFromBottom')) {
@@ -41,10 +42,9 @@ export const MainProvider = ({ children }) => {
 
     return (
         <MainContext.Provider value={{
-            activeContent,
-            isVisible,
-            handleMouseHover,
-            handleMouseLeave,
+            beTech,
+            feTech,
+            dbTech,
             handleAnimationEnd
         }}>
             {children}

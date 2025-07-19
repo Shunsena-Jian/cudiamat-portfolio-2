@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { MainContext } from '../../pages/Main/MainContext.jsx';
 import styles from '../../styles/main.module.css';
 
@@ -29,53 +29,52 @@ const logoImages = {
 };
 
 const LeftContent = () => {
-    const { handleMouseHover, handleMouseLeave, handleAnimationEnd } = useContext(MainContext);
-    const [logoItems, setLogoItems] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        fetch('/data/leftMainContent.json')
-            .then(response => response.json())
-            .then(data => {
-                const items = data.map(item => ({
-                    ...item,
-                    src: logoImages[item.src],
-                    ElementType: 'img',
-                    className: styles.logo,
-                }));
-                setLogoItems(items);
-                setIsLoading(false);
-            })
-            .catch(error => {
-                console.error('Error fetching left content:', error)
-                setIsLoading(false);
-            });
-    }, []);
-
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
+    const { beTech, feTech, dbTech, handleAnimationEnd } = useContext(MainContext);
 
     return (
-        <div className={`${styles.logoContainer} d-flex flex-wrap gap-3`}>
-            {
-                logoItems.map((item, index) => {
-                    const {id, ElementType, src, className} = item;
+        <div className={'d-flex flex-column gap-2'}>
+            <div>
+                <h5>Server Side</h5>
+                <div className={`${styles.logoContainer} d-flex flex-wrap gap-2 mt-2`}>
+                    {
+                        beTech.map((backend, index) => {
+                            const { id, src, alt } = backend;
 
-                    return (
-                        <ElementType
-                            key={id}
-                            src={src}
-                            alt={item.boldedWord}
-                            onMouseEnter={() => handleMouseHover(item)}
-                            onMouseLeave={handleMouseLeave}
-                            className={className}
-                            onAnimationEnd={handleAnimationEnd}
-                            style={{ '--n': index + 1 }}
-                        />
-                    );
-                })
-            }
+                            return (
+                                <img key={id} src={logoImages[src]} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{'--n': index + 1}} />
+                            );
+                        })
+                    }
+                </div>
+            </div>
+            <div>
+                <h5>Frontend</h5>
+                <div className={`${styles.logoContainer} d-flex flex-wrap gap-2 mt-2`}>
+                    {
+                        feTech.map((frontend, index) => {
+                            const { id, src, alt } = frontend;
+
+                            return (
+                                <img key={id} src={logoImages[src]} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{'--n': index + 1}} />
+                            );
+                        })
+                    }
+                </div>
+            </div>
+            <div>
+                <h5>Database</h5>
+                <div className={`${styles.logoContainer} d-flex flex-wrap gap-2 mt-2`}>
+                    {
+                        dbTech.map((database, index) => {
+                            const { id, src, alt } = database;
+
+                            return (
+                                <img key={id} src={logoImages[src]} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{'--n': index + 1}} />
+                            );
+                        })
+                    }
+                </div>
+            </div>
         </div>
     );
 };

@@ -19,11 +19,6 @@
     transform: scale(1.2);
 }
 
-.logoContainer {
-    justify-content: center;
-    gap: 10px;
-}
-
 .logoContainer > img {
     animation-delay: calc((var(--n) - 1) * 0.1s);
 }
@@ -32,18 +27,6 @@
     font-size: 15px;
 
     animation-name: var(--animation-fade-in-from-right);
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.showDynamicContent {
-    animation-name: var(--animation-fade-in-from-top);
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.hideDynamicContent {
-    animation-name: var(--animation-exit-fade-to-bottom);
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }

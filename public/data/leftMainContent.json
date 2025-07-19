@@ -1,68 +1,64 @@
 [
     {
-        "id": "java_logo",
-        "src": "java.png",
-        "boldedWord": "Java",
-        "description": "As my first programming language, it became the bedrock of my coding journey and sparked a lifelong passion for software development that started in college."
+        "backend": [
+            {
+                "id": 1,
+                "src": "java.png",
+                "alt": "Java"
+            },
+            {
+                "id": 2,
+                "src": "python.png",
+                "alt": "Python"
+            },
+            {
+                "id": 3,
+                "src": "nodeJS.png",
+                "alt": "Node JS"
+            },
+            {
+                "id": 4,
+                "src": "laravel-logo.png",
+                "alt": "PHP with Laravel"
+            }
+        ]
     },
     {
-        "id": "python_logo",
-        "src": "python.png",
-        "boldedWord": "Python",
-        "description": "In college, I dove deep into this versatile language, using it for everything from web scraping and data analysis to exploring machine learning."
+        "frontend": [
+            {
+                "id": 9,
+                "src": "react.png",
+                "alt": "React"
+            },
+            {
+                "id": 10,
+                "src": "bootstrap.png",
+                "alt": "Bootstrap"
+            }
+        ]
     },
     {
-        "id": "nodeJS_logo",
-        "src": "nodeJS.png",
-        "boldedWord": "Node.js with Express",
-        "description": "This powerful duo was the backbone of my college thesis, \"Intellijent,\" allowing me to build robust applications and igniting my passion for web development."
-    },
-    {
-        "id": "laravel_logo",
-        "src": "laravel-logo.png",
-        "boldedWord": "PHP with Laravel",
-        "description": "As my primary tool for server-side development, I use its powerful features to build robust applications like the Cadet Information System, which marked the beginning of my web development journey during my internship."
-    },
-    {
-        "id": "mySQL_logo",
-        "src": "mySQL.png",
-        "boldedWord": "MySQL",
-        "description": "As my introduction to database management in college, it was an essential stepping stone that solidified my understanding of efficient data organization and management."
-    },
-    {
-        "id": "mongoDB_logo",
-        "src": "mongoDB.png",
-        "boldedWord": "MongoDB",
-        "description": "Crucial for my college thesis, 'Intellijent,' and still a key tool in my current role, it was with this database that I truly grasped the power of NoSQL for handling diverse, unstructured data."
-    },
-    {
-        "id": "dynamoDB_logo",
-        "src": "dynamoDB.svg",
-        "boldedWord": "DynamoDB",
-        "description": "As a core part of my toolkit, I use it to manage vital project information—from cache to TTLs—and confidently handle data retrieval, additions, and modifications to ensure seamless operations."
-    },
-    {
-        "id": "opensearch_logo",
-        "src": "opensearch.svg",
-        "boldedWord": "OpenSearch",
-        "description": "A vital tool in my workflow, I use it to monitor projects by sifting through vast amounts of data, effectively logging events, and pinpointing errors to ensure seamless data retrieval for features like pagination."
-    },
-    {
-        "id": "react_logo",
-        "src": "react.png",
-        "boldedWord": "React",
-        "description": "I use this library in my personal projects to hone my front-end skills, allowing me to craft dynamic and interactive user interfaces that bring my ideas to life."
-    },
-    {
-        "id": "bootstrap_logo",
-        "src": "bootstrap.png",
-        "boldedWord": "Bootstrap",
-        "description": "In this portfolio, I use this framework to enhance my front-end skills by rapidly creating responsive and visually appealing web applications."
-    },
-    {
-        "id": "jQuery_logo",
-        "src": "jQuery.png",
-        "boldedWord": "jQuery",
-        "description": "This was instrumental in the Cadet Information System project, where I used it to enhance the user interface and significantly improve the overall user experience."
+        "database": [
+            {
+                "id":  5,
+                "src": "mySQL.png",
+                "alt": "MySQL"
+            },
+            {
+                "id": 6,
+                "src": "mongoDB.png",
+                "alt": "MongoDB"
+            },
+            {
+                "id": 7,
+                "src": "dynamoDB.svg",
+                "alt": "DynamoDB"
+            },
+            {
+                "id": 8,
+                "src": "opensearch.svg",
+                "alt": "OpenSearch"
+            }
+        ]
     }
 ]
