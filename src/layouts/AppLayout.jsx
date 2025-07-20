@@ -1,12 +1,12 @@
+import styles from './app-layout.module.css';
+
 function AppLayout({ header, content }) {
     return (
-        <div className={'container-fluid d-flex flex-column vh-100 p-0'}>
+        <div className={'d-flex flex-column min-vh-100 p-0'}>
             <header>
                 { header }
             </header>
-
-            {/* Main Content Row */}
-            <main className={'row g-0 flex-grow-1'}>
+            <main className={styles['main-content']}>
                 { content }
             </main>
         </div>
