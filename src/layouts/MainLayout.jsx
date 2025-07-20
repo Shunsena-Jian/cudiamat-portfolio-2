@@ -1,6 +1,8 @@
+import styles from './main-layout.module.css';
+
 const LeftColumnContent = ({leftColumn}) => {
     return (
-        <section className={'col-12 col-md-6 d-flex align-items-center order-2 order-md-1'}>
+        <section className={`${styles.gridItem} d-flex align-items-center`}>
             {leftColumn}
         </section>
     );
@@ -8,7 +10,7 @@ const LeftColumnContent = ({leftColumn}) => {
 
 const RightColumnContent = ({rightColumn}) => {
     return (
-        <aside className={'col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-start justify-content-md-end order-1 order-md-2 pb-3 pb-md-0'}>
+        <aside className={`${styles.gridItem} d-flex align-items-center justify-content-center`}>
             {rightColumn}
         </aside>
     );
@@ -16,12 +18,9 @@ const RightColumnContent = ({rightColumn}) => {
 
 export default function MainLayout({leftColumn, rightColumn}) {
     return (
-        <main className="main-section container-fluid d-flex p-3">
-            {/* Main Row */}
-            <div className={'row d-flex container-fluid p-0'}>
-                <LeftColumnContent leftColumn={leftColumn}/>
-                <RightColumnContent rightColumn={rightColumn}/>
-            </div>
+        <main className={styles['grid-container']}>
+            <LeftColumnContent leftColumn={leftColumn}/>
+            <RightColumnContent rightColumn={rightColumn}/>
         </main>
     );
 }

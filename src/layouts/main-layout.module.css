@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100%;
+    width: 100%;
+    gap: 15px;
+    padding: 1rem;
+}
+
+/*@media (min-width: 768px) { !* Corresponds to Bootstrap's 'md' breakpoint *!*/
+/*    .grid-container {*/
+/*        grid-template-columns: 1fr 1fr; !* Two equal columns on medium screens and up *!*/
+/*    }*/
+/*}*/
+
+.gridItem {
+    background: #333333;
+    background-repeat: repeat;
+    background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+
+    display: flex;
+    border: #4f4f4f solid 1px;
+    border-radius: 15px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    justify-content: center;
+    align-items: center;
+}

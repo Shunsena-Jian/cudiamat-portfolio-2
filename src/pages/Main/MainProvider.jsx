@@ -1,6 +1,5 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {MainContext} from "./MainContext.jsx";
-import styles from "../../styles/main.module.css";
 
 export const MainProvider = ({ children }) => {
     const [beTech, setBETech] = useState([]);

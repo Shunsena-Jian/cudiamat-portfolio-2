@@ -3,7 +3,6 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 import './animations.css';
 import AppLayout from './layouts/AppLayout.jsx';
 import Header from "./pages/Header.jsx";
-import DynamicBackground from "./components/DynamicBackground/DynamicBackground.jsx";
 
 const Main = lazy(() => import("./pages/Main/Main.jsx"));
 const Projects = lazy(() => import("./pages/Projects/Projects.jsx"));
@@ -12,7 +11,6 @@ const Experience = lazy(() => import("./pages/Experience/Experience.jsx"));
 function App() {
     return (
         <>
-            <DynamicBackground />
             <Suspense fallback={<div className={'d-flex justify-content-center'}>Loading...</div>}>
             <Routes>
                 <Route
