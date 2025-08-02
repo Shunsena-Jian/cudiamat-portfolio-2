@@ -1,4 +1,4 @@
-import styles from './main-layout.module.css';
+import styles from '../styles/main-layout.module.css';
 
 const LeftColumnContent = ({leftColumn}) => {
     return (

@@ -1,11 +1,11 @@
 import {Link, useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 
-import HeaderLayout from "../layouts/HeaderLayout.jsx";
-import UnderLineGrow from "../components/UnderlineGrow/UnderLineGrow.jsx";
-import GithubLogo from "../assets/images/technologies/github-logo-white.png";
-import LinkedInLogo from "../assets/images/technologies/InBug-White.png";
-import styles from '../styles/header.module.css';
+import HeaderLayout from "../../layouts/HeaderLayout.jsx";
+import UnderLineGrow from "../UnderlineGrow/UnderLineGrow.jsx";
+import GithubLogo from "../../assets/images/technologies/github-logo-white.png";
+import LinkedInLogo from "../../assets/images/technologies/InBug-White.png";
+import styles from '../../styles/header.module.css';
 
 const logoImages = {
     'github-logo-white.png': GithubLogo,

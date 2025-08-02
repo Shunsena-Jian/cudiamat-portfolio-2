@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route, Outlet } from 'react-router-dom';
 import './animations.css';
 import AppLayout from './layouts/AppLayout.jsx';
-import Header from "./pages/Header.jsx";
+import Header from "./components/Header/Header.jsx";
 
 const Main = lazy(() => import("./pages/Main/Main.jsx"));
 const Projects = lazy(() => import("./pages/Projects/Projects.jsx"));
