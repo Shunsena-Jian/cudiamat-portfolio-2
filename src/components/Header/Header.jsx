@@ -41,10 +41,12 @@ const NavigationLinks = () => {
     return (
         <>
             {navigationLinks && navigationLinks.map((item, index) => {
-                const { id, text, ElementType, className, to } = item;
+                const { id, text, ElementType, className, to, isCta } = item;
                 const isActive = location.pathname === to;
 
-                const content = (
+                const content = isCta ? (
+                    <button className={`${styles.ctaButton} ${styles.textItem} ${isActive ? styles.activeCtaButton : ''}`}>{text}</button>
+                ) : (
                     <UnderLineGrow key={id} isActive={isActive}>
                         <ElementType className={`${className} ${styles.textItem}`} style={{ '--item': index }}>{text}</ElementType>
                     </UnderLineGrow>

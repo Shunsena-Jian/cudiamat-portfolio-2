@@ -4,14 +4,16 @@
         "text": "Experience",
         "ElementType": "h5",
         "className": "m-0",
-        "to": "/experience"
+        "to": "/experience",
+        "isCta": true
     },
     {
         "id": "projects",
         "text": "Projects",
         "ElementType": "h5",
         "className": "m-0",
-        "to": "/projects"
+        "to": "/projects",
+        "isCta": true
     },
     {
         "id": "github_logo",
