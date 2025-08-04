@@ -1,12 +1,5 @@
 [
     {
-        "id": "name",
-        "text": "Jian Raphael R. Cudiamat",
-        "ElementType": "h1",
-        "className": "m-0",
-        "to": "/"
-    },
-    {
         "id": "experience",
         "text": "Experience",
         "ElementType": "h5",
@@ -19,5 +12,23 @@
         "ElementType": "h5",
         "className": "m-0",
         "to": "/projects"
+    },
+    {
+        "id": "github_logo",
+        "ElementType": "a",
+        "SubElementType": "img",
+        "src": "github-logo-white.png",
+        "url": "https://github.com/Shunsena-Jian",
+        "className": "m-0",
+        "target": "_blank"
+    },
+    {
+        "id": "linkedIn_logo",
+        "ElementType": "a",
+        "SubElementType": "img",
+        "src": "InBug-White.png",
+        "url": "https://www.linkedin.com/in/jian-raphael-cudiamat-70b1a5269/",
+        "className": "m-0",
+        "target": "_blank"
     }
 ]
