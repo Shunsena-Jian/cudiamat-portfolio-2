@@ -19,11 +19,11 @@ const upperContent = () => {
     const isActive = location.pathname === '/';
 
     return (
-        <a href="/" className={styles.linkReset}>
+        <Link to="/" className={styles.linkReset}>
             <UnderLineGrow isActive={isActive}>
                 <h1 className={'m-0'}>Jian Raphael R. Cudiamat</h1>
             </UnderLineGrow>
-        </a>
+        </Link>
     );
 };
 
