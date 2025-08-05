@@ -1,10 +1,17 @@
+
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     height: 100%;
     width: 100%;
     gap: 15px;
     padding: 1rem;
+}
+
+.left-column {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
 }
 
 /*@media (min-width: 768px) { !* Corresponds to Bootstrap's 'md' breakpoint *!*/
@@ -23,6 +30,4 @@
     border-radius: 15px;
     padding-left: 3rem;
     padding-right: 3rem;
-    justify-content: center;
-    align-items: center;
 }

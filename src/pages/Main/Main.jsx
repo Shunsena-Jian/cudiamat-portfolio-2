@@ -1,5 +1,5 @@
 import MainLayout from '../../layouts/MainLayout.jsx';
-import LeftContent from "../../components/MainPage/LeftContent.jsx";
+import { UpperRow, MiddleRow, LowerRow } from "../../components/MainPage/LeftContent.jsx";
 import RightContent from "../../components/MainPage/RightContent.jsx";
 import { MainProvider } from './MainProvider.jsx';
 
@@ -8,7 +8,7 @@ function Main() {
         <MainProvider>
             <title>My Portfolio | Home</title>
             <MainLayout
-                leftColumn={<LeftContent />}
+                leftColumn={[<UpperRow />, <MiddleRow />, <LowerRow />]}
                 rightColumn={<RightContent />}
             />
         </MainProvider>
