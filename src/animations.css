@@ -7,6 +7,26 @@
     --animation-exit-fade-to-top: exitFadeToTop;
     --animation-exit-fade-to-left: exitFadeToLeft;
     --animation-exit-fade-to-right: exitFadeToRight;
+    --animation-fade-in: fadeIn;
+    --animation-fade-out: fadeOut;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes enterFadeFromTop {

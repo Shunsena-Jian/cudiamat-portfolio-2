@@ -21,13 +21,13 @@
 /*}*/
 
 .gridItem {
-    background: #333333;
-    background-repeat: repeat;
-    background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+    background: #333333 url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat;
 
     display: flex;
     border: #4f4f4f solid 1px;
     border-radius: 15px;
     padding-left: 3rem;
     padding-right: 3rem;
+    position: relative;
+    overflow: hidden;
 }

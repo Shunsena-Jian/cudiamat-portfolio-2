@@ -81,12 +81,12 @@
             },
             {
                 "id": 7,
-                "src": "dynamoDB.svg",
+                "src": "dynamoDB.png",
                 "alt": "DynamoDB"
             },
             {
                 "id": 8,
-                "src": "opensearch.svg",
+                "src": "opensearch.png",
                 "alt": "OpenSearch"
             }
         ]

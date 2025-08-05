@@ -1,15 +1,9 @@
-import {useEffect, useState} from "react";
+import {useContext} from "react";
 import styles from '../../styles/main.module.css';
+import {MainContext} from "../../pages/Main/MainContext.jsx";
 
 const RightContent = () => {
-    const [paragraphs, setParagraphs] = useState([]);
-
-    useEffect(() => {
-        fetch('/data/rightMainContent.json')
-            .then(response => response.json())
-            .then(data => setParagraphs(data))
-            .catch(error => console.error('Error fetching paragraphs:', error));
-    }, []);
+    const { paragraphs } = useContext(MainContext);
 
     return (
         <div className={`${styles.paragraph}`}>

@@ -5,6 +5,10 @@ export const MainProvider = ({ children }) => {
     const [beTech, setBETech] = useState([]);
     const [feTech, setFETech] = useState([]);
     const [dbTech, setDBTech] = useState([]);
+    const [paragraphs, setParagraphs] = useState([]);
+    const [hoveredLogo, setHoveredLogo] = useState(null);
+    const [activeLogo, setActiveLogo] = useState(null);
+    const [animation, setAnimation] = useState('');
 
     useEffect(() => {
         fetch('/data/leftMainContent.json')
@@ -31,7 +35,25 @@ export const MainProvider = ({ children }) => {
                 setDBTech(databaseTechs);
             })
             .catch(error => console.error('Error fetching left content:', error));
+
+        fetch('/data/rightMainContent.json')
+            .then(response => response.json())
+            .then(data => setParagraphs(data))
+            .catch(error => console.error('Error fetching paragraphs:', error));
     }, []);
+
+    useEffect(() => {
+        if (hoveredLogo) {
+            setActiveLogo(hoveredLogo);
+            setAnimation('fadeIn');
+        } else if (activeLogo) {
+            setAnimation('fadeOut');
+            const timer = setTimeout(() => {
+                setActiveLogo(null);
+            }, 250); // Match animation duration
+            return () => clearTimeout(timer);
+        }
+    }, [hoveredLogo, activeLogo]);
 
     const handleAnimationEnd = (event) => {
         if (event.animationName && event.animationName.includes('enterFadeFromBottom')) {
@@ -39,12 +61,21 @@ export const MainProvider = ({ children }) => {
         }
     };
 
+    const handleLogoHover = (logo) => {
+        setHoveredLogo(logo);
+    };
+
     return (
         <MainContext.Provider value={{
             beTech,
             feTech,
             dbTech,
-            handleAnimationEnd
+            paragraphs,
+            activeLogo,
+            animation,
+            handleAnimationEnd,
+            hoveredLogo,
+            handleLogoHover
         }}>
             {children}
         </MainContext.Provider>

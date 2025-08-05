@@ -3,6 +3,7 @@ import { MainContext } from '../../pages/Main/MainContext.jsx';
 import styles from '../../styles/main.module.css';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import { getImageUrl } from '../../utils/assetHelper.js';
 
 const renderTooltip = (props, alt) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -10,11 +11,10 @@ const renderTooltip = (props, alt) => (
     </Tooltip>
 );
 
-const LogoSection = ({ technologies, handleAnimationEnd }) => (
+const LogoSection = ({ technologies, handleAnimationEnd, handleLogoHover }) => (
     <div className={`${styles.logoContainer} d-flex flex-wrap gap-3 mt-2`}>
         {technologies.map((tech, index) => {
             const { id, src, alt } = tech;
-            const imageUrl = new URL(`../../assets/images/technologies/${src}`, import.meta.url).href;
 
             return (
                 <OverlayTrigger
@@ -22,39 +22,53 @@ const LogoSection = ({ technologies, handleAnimationEnd }) => (
                     placement="top"
                     overlay={(props) => renderTooltip(props, alt)}
                 >
-                    <img src={imageUrl} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{ '--n': index + 1 }} />
+                    <img
+                        src={getImageUrl(src)}
+                        alt={alt}
+                        onAnimationEnd={handleAnimationEnd}
+                        className={styles.logo}
+                        style={{ '--n': index + 1 }}
+                        onMouseEnter={() => handleLogoHover(tech)}
+                        onMouseLeave={() => handleLogoHover(null)}
+                    />
                 </OverlayTrigger>
             );
         })}
     </div>
 );
 
-export const UpperRow = () => {
-    const { beTech, handleAnimationEnd } = useContext(MainContext);
+const Row = ({ title, technologies }) => {
+    const { handleAnimationEnd, handleLogoHover, activeLogo, animation } = useContext(MainContext);
+    const isSectionActive = activeLogo && technologies.some(t => t.id === activeLogo.id);
+    const imageUrl = activeLogo ? getImageUrl(activeLogo.src) : '';
+
     return (
-        <div className={styles.rowStyle}>
-            <h5>Server Side</h5>
-            <LogoSection technologies={beTech} handleAnimationEnd={handleAnimationEnd} />
-        </div>
+        <>
+            {isSectionActive && (
+                <div
+                    className={`${styles.backgroundLogo} ${styles[animation]}`}
+                    style={{ backgroundImage: `url(${imageUrl})` }}
+                ></div>
+            )}
+            <div className={styles.rowContent}>
+                <h5>{title}</h5>
+                <LogoSection technologies={technologies} handleAnimationEnd={handleAnimationEnd} handleLogoHover={handleLogoHover} />
+            </div>
+        </>
     );
+}
+
+export const UpperRow = () => {
+    const { beTech } = useContext(MainContext);
+    return <Row title="Server Side" technologies={beTech} />;
 };
 
 export const MiddleRow = () => {
-    const { feTech, handleAnimationEnd } = useContext(MainContext);
-    return (
-        <div className={styles.rowStyle}>
-            <h5>Frontend</h5>
-            <LogoSection technologies={feTech} handleAnimationEnd={handleAnimationEnd} />
-        </div>
-    );
+    const { feTech } = useContext(MainContext);
+    return <Row title="Frontend" technologies={feTech} />;
 };
 
 export const LowerRow = () => {
-    const { dbTech, handleAnimationEnd } = useContext(MainContext);
-    return (
-        <div className={styles.rowStyle}>
-            <h5>Database</h5>
-            <LogoSection technologies={dbTech} handleAnimationEnd={handleAnimationEnd} />
-        </div>
-    );
+    const { dbTech } = useContext(MainContext);
+    return <Row title="Database" technologies={dbTech} />;
 };
