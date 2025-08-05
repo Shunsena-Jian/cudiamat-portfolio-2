@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
-import UnderLineGrow from "../UnderlineGrow/UnderLineGrow.jsx";
 import styles from "../../styles/experiences.module.css";
+import headerStyles from "../../styles/header.module.css";
 import {ExperienceContext} from "../../pages/Experience/ExperienceContext.jsx";
 
 const LeftContent = () => {
@@ -11,18 +11,17 @@ const LeftContent = () => {
             {
                 experiences.map(experience => {
                     const { id, company } = experience;
+                    const isActive = activeExperience && activeExperience.id === id;
 
                     return (
                         <li key={id} className={'mb-2'}>
-                            <UnderLineGrow isActive={activeExperience && activeExperience.id === id}>
-                                <h4
-                                    className={`m-0 ${styles.experienceTitle}`}
-                                    onClick={() => handleOnClickExperience(experience)}
-                                    style={{ '--experience': id }}
-                                >
-                                    {company}
-                                </h4>
-                            </UnderLineGrow>
+                            <button
+                                className={`${headerStyles.ctaButton} ${styles.experienceTitle} ${isActive ? headerStyles.activeCtaButton : ''}`}
+                                onClick={() => handleOnClickExperience(experience)}
+                                style={{ '--experience': id }}
+                            >
+                                {company}
+                            </button>
                         </li>
                     );
                 })

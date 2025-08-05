@@ -1,28 +1,27 @@
 import React, {useContext} from "react";
-import UnderLineGrow from "../UnderlineGrow/UnderLineGrow.jsx";
-import styles from "../../styles/projects.module.css";
 import { ProjectsContext } from "../../pages/Projects/ProjectsContext.jsx";
+import styles from "../../styles/projects.module.css";
+import headerStyles from "../../styles/header.module.css";
 
 const LeftContent = () => {
-const { projects, middleContent, handleMouseOnClickMiddle } = useContext(ProjectsContext);
+    const { projects, middleContent, handleMouseOnClickMiddle } = useContext(ProjectsContext);
 
     return(
         <ul className={'m-0 ps-0 list-unstyled'}>
             {
                 projects.map((project, index) => {
                     const { title } = project;
+                    const isActive = middleContent && middleContent.title === title;
 
                     return (
                         <li key={index} className={'mb-2'}>
-                            <UnderLineGrow isActive={middleContent && middleContent.title === title}>
-                                <h4
-                                    className={`m-0 ${styles.projectTitle}`}
-                                    onClick={() => handleMouseOnClickMiddle(project)}
-                                    style={{ '--project': index }}
-                                >
-                                    {title}
-                                </h4>
-                            </UnderLineGrow>
+                            <button
+                                className={`${headerStyles.ctaButton} ${styles.projectTitle} ${isActive ? headerStyles.activeCtaButton : ''}`}
+                                onClick={() => handleMouseOnClickMiddle(project)}
+                                style={{ '--project': index }}
+                            >
+                                {title}
+                            </button>
                         </li>
                     );
                 })
