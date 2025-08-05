@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { MainContext } from '../../pages/Main/MainContext.jsx';
 import styles from '../../styles/main.module.css';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 import javaLogo from "../../assets/images/technologies/java.png";
 import pythonLogo from "../../assets/images/technologies/python.png";
@@ -31,6 +33,12 @@ const logoImages = {
 const LeftContent = () => {
     const { beTech, feTech, dbTech, handleAnimationEnd } = useContext(MainContext);
 
+    const renderTooltip = (props, alt) => (
+        <Tooltip id="button-tooltip" {...props}>
+            {alt}
+        </Tooltip>
+    );
+
     return (
         <div className={'d-flex flex-column gap-2'}>
             <div>
@@ -41,7 +49,14 @@ const LeftContent = () => {
                             const { id, src, alt } = backend;
 
                             return (
-                                <img key={id} src={logoImages[src]} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{'--n': index + 1}} />
+                                <OverlayTrigger
+                                    key={id}
+                                    placement="top"
+                                    delay={{ show: 0, hide: 250 }}
+                                    overlay={(props) => renderTooltip(props, alt)}
+                                >
+                                    <img src={logoImages[src]} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{'--n': index + 1}} />
+                                </OverlayTrigger>
                             );
                         })
                     }
@@ -55,7 +70,14 @@ const LeftContent = () => {
                             const { id, src, alt } = frontend;
 
                             return (
-                                <img key={id} src={logoImages[src]} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{'--n': index + 1}} />
+                                <OverlayTrigger
+                                    key={id}
+                                    placement="top"
+                                    delay={{ show: 0, hide: 250 }}
+                                    overlay={(props) => renderTooltip(props, alt)}
+                                >
+                                    <img src={logoImages[src]} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{'--n': index + 1}} />
+                                </OverlayTrigger>
                             );
                         })
                     }
@@ -69,7 +91,14 @@ const LeftContent = () => {
                             const { id, src, alt } = database;
 
                             return (
-                                <img key={id} src={logoImages[src]} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{'--n': index + 1}} />
+                                <OverlayTrigger
+                                    key={id}
+                                    placement="top"
+                                    delay={{ show: 0, hide: 250 }}
+                                    overlay={(props) => renderTooltip(props, alt)}
+                                >
+                                    <img src={logoImages[src]} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{'--n': index + 1}} />
+                                </OverlayTrigger>
                             );
                         })
                     }
