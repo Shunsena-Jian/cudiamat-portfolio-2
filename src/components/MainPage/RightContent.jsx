@@ -12,17 +12,16 @@ const RightContent = () => {
     }, []);
 
     return (
-        <div className={`${styles.paragraph} text-center text-md-end`}>
-            {
-                paragraphs.map((paragraph, index) => {
-                    return (
-                        <p key={index}>{paragraph}</p>
-                    );
-                })
-            }
+        <div className={`${styles.paragraph}`}>
+            {paragraphs.map((paragraph, index) => {
+                if (index === 0) {
+                    return <h4 key={index} className={'mb-4'}><strong>{paragraph}</strong></h4>;
+                } else {
+                    return <h6 key={index}>{paragraph}</h6>;
+                }
+            })}
         </div>
     );
 };
 
 export default RightContent;
-
