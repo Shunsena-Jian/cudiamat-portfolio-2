@@ -20,7 +20,6 @@ const LogoSection = ({ technologies, handleAnimationEnd }) => (
                 <OverlayTrigger
                     key={id}
                     placement="top"
-                    delay={{ show: 0, hide: 250 }}
                     overlay={(props) => renderTooltip(props, alt)}
                 >
                     <img src={imageUrl} alt={alt} onAnimationEnd={handleAnimationEnd} className={styles.logo} style={{ '--n': index + 1 }} />
