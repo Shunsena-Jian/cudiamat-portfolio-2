@@ -11,7 +11,7 @@ const renderTooltip = (props, alt) => (
 );
 
 const LogoSection = ({ technologies, handleAnimationEnd }) => (
-    <div className={`${styles.logoContainer} d-flex flex-wrap gap-2 mt-2`}>
+    <div className={`${styles.logoContainer} d-flex flex-wrap gap-3 mt-2`}>
         {technologies.map((tech, index) => {
             const { id, src, alt } = tech;
             const imageUrl = new URL(`../../assets/images/technologies/${src}`, import.meta.url).href;
@@ -32,7 +32,7 @@ const LogoSection = ({ technologies, handleAnimationEnd }) => (
 export const UpperRow = () => {
     const { beTech, handleAnimationEnd } = useContext(MainContext);
     return (
-        <div>
+        <div className={styles.rowStyle}>
             <h5>Server Side</h5>
             <LogoSection technologies={beTech} handleAnimationEnd={handleAnimationEnd} />
         </div>
@@ -42,7 +42,7 @@ export const UpperRow = () => {
 export const MiddleRow = () => {
     const { feTech, handleAnimationEnd } = useContext(MainContext);
     return (
-        <div>
+        <div className={styles.rowStyle}>
             <h5>Frontend</h5>
             <LogoSection technologies={feTech} handleAnimationEnd={handleAnimationEnd} />
         </div>
@@ -52,7 +52,7 @@ export const MiddleRow = () => {
 export const LowerRow = () => {
     const { dbTech, handleAnimationEnd } = useContext(MainContext);
     return (
-        <div>
+        <div className={styles.rowStyle}>
             <h5>Database</h5>
             <LogoSection technologies={dbTech} handleAnimationEnd={handleAnimationEnd} />
         </div>

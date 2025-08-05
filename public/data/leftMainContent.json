@@ -62,11 +62,6 @@
             },
             {
                 "id": 16,
-                "src": "react.png",
-                "alt": "React"
-            },
-            {
-                "id": 17,
                 "src": "tailwind_logo.png",
                 "alt": "Tailwind"
             }

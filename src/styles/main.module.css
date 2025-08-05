@@ -31,3 +31,8 @@
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
+
+.rowStyle {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
