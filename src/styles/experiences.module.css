@@ -1,3 +1,4 @@
+
 .experienceTitle {
     font-size: clamp(1rem, 1vw, 1.50rem);
 
@@ -46,4 +47,30 @@
     filter: grayscale(0%);
     transform: scale(1.10);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 35fr 65fr;
+    height: 100%;
+    width: 100%;
+    gap: 15px;
+    padding: 1rem;
+}
+
+.left-column {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.gridItem {
+    background: #333333 url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat;
+
+    display: flex;
+    border: #4f4f4f solid 1px;
+    border-radius: 15px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    position: relative;
+    overflow: hidden;
 }
