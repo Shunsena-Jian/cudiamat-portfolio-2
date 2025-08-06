@@ -1,10 +1,13 @@
-import {ExperienceContext} from "./ExperienceContext.jsx";
-import {useEffect, useState} from "react";
+import { ExperienceContext } from "./ExperienceContext.jsx";
+import { useEffect, useState } from "react";
+import { getCompanyImageUrl } from "../../utils/assetHelper.js";
 
 export const ExperienceProvider = ({ children }) => {
     const [experiences, setExperiences] = useState([]);
     const [activeExperience, setActiveExperience] = useState(null);
     const [isActive, setIsActive] = useState(false);
+    const [companyLogoUrl, setCompanyLogoUrl] = useState(null);
+    const [activeAnimation, setActiveAnimation] = useState('');
 
     useEffect(() => {
         fetch('/data/experiences.json')
@@ -14,7 +17,7 @@ export const ExperienceProvider = ({ children }) => {
             })
             .catch(error => {
                 console.error('Error fetching experiences:', error);
-            })
+            });
     }, []);
 
     const handleOnClickExperience = (experience) => {
@@ -31,28 +34,41 @@ export const ExperienceProvider = ({ children }) => {
 
         if (isActive) {
             setIsActive(false);
+            setActiveAnimation('fade-out');
             setTimeout(() => {
                 if (isSameItem) {
-                    setActiveExperience('');
+                    setActiveExperience(null);
+                    setCompanyLogoUrl(null);
+                    setActiveAnimation(null);
                 } else {
                     setIsActive(true);
                     setActiveExperience(processedExperience);
+                    setActiveAnimation('fade-in');
+
+                    const newLogoUrl = getCompanyImageUrl(processedExperience.company_logo);
+                    setCompanyLogoUrl(newLogoUrl);
                 }
-            }, 500)
+            }, 500);
         } else {
             setIsActive(true);
             setActiveExperience(processedExperience);
+            setActiveAnimation('fade-in');
+
+            const newLogoUrl = getCompanyImageUrl(processedExperience.company_logo);
+            setCompanyLogoUrl(newLogoUrl);
         }
-    }
+    };
 
     return (
         <ExperienceContext.Provider value={{
             experiences,
             isActive,
             activeExperience,
-            handleOnClickExperience
+            handleOnClickExperience,
+            companyLogoUrl,
+            activeAnimation
         }}>
-            { children }
+            {children}
         </ExperienceContext.Provider>
-    )
+    );
 };

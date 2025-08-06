@@ -74,3 +74,57 @@
     position: relative;
     overflow: hidden;
 }
+
+@keyframes bgFadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+@keyframes bgFadeOut {
+    from { opacity: 0.5; }
+    to { opacity: 0; }
+}
+
+.rightColumnContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.rightColumnContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--bg-image);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: -1;
+}
+
+.bgFadeIn::before {
+    animation-name: bgFadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.bgFadeOut::before {
+    animation-name: bgFadeOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.quadrant {
+    border: #4f4f4f solid 1px;
+    border-radius: 15px;
+    background: #1a1a1a url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat;
+    padding: 1rem;
+}

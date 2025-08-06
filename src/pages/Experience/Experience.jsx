@@ -9,7 +9,7 @@ export default function Experience() {
         <ExperienceProvider>
             <title>My Experience</title>
             <ExperienceLayout
-                content={ <LeftContent/> }
+                experiences={ <LeftContent/> }
                 details={ <RightContent/> }
             />
         </ExperienceProvider>
