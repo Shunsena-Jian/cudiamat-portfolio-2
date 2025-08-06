@@ -51,7 +51,7 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: 35fr 65fr;
+    grid-template-columns: 30fr 70fr;
     height: 100%;
     width: 100%;
     gap: 15px;
