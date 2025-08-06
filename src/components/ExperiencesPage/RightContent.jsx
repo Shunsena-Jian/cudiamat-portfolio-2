@@ -1,16 +1,10 @@
 import React, {useContext} from "react";
 import styles from "../../styles/experiences.module.css";
 import {ExperienceContext} from "../../pages/Experience/ExperienceContext.jsx";
-import pmaLogo from "/src/assets/images/companies/pma_logo.png";
-import iThinkWebLogo from "/src/assets/images/companies/ithinkweb_corporation_logo.png";
+import {getCompanyImageUrl} from "../../utils/assetHelper.js";
 
 const RightContent = () => {
     const { isActive, activeExperience } = useContext(ExperienceContext);
-
-    const companyLogos = {
-        'pma_logo.png': pmaLogo,
-        'ithinkweb_logo.png': iThinkWebLogo
-    };
 
     if (!activeExperience) {
         return (
@@ -18,12 +12,12 @@ const RightContent = () => {
         );
     }
 
-    const company = activeExperience.company_logo ? companyLogos[activeExperience.company_logo] : null;
+    const companyLogoUrl = activeExperience.company_logo ? getCompanyImageUrl(activeExperience.company_logo) : null;
 
     return (
         <div className={`d-flex flex-column gap-2 ${isActive ? styles.showContent : styles.hideContent}`}>
             <div className={styles.companyLogoContainer}>
-                <img className={styles.companyLogo} src={company} alt={activeExperience.alt}/>
+                <img className={styles.companyLogo} src={companyLogoUrl} alt={activeExperience.alt}/>
             </div>
             <h5 className={'m-0'}>{activeExperience.position}</h5>
             <p>{activeExperience.duration}</p>
@@ -32,7 +26,7 @@ const RightContent = () => {
                 {
                     activeExperience.responsibilities.map(responsibility => {
                         return(
-                            <li>
+                            <li key={responsibility}>
                                 <p>{responsibility}</p>
                             </li>
                         );
