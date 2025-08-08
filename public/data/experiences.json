@@ -2,14 +2,61 @@
     {
         "id": 1,
         "company": "IThinkWeb Corporation",
-        "position": "Junior Backend Developer",
-        "duration": "July 2024 - Present",
-        "responsibilities": [
-            "Directly report to the squad/team leader for updates and progress.",
-            "Designed and developed new APIs to be integrated with the frontend.",
-            "Applied bug fixes reported by the quality assurance team.",
-            "Reviewed pull requests by other developers from the backend team.",
-            "Developed and implemented new features and RESTFul APIs in an agile environment."
+        "overview": {
+            "position": "Junior Backend Developer",
+            "duration": "July 2024 - Present",
+            "responsibilities": [
+                "Directly report to the squad for updates and progress.",
+                "Designed, developed, and implemented new features and RESTful APIs in an agile environment, collaborating with the frontend team for seamless integration.",
+                "Resolved critical bug fixes reported by the QA team, improving application stability.",
+                "Reviewed pull requests by other developers from the backend team."
+            ]
+        },
+        "achievements": [
+            "Successfully launched new features by developing robust backend APIs.",
+            "Improved application stability by reducing critical bugs."
+        ],
+        "technologies": [
+            {
+                "id": 1,
+                "src": "laravel-logo.png",
+                "alt": "PHP Laravel"
+            },
+            {
+                "id": 2,
+                "src": "mySQL.png",
+                "alt": "MySQL"
+            },
+            {
+                "id": 3,
+                "src": "mongoDB.png",
+                "alt": "MongoDB"
+            },
+            {
+                "id": 4,
+                "src": "dynamoDB.png",
+                "alt": "DynamoDB"
+            },
+            {
+                "id": 5,
+                "src": "opensearch.png",
+                "alt": "OpenSearch"
+            },
+            {
+                "id": 6,
+                "src": "git.png",
+                "alt": "Git"
+            },
+            {
+                "id": 7,
+                "src": "jira.png",
+                "alt": "Jira"
+            },
+            {
+                "id": 8,
+                "src": "confluence.png",
+                "alt": "Confluence"
+            }
         ],
         "company_logo": "ithinkweb_corporation_logo.png",
         "alt": "IThinkWeb Logo"
@@ -17,13 +64,50 @@
     {
         "id": 2,
         "company": "Philippine Military Academy",
-        "position": "Computer Programmer (Apprentice)",
-        "duration": "January 2024 - February 2024",
-        "responsibilities": [
-            "Receive and apply feedbacks from our direct supervisor.",
-            "Spearheaded the development of the backend side of the Cadet Information System project.",
-            "Developed the basic CRUD functionalities of the backend using PHP and Laravel.",
-            "Implemented the frontend using HTML, CSS, and JavaScript."
+        "overview": {
+            "position": "Computer Programmer (Apprentice)",
+            "duration": "January 2024 - May 2024",
+            "responsibilities": [
+                "Collaborated with supervisor to iterate on and improve project features.",
+                "Developed the basic CRUD functionalities of the backend using PHP and Laravel.",
+                "Implemented the frontend using HTML, CSS, and JavaScript."
+            ]
+        },
+        "achievements": [
+            "Successfully designed, initialized, and implemented the backend for the Cadet Information System, creating a foundation for a more efficient cadet management process.",
+            "Co-developed the frontend of the Cadet Information System, contributing to a user-friendly interface."
+        ],
+        "technologies": [
+            {
+                "id": 1,
+                "src": "html_logo.png",
+                "alt": "HTML"
+            },
+            {
+                "id": 2,
+                "src": "css_logo.png",
+                "alt": "CSS"
+            },
+            {
+                "id": 3,
+                "src": "javascript_logo.png",
+                "alt": "JavaScript"
+            },
+            {
+                "id": 5,
+                "src": "laravel-logo.png",
+                "alt": "PHP Laravel"
+            },
+            {
+                "id": 6,
+                "src": "mySQL.png",
+                "alt": "MySQL"
+            },
+            {
+                "id": 7,
+                "src": "git.png",
+                "alt": "Git"
+            }
         ],
         "company_logo": "pma_logo.png",
         "alt": "Philippine Military Academy Logo"

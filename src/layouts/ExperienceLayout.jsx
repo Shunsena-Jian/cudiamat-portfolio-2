@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { ExperienceContext } from '../pages/Experience/ExperienceContext.jsx';
 import experienceStyles from '../styles/experiences.module.css';
 
-export default function ExperienceLayout({ experiences, details }) {
+export default function ExperienceLayout({ experiences, overview, achievements, technologies }) {
     const { companyLogoUrl, activeAnimation } = useContext(ExperienceContext);
 
     const animationClass = activeAnimation === 'fade-in'
@@ -24,9 +24,9 @@ export default function ExperienceLayout({ experiences, details }) {
                 className={`${experienceStyles.gridItem} ${experienceStyles.rightColumnContainer} ${animationClass}`}
                 style={rightColumnStyle}
             >
-                <div className={experienceStyles.quadrant}>{details}</div>
-                <div className={experienceStyles.quadrant}></div>
-                <div className={experienceStyles.quadrant}></div>
+                <div className={experienceStyles.quadrant}>{overview}</div>
+                <div className={experienceStyles.quadrant}>{achievements}</div>
+                <div className={experienceStyles.quadrant}>{technologies}</div>
                 <div className={experienceStyles.quadrant}></div>
             </aside>
         </main>

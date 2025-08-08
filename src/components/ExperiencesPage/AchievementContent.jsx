@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import styles from "../../styles/experiences.module.css";
 import {ExperienceContext} from "../../pages/Experience/ExperienceContext.jsx";
 
-const RightContent = () => {
+const AchievementContent = () => {
     const { isActive, activeExperience } = useContext(ExperienceContext);
 
     if (!activeExperience) {
@@ -13,16 +13,13 @@ const RightContent = () => {
 
     return (
         <div className={`d-flex flex-column justify-content-center gap-2 ${isActive ? styles.showContent : styles.hideContent}`}>
-            <h2 className={'m-0 text-center'}>{activeExperience.position}</h2>
-            <p className={'text-center'}>{activeExperience.duration}</p>
-            <hr></hr>
-            <h5 className={'m-0'}>Responsibilities:</h5>
+            <h2 className={'m-0 text-center'}>Achievements</h2>
             <ul>
                 {
-                    activeExperience.responsibilities.map(responsibility => {
+                    activeExperience.achievements.map((achievement, id) => {
                         return(
-                            <li key={responsibility}>
-                                <p>{responsibility}</p>
+                            <li key={id}>
+                                <p>{achievement}</p>
                             </li>
                         );
                     })
@@ -32,4 +29,4 @@ const RightContent = () => {
     );
 }
 
-export default RightContent;
+export default AchievementContent;

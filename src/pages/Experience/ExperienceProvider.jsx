@@ -23,9 +23,11 @@ export const ExperienceProvider = ({ children }) => {
     const handleOnClickExperience = (experience) => {
         const processedExperience = {
             id: experience.id,
-            position: experience.position,
-            duration: experience.duration,
-            responsibilities: experience.responsibilities,
+            position: experience.overview.position,
+            duration: experience.overview.duration,
+            responsibilities: experience.overview.responsibilities,
+            achievements: experience.achievements,
+            technologies: experience.technologies,
             company_logo: experience.company_logo,
             alt: experience.alt
         };
