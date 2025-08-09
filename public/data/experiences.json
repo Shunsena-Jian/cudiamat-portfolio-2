@@ -44,17 +44,17 @@
             },
             {
                 "id": 6,
-                "src": "git.png",
+                "src": "github-logo-dark.png",
                 "alt": "Git"
             },
             {
                 "id": 7,
-                "src": "jira.png",
+                "src": "jira_logo.png",
                 "alt": "Jira"
             },
             {
                 "id": 8,
-                "src": "confluence.png",
+                "src": "confluence_logo.png",
                 "alt": "Confluence"
             }
         ],
@@ -105,7 +105,7 @@
             },
             {
                 "id": 7,
-                "src": "git.png",
+                "src": "github-logo-dark.png",
                 "alt": "Git"
             }
         ],
