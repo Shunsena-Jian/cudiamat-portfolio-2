@@ -13,7 +13,7 @@ const AchievementContent = () => {
 
     return (
         <div className={`d-flex flex-column justify-content-center gap-2 ${isActive ? styles.showContent : styles.hideContent}`}>
-            <h1 className={'m-0 text-center'}>Achievements</h1>
+            <h1 className={'m-0 text-center'}><strong>Achievements</strong></h1>
             <hr/>
             <ul>
                 {
