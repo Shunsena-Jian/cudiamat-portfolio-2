@@ -13,8 +13,8 @@ const OverviewContent = () => {
 
     return (
         <div className={`d-flex flex-column justify-content-center gap-2 ${isActive ? styles.showContent : styles.hideContent}`}>
-            <h2 className={'m-0 text-center'}>{activeExperience.position}</h2>
-            <p className={'text-center'}>{activeExperience.duration}</p>
+            <h1 className={'m-0 text-center'}>{activeExperience.position}</h1>
+            <h5 className={'text-center'}>{activeExperience.duration}</h5>
             <hr></hr>
             <h5 className={'m-0'}>Responsibilities:</h5>
             <ul>
