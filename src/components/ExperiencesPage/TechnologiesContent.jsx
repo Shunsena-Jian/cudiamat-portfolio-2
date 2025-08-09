@@ -12,7 +12,7 @@ const renderTooltip = (props, alt) => (
 );
 
 const TechnologiesContent = () => {
-    const { isActive, activeExperience } = useContext(ExperienceContext);
+    const { isActive, animation, activeExperience, activeTech, handleHoverTechStack } = useContext(ExperienceContext);
 
     if (!activeExperience) {
         return (
@@ -20,12 +20,21 @@ const TechnologiesContent = () => {
         );
     }
 
+    const imageUrl = activeTech ? getTechImageUrl(activeTech) : '';
+
     return (
         <div className={`d-flex flex-column gap-2 ${isActive ? styles.showContent : styles.hideContent}`}>
             <h2 className={'m-0 text-center'}>Tech Stack Used</h2>
+            <hr/>
+            {activeTech && (
+                <div
+                    className={`${styles.backgroundWordMark} ${styles[animation]}`}
+                    style={{ backgroundImage: `url(${imageUrl})` }}
+                ></div>
+            )}
             <div className={`${styles.logoContainer} d-flex flex-wrap gap-3 mt-2`}>
                 {activeExperience.technologies.map((tech) => {
-                    const {id, src, alt} = tech;
+                    const {id, src, wordmark, alt} = tech;
 
                     return (
                         <OverlayTrigger
@@ -34,9 +43,11 @@ const TechnologiesContent = () => {
                             overlay={(props) => renderTooltip(props, tech.alt)}
                         >
                             <img
-                                src={getTechImageUrl(src)}
-                                alt={alt}
-                                className={styles.logo}
+                              src={getTechImageUrl(src)}
+                              alt={alt}
+                              className={styles.logo}
+                              onMouseEnter={() => handleHoverTechStack(wordmark)}
+                              onMouseLeave={() => handleHoverTechStack(null)}
                             />
                         </OverlayTrigger>
                     );

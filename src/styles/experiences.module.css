@@ -154,8 +154,36 @@
 
 .logoContainer {
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 .logoContainer > img {
     animation-delay: calc((var(--n) - 1) * 0.1s);
+}
+
+.backgroundWordMark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.fadeIn {
+    animation-name: var(--animation-fade-in);
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.fadeOut {
+    animation-name: var(--animation-fade-out);
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
 }

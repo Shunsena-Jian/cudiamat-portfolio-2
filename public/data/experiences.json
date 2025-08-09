@@ -20,41 +20,49 @@
             {
                 "id": 1,
                 "src": "laravel-logo.png",
+                "wordmark": "laravel-wordmark.png",
                 "alt": "PHP Laravel"
             },
             {
                 "id": 2,
                 "src": "mySQL.png",
+                "wordmark": "mySQL.png",
                 "alt": "MySQL"
             },
             {
                 "id": 3,
                 "src": "mongoDB.png",
+                "wordmark": "mongoDB-wordmark.png",
                 "alt": "MongoDB"
             },
             {
                 "id": 4,
                 "src": "dynamoDB.png",
+                "wordmark": "aws-wordmark.png",
                 "alt": "DynamoDB"
             },
             {
                 "id": 5,
                 "src": "opensearch.png",
+                "wordmark": "opensearch-wordmark.png",
                 "alt": "OpenSearch"
             },
             {
                 "id": 6,
                 "src": "github-logo-dark.png",
+                "wordmark": "github-wordmark.png",
                 "alt": "Git"
             },
             {
                 "id": 7,
                 "src": "jira_logo.png",
+                "wordmark": "jira-wordmark.png",
                 "alt": "Jira"
             },
             {
                 "id": 8,
                 "src": "confluence_logo.png",
+                "wordmark": "confluence-wordmark.png",
                 "alt": "Confluence"
             }
         ],
@@ -81,31 +89,37 @@
             {
                 "id": 1,
                 "src": "html_logo.png",
+                "wordmark": "jira-wordmark.png",
                 "alt": "HTML"
             },
             {
                 "id": 2,
-                "src": "css_logo.png",
-                "alt": "CSS"
+                "src": "tailwind_logo.png",
+                "wordmark": "tailwind-wordmark.png",
+                "alt": "Tailwind"
             },
             {
                 "id": 3,
                 "src": "javascript_logo.png",
+                "wordmark": "javascript_logo.png",
                 "alt": "JavaScript"
             },
             {
                 "id": 5,
                 "src": "laravel-logo.png",
+                "wordmark": "laravel-wordmark.png",
                 "alt": "PHP Laravel"
             },
             {
                 "id": 6,
                 "src": "mySQL.png",
+                "wordmark": "mySQL.png",
                 "alt": "MySQL"
             },
             {
                 "id": 7,
                 "src": "github-logo-dark.png",
+                "wordmark": "github-wordmark.png",
                 "alt": "Git"
             }
         ],

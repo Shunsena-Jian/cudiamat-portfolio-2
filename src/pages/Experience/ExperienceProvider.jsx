@@ -1,5 +1,5 @@
 import { ExperienceContext } from "./ExperienceContext.jsx";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getCompanyImageUrl } from "../../utils/assetHelper.js";
 
 export const ExperienceProvider = ({ children }) => {
@@ -8,6 +8,9 @@ export const ExperienceProvider = ({ children }) => {
     const [isActive, setIsActive] = useState(false);
     const [companyLogoUrl, setCompanyLogoUrl] = useState(null);
     const [activeAnimation, setActiveAnimation] = useState('');
+    const [activeTech, setActiveTech] = useState(null);
+    const [animation, setAnimation] = useState('');
+    const hoverTimeoutRef = useRef(null);
 
     useEffect(() => {
         fetch('/data/experiences.json')
@@ -61,14 +64,31 @@ export const ExperienceProvider = ({ children }) => {
         }
     };
 
+    const handleHoverTechStack = (wordmark) => {
+        clearTimeout(hoverTimeoutRef.current);
+
+        if (!wordmark) {
+            setAnimation('fadeOut');
+            hoverTimeoutRef.current = setTimeout(() => {
+                setActiveTech(null);
+            }, 250);
+        } else {
+            setActiveTech(wordmark);
+            setAnimation('fadeIn');
+        }
+    };
+
     return (
         <ExperienceContext.Provider value={{
             experiences,
             isActive,
             activeExperience,
             handleOnClickExperience,
+            handleHoverTechStack,
             companyLogoUrl,
-            activeAnimation
+            activeAnimation,
+            activeTech,
+            animation
         }}>
             {children}
         </ExperienceContext.Provider>
