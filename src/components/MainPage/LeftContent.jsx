@@ -51,7 +51,7 @@ const Row = ({ title, technologies }) => {
                 ></div>
             )}
             <div className={styles.rowContent}>
-                <h5>{title}</h5>
+                <h3 className={'mb-3'}>{title}</h3>
                 <LogoSection technologies={technologies} handleAnimationEnd={handleAnimationEnd} handleLogoHover={handleLogoHover} />
             </div>
         </>

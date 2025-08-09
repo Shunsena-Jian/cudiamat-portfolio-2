@@ -9,9 +9,14 @@ const RightContent = () => {
         <div className={`${styles.paragraph}`}>
             {paragraphs.map((paragraph, index) => {
                 if (index === 0) {
-                    return <h4 key={index} className={'mb-4'}><strong>{paragraph}</strong></h4>;
+                    return (
+                      <>
+                        <h1 key={index} className={'mb-4 text-center'}><strong>{paragraph}</strong></h1>
+                        <hr />
+                      </>
+                    );
                 } else {
-                    return <h6 key={index}>{paragraph}</h6>;
+                    return <h4 key={index} className={'mb-4'}>{paragraph}</h4>;
                 }
             })}
         </div>
