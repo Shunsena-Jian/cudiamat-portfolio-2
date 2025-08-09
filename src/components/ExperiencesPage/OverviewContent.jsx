@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import styles from "../../styles/experiences.module.css";
 import {ExperienceContext} from "../../pages/Experience/ExperienceContext.jsx";
 
-const RightContent = () => {
+const OverviewContent = () => {
     const { isActive, activeExperience } = useContext(ExperienceContext);
 
     if (!activeExperience) {
@@ -32,4 +32,4 @@ const RightContent = () => {
     );
 }
 
-export default RightContent;
+export default OverviewContent;

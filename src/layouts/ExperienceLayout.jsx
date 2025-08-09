@@ -24,10 +24,9 @@ export default function ExperienceLayout({ experiences, overview, achievements, 
                 className={`${experienceStyles.gridItem} ${experienceStyles.rightColumnContainer} ${animationClass}`}
                 style={rightColumnStyle}
             >
-                <div className={experienceStyles.quadrant}>{overview}</div>
-                <div className={experienceStyles.quadrant}>{achievements}</div>
-                <div className={experienceStyles.quadrant}>{technologies}</div>
-                <div className={experienceStyles.quadrant}></div>
+                <div style={{ gridArea: 'top-left' }} className={experienceStyles.quadrant}>{overview}</div>
+                <div style={{ gridArea: 'top-right' }} className={experienceStyles.quadrant}>{achievements}</div>
+                <div style={{ gridArea: 'bottom' }} className={experienceStyles.quadrant}>{technologies}</div>
             </aside>
         </main>
     );

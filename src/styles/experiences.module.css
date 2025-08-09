@@ -89,6 +89,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "top-left top-right"
+        "bottom bottom";
     gap: 15px;
     padding: 1rem;
     position: relative;
