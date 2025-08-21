@@ -31,6 +31,34 @@
     animation-fill-mode: forwards;
 }
 
+.links {
+    position: relative;
+    animation-name: var(--animation-fade-in-from-bottom);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    align-items: center;
+    text-align: center;
+}
+
+.linkButton {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+
+.linkButton:hover {
+    background-color: white;
+    color: black;
+}
+
 .rowContent {
     position: relative;
     z-index: 1;

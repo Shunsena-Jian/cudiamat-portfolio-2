@@ -4,7 +4,7 @@ import { useMainContent } from "../../hooks/useMainContent.js";
 import { useLogoAnimation } from "../../hooks/useLogoAnimation.js";
 
 export const MainProvider = ({ children }) => {
-    const { beTech, feTech, dbTech, paragraphs } = useMainContent();
+    const { beTech, feTech, dbTech, paragraphs, resume, github, linkedin } = useMainContent();
     const { activeLogo, animation, hoveredLogo, handleLogoHover } = useLogoAnimation();
 
     const handleAnimationEnd = (event) => {
@@ -21,6 +21,9 @@ export const MainProvider = ({ children }) => {
             paragraphs,
             activeLogo,
             animation,
+            resume,
+            github,
+            linkedin,
             handleAnimationEnd,
             hoveredLogo,
             handleLogoHover

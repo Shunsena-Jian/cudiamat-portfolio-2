@@ -5,6 +5,9 @@ export const useMainContent = () => {
     const [feTech, setFETech] = useState([]);
     const [dbTech, setDBTech] = useState([]);
     const [paragraphs, setParagraphs] = useState([]);
+    const [resume, setResume] = useState(null);
+    const [github, setGithub] = useState(null);
+    const [linkedin, setLinkedIn] = useState(null);
 
     useEffect(() => {
         fetch('/data/mainContent.json')
@@ -30,9 +33,12 @@ export const useMainContent = () => {
                 setFETech(frontendTechs);
                 setDBTech(databaseTechs);
                 setParagraphs(data.paragraphs);
+                setResume(data.links.resume);
+                setGithub(data.links.github);
+                setLinkedIn(data.links.linkedin);
             })
             .catch(error => console.error('Error fetching content:', error));
     }, []);
 
-    return { beTech, feTech, dbTech, paragraphs };
+    return { beTech, feTech, dbTech, paragraphs, resume, github, linkedin };
 };

@@ -1,20 +1,13 @@
 import {Link, useLocation} from "react-router-dom";
-import {useContext, useEffect, useState} from "react";
+import {useContext} from "react";
 
 import {HeaderContext} from "./HeaderContext.jsx";
 import HeaderLayout from "../../layouts/HeaderLayout.jsx";
 import UnderLineGrow from "../UnderlineGrow/UnderLineGrow.jsx";
-import GithubLogo from "../../assets/images/technologies/github-logo-white.png";
-import LinkedInLogo from "../../assets/images/technologies/InBug-White.png";
 import styles from '../../styles/header.module.css';
 import {HeaderProvider} from "./HeaderProvider.jsx";
 
-const logoImages = {
-    'github-logo-white.png': GithubLogo,
-    'InBug-White.png': LinkedInLogo,
-};
-
-const upperContent = () => {
+const UpperContent = () => {
     const location = useLocation();
     const isActive = location.pathname === '/';
 
@@ -27,14 +20,7 @@ const upperContent = () => {
     );
 };
 
-const lowerContent = () => (
-    <>
-        <NavigationLinks />
-        <SocialLogos />
-    </>
-);
-
-const NavigationLinks = () => {
+const LowerContent = () => {
     const { navigationLinks } = useContext(HeaderContext);
     const location = useLocation();
 
@@ -62,44 +48,15 @@ const NavigationLinks = () => {
                 return content;
             })}
         </>
-    );
-};
-
-const SocialLogos = () => {
-    const { logoLinks } = useContext(HeaderContext);
-    const [logoItems, setLogoItems] = useState([]);
-
-    useEffect(() => {
-        if (logoLinks) {
-            const items = logoLinks.map(item => ({
-                ...item,
-                src: logoImages[item.src],
-            }));
-            setLogoItems(items);
-        }
-    }, [logoLinks]);
-
-    return (
-        <>
-            {logoItems.map((item, index) => {
-                const { id, ElementType, SubElementType, src, url, className, target } = item;
-
-                return (
-                    <ElementType key={id} href={url} target={target} className={`${className} ${styles.logoItem}`} style={{ '--logo': index }}>
-                        <SubElementType src={src} className={`${styles.logo}`} alt={id.replace('_', ' ')} />
-                    </ElementType>
-                );
-            })}
-        </>
-    );
+    )
 };
 
 export default function Header() {
     return (
         <HeaderProvider>
             <HeaderLayout
-                upperContent={upperContent()}
-                lowerContent={lowerContent()}
+                upperContent={<UpperContent />}
+                lowerContent={<LowerContent />}
             />
         </HeaderProvider>
     );
