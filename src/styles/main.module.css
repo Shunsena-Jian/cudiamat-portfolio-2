@@ -25,6 +25,8 @@
 }
 
 .paragraph {
+    display: flex;
+    flex-direction: column;
     position: relative;
     animation-name: var(--animation-fade-in-from-right);
     animation-duration: 0.5s;
@@ -37,6 +39,7 @@
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     align-items: center;
+    justify-content: center;
     text-align: center;
 }
 

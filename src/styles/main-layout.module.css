@@ -1,3 +1,4 @@
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -13,11 +14,11 @@
     gap: 15px;
 }
 
-/*@media (min-width: 768px) { !* Corresponds to Bootstrap's 'md' breakpoint *!*/
-/*    .grid-container {*/
-/*        grid-template-columns: 1fr 1fr; !* Two equal columns on medium screens and up *!*/
-/*    }*/
-/*}*/
+.right-column {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 15px;
+}
 
 .gridItem {
     background: #333333 url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat;

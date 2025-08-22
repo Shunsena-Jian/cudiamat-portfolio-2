@@ -10,6 +10,8 @@ const RightColumnContent = ({rightColumn}) => {
 
 export default function MainLayout({leftColumn, rightColumn}) {
     const [upperRow, middleRow, lowerRow] = leftColumn;
+    const [upperRightRow, lowerRightRow] = rightColumn;
+
     return (
         <main className={mainStyles['grid-container']}>
             <div className={mainStyles['left-column']}>
@@ -23,7 +25,14 @@ export default function MainLayout({leftColumn, rightColumn}) {
                     {lowerRow}
                 </section>
             </div>
-            <RightColumnContent rightColumn={rightColumn}/>
+            <div className={mainStyles['right-column']}>
+                <section className={`${mainStyles.gridItem} d-flex align-items-center`}>
+                    {upperRightRow}
+                </section>
+                <section className={`${mainStyles.gridItem} d-flex align-items-center justify-content-center`}>
+                    {lowerRightRow}
+                </section>
+            </div>
         </main>
     );
 }
