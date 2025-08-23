@@ -64,11 +64,10 @@
 }
 
 .gridItem {
-    background: #333333 url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat;
+    background: #292929 url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat;
 
     display: flex;
     border: #4f4f4f solid 1px;
-    border-radius: 15px;
     padding-left: 3rem;
     padding-right: 3rem;
     position: relative;
@@ -127,8 +126,8 @@
 
 .quadrant {
     border: #4f4f4f solid 1px;
-    border-radius: 15px;
-    background: #1a1a1a url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat;
+    background: rgba(26, 26, 26, 0.9) url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat;
+
     padding: 1rem;
     display: flex;
     align-items: center;
